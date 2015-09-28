@@ -1,0 +1,5 @@
+{
+  ImageView imageView=new ImageView(this);
+  imageView.setImageResource(resId);
+  getTileView().addMarker(imageView,x,y);
+}

@@ -1,0 +1,3 @@
+{
+  setMeasuredDimension(getDIP(getContext(),20),getDIP(getContext(),15));
+}

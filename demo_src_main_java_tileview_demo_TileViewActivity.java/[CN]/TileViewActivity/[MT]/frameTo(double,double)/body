@@ -1,0 +1,8 @@
+{
+  getTileView().post(new Runnable(){
+    @Override public void run(){
+      getTileView().moveToAndCenter(x,y);
+    }
+  }
+);
+}

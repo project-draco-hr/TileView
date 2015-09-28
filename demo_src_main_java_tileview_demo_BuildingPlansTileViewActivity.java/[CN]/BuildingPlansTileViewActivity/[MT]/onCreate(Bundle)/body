@@ -1,0 +1,19 @@
+{
+  super.onCreate(savedInstanceState);
+  TileView tileView=getTileView();
+  tileView.setSize(2736,2880);
+  tileView.addDetailLevel(1.000f,"tiles/plans/1000/%col%_%row%.jpg","samples/plans.JPG");
+  tileView.addDetailLevel(0.500f,"tiles/plans/500/%col%_%row%.jpg","samples/plans.JPG");
+  tileView.addDetailLevel(0.250f,"tiles/plans/250/%col%_%row%.jpg","samples/plans.JPG");
+  tileView.addDetailLevel(0.125f,"tiles/plans/125/%col%_%row%.jpg","samples/plans.JPG");
+  tileView.defineRelativeBounds(0,0,1,1);
+  tileView.setMarkerAnchorPoints(-0.5f,-0.5f);
+  tileView.addMarkerEventListener(markerEventListener);
+  addPin(0.25,0.25);
+  addPin(0.25,0.75);
+  addPin(0.75,0.25);
+  addPin(0.75,0.75);
+  addPin(0.50,0.50);
+  tileView.setScale(0.5);
+  frameTo(0.5,0.5);
+}

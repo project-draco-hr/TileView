@@ -1,0 +1,4 @@
+{
+  renderIsCancelled=true;
+  renderPoolExecutor.clearQueue();
+}

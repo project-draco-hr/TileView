@@ -1,0 +1,36 @@
+{
+  super.onCreate(savedInstanceState);
+  TileView tileView=getTileView();
+  tileView.setSize(17934,13452);
+  tileView.setBackgroundColor(0xFFe7e7e7);
+  tileView.addDetailLevel(0.0625f,"tiles/map/phi-62500-%col%_%row%.jpg");
+  tileView.addDetailLevel(0.1250f,"tiles/map/phi-125000-%col%_%row%.jpg");
+  tileView.addDetailLevel(0.2500f,"tiles/map/phi-250000-%col%_%row%.jpg");
+  tileView.addDetailLevel(0.5000f,"tiles/map/phi-500000-%col%_%row%.jpg");
+  tileView.addDetailLevel(1.0000f,"tiles/map/phi-1000000-%col%_%row%.jpg");
+  tileView.setMarkerAnchorPoints(-0.5f,-1.0f);
+  tileView.defineRelativeBounds(NORTH_WEST_LONGITUDE,NORTH_WEST_LATITUDE,SOUTH_EAST_LONGITUDE,SOUTH_EAST_LATITUDE);
+  Paint paint=tileView.getPathPaint();
+  DisplayMetrics metrics=getResources().getDisplayMetrics();
+  paint.setShadowLayer(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,4,metrics),TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,2,metrics),TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,2,metrics),0x66000000);
+  paint.setPathEffect(new CornerPathEffect(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,5,metrics)));
+  tileView.drawPath(points.subList(1,5));
+  for (  double[] point : points) {
+    ImageView marker=new ImageView(this);
+    marker.setTag(point);
+    marker.setImageResource(Math.random() < 0.75 ? R.drawable.map_marker_normal : R.drawable.map_marker_featured);
+    marker.setOnClickListener(markerClickListener);
+    tileView.addMarker(marker,point[0],point[1]);
+  }
+  double x=0;
+  double y=0;
+  for (  double[] point : points) {
+    x=x + point[0];
+    y=y + point[1];
+  }
+  int size=points.size();
+  x=x / size;
+  y=y / size;
+  frameTo(x,y);
+  tileView.setScale(0.3);
+}

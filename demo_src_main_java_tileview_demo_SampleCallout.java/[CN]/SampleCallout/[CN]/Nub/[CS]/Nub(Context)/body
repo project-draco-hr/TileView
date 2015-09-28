@@ -1,0 +1,9 @@
+{
+  super(context);
+  paint.setStyle(Paint.Style.FILL);
+  paint.setColor(0xFF313231);
+  paint.setAntiAlias(true);
+  path.lineTo(getDIP(context,20),0);
+  path.lineTo(getDIP(context,10),getDIP(context,15));
+  path.close();
+}

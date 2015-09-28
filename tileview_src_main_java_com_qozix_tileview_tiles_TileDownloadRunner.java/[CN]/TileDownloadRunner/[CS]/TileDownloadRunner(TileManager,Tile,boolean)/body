@@ -1,0 +1,5 @@
+{
+  this.tile=new WeakReference<>(tile);
+  this.reference=new WeakReference<>(tileManager);
+  last=isLast;
+}

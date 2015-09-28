@@ -1,0 +1,4 @@
+{
+  canvas.drawPath(path,paint);
+  super.onDraw(canvas);
+}

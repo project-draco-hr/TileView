@@ -1,0 +1,5 @@
+{
+  super.onDestroy();
+  tileView.destroy();
+  tileView=null;
+}

@@ -1,0 +1,6 @@
+{
+  if (markerMap.containsKey(v)) {
+    v.setLayoutParams(params);
+    requestLayout();
+  }
+}

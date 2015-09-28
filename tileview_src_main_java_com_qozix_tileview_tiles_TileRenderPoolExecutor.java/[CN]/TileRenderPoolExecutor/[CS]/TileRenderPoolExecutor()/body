@@ -1,0 +1,4 @@
+{
+  downloadWorkQueue=new LinkedBlockingQueue<>();
+  downloadThreadPool=new ThreadPoolExecutor(CORE_POOL_SIZE,MAXIMUM_POOL_SIZE,KEEP_ALIVE_TIME,KEEP_ALIVE_TIME_UNIT,downloadWorkQueue);
+}

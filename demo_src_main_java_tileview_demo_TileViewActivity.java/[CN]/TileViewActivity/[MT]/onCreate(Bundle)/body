@@ -1,0 +1,5 @@
+{
+  super.onCreate(savedInstanceState);
+  tileView=new TileView(this);
+  setContentView(tileView);
+}
