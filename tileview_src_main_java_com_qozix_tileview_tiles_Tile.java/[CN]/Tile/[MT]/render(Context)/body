@@ -1,8 +1,8 @@
 {
-  if (imageView == null) {
-    imageView=new ImageView(context);
-    imageView.setAdjustViewBounds(false);
-    imageView.setScaleType(ImageView.ScaleType.MATRIX);
+  if (mImageView == null) {
+    mImageView=new ImageView(context);
+    mImageView.setAdjustViewBounds(false);
+    mImageView.setScaleType(ImageView.ScaleType.MATRIX);
   }
-  imageView.setImageBitmap(bitmap);
+  mImageView.setImageBitmap(mBitmap);
 }

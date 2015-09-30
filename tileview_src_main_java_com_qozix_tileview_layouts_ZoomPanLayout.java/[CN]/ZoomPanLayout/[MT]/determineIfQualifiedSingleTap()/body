@@ -1,0 +1,3 @@
+{
+  return !mIsTapInterrupted && (Math.abs(mFirstFinger.x - mSingleTapHistory.x) <= SINGLE_TAP_DISTANCE_THRESHOLD) && (Math.abs(mFirstFinger.y - mSingleTapHistory.y) <= SINGLE_TAP_DISTANCE_THRESHOLD);
+}

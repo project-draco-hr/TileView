@@ -1,4 +1,0 @@
-{
-  bitmap=decoder.decode(currentFileName,getContext());
-  postInvalidate();
-}

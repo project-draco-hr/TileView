@@ -1,0 +1,8 @@
+{
+  if (isTweening) {
+    return;
+  }
+  mDoubleTapDestinationScale=destination;
+  mValueAnimator.setDuration(duration);
+  mValueAnimator.start();
+}

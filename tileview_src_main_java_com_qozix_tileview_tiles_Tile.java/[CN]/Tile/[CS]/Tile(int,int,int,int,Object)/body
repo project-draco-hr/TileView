@@ -1,0 +1,7 @@
+{
+  mRow=row;
+  mCol=col;
+  mWidth=width;
+  mHeight=height;
+  mData=data;
+}

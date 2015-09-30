@@ -1,14 +1,14 @@
 {
-  if (imageView != null) {
-    imageView.clearAnimation();
-    imageView.setImageBitmap(null);
-    ViewParent parent=imageView.getParent();
+  if (mImageView != null) {
+    mImageView.clearAnimation();
+    mImageView.setImageBitmap(null);
+    ViewParent parent=mImageView.getParent();
     if (parent != null && parent instanceof ViewGroup) {
       ViewGroup group=(ViewGroup)parent;
-      group.removeView(imageView);
+      group.removeView(mImageView);
     }
-    imageView=null;
+    mImageView=null;
   }
-  bitmap=null;
-  hasBitmap=false;
+  mBitmap=null;
+  mHasBitmap=false;
 }

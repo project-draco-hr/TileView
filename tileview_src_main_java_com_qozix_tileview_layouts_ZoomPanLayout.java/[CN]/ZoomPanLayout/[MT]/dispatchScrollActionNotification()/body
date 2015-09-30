@@ -1,0 +1,6 @@
+{
+  if (mScrollActionHandler.hasMessages(0)) {
+    mScrollActionHandler.removeMessages(0);
+  }
+  mScrollActionHandler.sendEmptyMessageDelayed(0,100);
+}

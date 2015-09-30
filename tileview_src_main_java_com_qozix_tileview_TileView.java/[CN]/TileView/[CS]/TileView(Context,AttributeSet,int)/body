@@ -1,7 +1,5 @@
 {
   super(context,attrs,defStyleAttr);
-  sampleManager=new SampleManager(context,detailManager);
-  addView(sampleManager);
   tileManager=new TileManager(context,detailManager);
   addView(tileManager);
   pathManager=new PathManager(context,detailManager);

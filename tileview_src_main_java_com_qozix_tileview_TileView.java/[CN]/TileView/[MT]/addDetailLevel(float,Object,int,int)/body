@@ -1,0 +1,3 @@
+{
+  detailManager.addDetailLevel(detailScale,data,tileWidth,tileHeight);
+}

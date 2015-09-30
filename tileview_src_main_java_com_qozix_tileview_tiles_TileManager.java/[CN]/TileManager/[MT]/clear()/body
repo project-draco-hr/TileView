@@ -20,7 +20,4 @@
     }
     tileGroup.removeAllViews();
   }
-  if (cache != null) {
-    cache.clear();
-  }
 }

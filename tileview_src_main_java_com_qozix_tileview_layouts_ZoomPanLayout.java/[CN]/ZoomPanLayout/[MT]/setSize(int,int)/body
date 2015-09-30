@@ -1,0 +1,7 @@
+{
+  mBaseWidth=wide;
+  mBaseHeight=tall;
+  mScaledWidth=(int)(mBaseWidth * scale);
+  mScaledHeight=(int)(mBaseHeight * scale);
+  updateClip();
+}

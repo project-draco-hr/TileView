@@ -1,0 +1,4 @@
+float detailScale
+Object data
+int tileWidth
+int tileHeight

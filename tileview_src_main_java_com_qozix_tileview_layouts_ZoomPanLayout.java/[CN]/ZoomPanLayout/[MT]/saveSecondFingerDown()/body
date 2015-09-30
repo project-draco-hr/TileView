@@ -1,0 +1,3 @@
+{
+  mSecondFingerLastDown.set(mSecondFinger.x,mSecondFinger.y);
+}

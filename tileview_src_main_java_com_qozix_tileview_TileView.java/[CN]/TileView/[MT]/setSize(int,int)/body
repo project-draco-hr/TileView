@@ -1,5 +1,5 @@
 {
-  super.setSize(w,h);
-  detailManager.setSize(w,h);
-  positionManager.setSize(w,h);
+  super.setSize(width,height);
+  detailManager.setSize(width,height);
+  positionManager.setSize(width,height);
 }

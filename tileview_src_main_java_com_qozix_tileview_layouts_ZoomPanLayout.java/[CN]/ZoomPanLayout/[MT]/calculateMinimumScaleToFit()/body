@@ -1,0 +1,11 @@
+{
+  if (mShouldScaleToFit) {
+    double minimumScaleX=getWidth() / (double)mBaseWidth;
+    double minimumScaleY=getHeight() / (double)mBaseHeight;
+    double recalculatedMinScale=Math.max(minimumScaleX,minimumScaleY);
+    if (recalculatedMinScale != mMinScale) {
+      mMinScale=recalculatedMinScale;
+      setScale(scale);
+    }
+  }
+}

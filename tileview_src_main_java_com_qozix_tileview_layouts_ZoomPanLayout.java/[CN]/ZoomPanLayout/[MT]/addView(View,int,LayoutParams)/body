@@ -1,0 +1,4 @@
+{
+  LayoutParams lp=new LayoutParams(mScaledWidth,mScaledHeight);
+  mClip.addView(child,index,lp);
+}

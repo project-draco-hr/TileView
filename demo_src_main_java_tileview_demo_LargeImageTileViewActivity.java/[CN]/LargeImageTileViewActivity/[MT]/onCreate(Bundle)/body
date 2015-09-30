@@ -3,10 +3,10 @@
   TileView tileView=getTileView();
   tileView.setTransitionsEnabled(false);
   tileView.setSize(2835,4289);
-  tileView.addDetailLevel(1.000f,"tiles/painting/1000/%col%_%row%.jpg");
-  tileView.addDetailLevel(0.500f,"tiles/painting/500/%col%_%row%.jpg");
-  tileView.addDetailLevel(0.250f,"tiles/painting/250/%col%_%row%.jpg");
-  tileView.addDetailLevel(0.125f,"tiles/painting/125/%col%_%row%.jpg");
+  tileView.addDetailLevel(1.000f,"tiles/painting/1000/%1_%2.jpg");
+  tileView.addDetailLevel(0.500f,"tiles/painting/500/%1_%2.jpg");
+  tileView.addDetailLevel(0.250f,"tiles/painting/250/%1_%2.jpg");
+  tileView.addDetailLevel(0.125f,"tiles/painting/125/%1_%2.jpg");
   tileView.setScale(0);
   tileView.defineRelativeBounds(0,0,1,1);
   frameTo(0.5,0.5);

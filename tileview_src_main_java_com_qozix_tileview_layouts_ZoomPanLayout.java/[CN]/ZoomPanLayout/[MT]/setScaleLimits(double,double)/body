@@ -1,0 +1,7 @@
+{
+  if (!mShouldScaleToFit) {
+    mMinScale=min;
+  }
+  mMaxScale=max;
+  setScale(scale);
+}

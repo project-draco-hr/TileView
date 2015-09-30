@@ -1,26 +1,22 @@
 {
   double relativeScale=getRelativeScale();
-  int drawableWidth=(int)(detailManager.getWidth() * getScale() * relativeScale);
-  int drawableHeight=(int)(detailManager.getHeight() * getScale() * relativeScale);
-  double offsetWidth=(tileWidth * relativeScale);
-  double offsetHeight=(tileHeight * relativeScale);
+  int drawableWidth=(int)(mDetailManager.getWidth() * getScale() * relativeScale);
+  int drawableHeight=(int)(mDetailManager.getHeight() * getScale() * relativeScale);
+  double offsetWidth=(mTileWidth * relativeScale);
+  double offsetHeight=(mTileHeight * relativeScale);
   LinkedList<Tile> intersections=new LinkedList<Tile>();
-  viewport.set(detailManager.getComputedViewport());
-  viewport.top=Math.max(viewport.top,0);
-  viewport.left=Math.max(viewport.left,0);
-  viewport.right=Math.min(viewport.right,drawableWidth);
-  viewport.bottom=Math.min(viewport.bottom,drawableHeight);
-  int startingRow=(int)Math.floor(viewport.top / offsetHeight);
-  int endingRow=(int)Math.ceil(viewport.bottom / offsetHeight);
-  int startingColumn=(int)Math.floor(viewport.left / offsetWidth);
-  int endingColumn=(int)Math.ceil(viewport.right / offsetWidth);
-  DetailLevelPatternParser parser=detailManager.getDetailLevelPatternParser();
+  mViewport.set(mDetailManager.getComputedViewport());
+  mViewport.top=Math.max(mViewport.top,0);
+  mViewport.left=Math.max(mViewport.left,0);
+  mViewport.right=Math.min(mViewport.right,drawableWidth);
+  mViewport.bottom=Math.min(mViewport.bottom,drawableHeight);
+  int startingRow=(int)Math.floor(mViewport.top / offsetHeight);
+  int endingRow=(int)Math.ceil(mViewport.bottom / offsetHeight);
+  int startingColumn=(int)Math.floor(mViewport.left / offsetWidth);
+  int endingColumn=(int)Math.ceil(mViewport.right / offsetWidth);
   for (int iterationRow=startingRow; iterationRow < endingRow; iterationRow++) {
     for (int iterationColumn=startingColumn; iterationColumn < endingColumn; iterationColumn++) {
-      String fileName=parser.parse(pattern,iterationRow,iterationColumn);
-      int left=iterationColumn * tileWidth;
-      int top=iterationRow * tileHeight;
-      Tile tile=new Tile(left,top,tileWidth,tileHeight,fileName);
+      Tile tile=new Tile(iterationRow,iterationColumn,mTileWidth,mTileHeight,mData);
       intersections.add(tile);
     }
   }

@@ -1,0 +1,8 @@
+{
+  if (mScroller.computeScrollOffset()) {
+    Point destination=new Point(mScroller.getCurrX(),mScroller.getCurrY());
+    scrollToPoint(destination);
+    dispatchScrollActionNotification();
+    postInvalidate();
+  }
+}

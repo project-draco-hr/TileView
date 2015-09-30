@@ -2,10 +2,10 @@
   super.onCreate(savedInstanceState);
   TileView tileView=getTileView();
   tileView.setSize(4015,4057);
-  tileView.addDetailLevel(1.000f,"tiles/fantasy/1000/%col%_%row%.jpg","samples/middle-earth.jpg");
-  tileView.addDetailLevel(0.500f,"tiles/fantasy/500/%col%_%row%.jpg","samples/middle-earth.jpg");
-  tileView.addDetailLevel(0.250f,"tiles/fantasy/250/%col%_%row%.jpg","samples/middle-earth.jpg");
-  tileView.addDetailLevel(0.125f,"tiles/fantasy/125/%col%_%row%.jpg","samples/middle-earth.jpg");
+  tileView.addDetailLevel(1.000f,"tiles/fantasy/1000/%1_%2.jpg");
+  tileView.addDetailLevel(0.500f,"tiles/fantasy/500/%1_%2.jpg");
+  tileView.addDetailLevel(0.250f,"tiles/fantasy/250/%1_%2.jpg");
+  tileView.addDetailLevel(0.125f,"tiles/fantasy/125/%1_%2.jpg");
   tileView.setScaleLimits(0,2);
   tileView.setMarkerAnchorPoints(-0.5f,-0.5f);
   placeMarker(R.drawable.fantasy_elves,1616,1353);
