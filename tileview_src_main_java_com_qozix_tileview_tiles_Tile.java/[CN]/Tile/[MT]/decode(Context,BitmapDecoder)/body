@@ -1,8 +1,6 @@
 {
-  if (mHasBitmap) {
+  if (hasBitmap()) {
     return;
   }
   mBitmap=decoder.decode(this,context);
-  Log.d("DEBUG",mBitmap != null ? mBitmap.toString() : "mBitmap is null");
-  mHasBitmap=(mBitmap != null);
 }

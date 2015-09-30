@@ -10,5 +10,4 @@
     mImageView=null;
   }
   mBitmap=null;
-  mHasBitmap=false;
 }

@@ -1,6 +1,6 @@
 {
   mRow=row;
-  mCol=col;
+  mColumn=column;
   mWidth=width;
   mHeight=height;
   mData=data;

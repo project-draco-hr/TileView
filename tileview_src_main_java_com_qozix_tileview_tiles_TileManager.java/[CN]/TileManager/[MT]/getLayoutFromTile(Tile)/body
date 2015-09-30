@@ -1,7 +1,3 @@
 {
-  int w=m.getWidth();
-  int h=m.getHeight();
-  int x=m.getCol() * w;
-  int y=m.getRow() * h;
-  return new FixedLayout.LayoutParams(w,h,y,x);
+  return new FixedLayout.LayoutParams(tile.getWidth(),tile.getHeight(),tile.getLeft(),tile.getTop());
 }

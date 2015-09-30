@@ -1,3 +1,3 @@
 {
-  return "(row=" + mRow + ", col="+ mCol+ ", mWidth="+ mWidth+ ", mHeight="+ mHeight+ ", file="+ mData+ ")";
+  return "(row=" + mRow + ", column="+ mColumn+ ", width="+ mWidth+ ", height="+ mHeight+ ", data="+ mData+ ")";
 }
