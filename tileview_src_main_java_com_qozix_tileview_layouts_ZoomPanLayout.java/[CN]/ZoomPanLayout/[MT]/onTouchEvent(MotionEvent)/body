@@ -38,7 +38,7 @@ for (GestureListener listener : mGestureListeners) {
 listener.onPinchStart(mPinchStartOffset);
 }
 for (ZoomPanListener listener : mZoomPanListeners) {
-listener.onZoomStart(scale);
+listener.onZoomStart(mScale);
 listener.onZoomPanEvent();
 }
 }
@@ -87,11 +87,11 @@ mScroller.forceFinished(true);
 saveHistoricalScale();
 saveDoubleTapHistory();
 double destination;
-if (scale >= mMaxScale) {
+if (mScale >= mMaxScale) {
 destination=mMinScale;
 }
  else {
-destination=Math.min(mMaxScale,scale * 2);
+destination=Math.min(mMaxScale,mScale * 2);
 }
 startSmoothScaleTo(destination,ZOOM_ANIMATION_DURATION);
 for (GestureListener listener : mGestureListeners) {
@@ -113,7 +113,7 @@ listener.onFingerUp(mActualPoint);
 listener.onPinchComplete(mPinchStartOffset);
 }
 for (ZoomPanListener listener : mZoomPanListeners) {
-listener.onZoomComplete(scale);
+listener.onZoomComplete(mScale);
 listener.onZoomPanEvent();
 }
 break;

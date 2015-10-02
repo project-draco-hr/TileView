@@ -1,5 +1,5 @@
 {
-  if (isTweening) {
+  if (mIsTweening) {
     return;
   }
   saveHistoricalScale();

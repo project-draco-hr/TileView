@@ -2,8 +2,8 @@
   constrainPoint(point);
   int ox=getScrollX();
   int oy=getScrollY();
-  int nx=(int)point.x;
-  int ny=(int)point.y;
+  int nx=point.x;
+  int ny=point.y;
   scrollTo(nx,ny);
   if (ox != nx || oy != ny) {
     for (    ZoomPanListener listener : mZoomPanListeners) {

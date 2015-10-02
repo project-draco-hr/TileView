@@ -3,5 +3,5 @@
     mMinScale=min;
   }
   mMaxScale=max;
-  setScale(scale);
+  setScale(mScale);
 }

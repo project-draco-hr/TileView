@@ -1,6 +1,0 @@
-{
-  addBitmapToMemoryCache(key,bitmap);
-synchronized (this) {
-    addBitmapToDiskCache(key,bitmap);
-  }
-}

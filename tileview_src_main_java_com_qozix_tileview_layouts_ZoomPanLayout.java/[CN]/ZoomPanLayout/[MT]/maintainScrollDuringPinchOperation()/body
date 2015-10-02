@@ -1,5 +1,5 @@
 {
-  double deltaScale=scale / mHistoricalScale;
+  double deltaScale=mScale / mHistoricalScale;
   int x=(int)(mPinchStartScroll.x * deltaScale) - mPinchStartOffset.x;
   int y=(int)(mPinchStartScroll.y * deltaScale) - mPinchStartOffset.y;
   mDestinationScroll.set(x,y);

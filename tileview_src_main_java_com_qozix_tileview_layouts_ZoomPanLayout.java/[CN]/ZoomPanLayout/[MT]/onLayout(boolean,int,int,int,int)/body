@@ -1,5 +1,8 @@
 {
-  mClip.layout(0,0,mClip.getMeasuredWidth(),mClip.getMeasuredHeight());
+  for (int i=0; i < getChildCount(); i++) {
+    View child=getChildAt(i);
+    child.layout(0,0,mScaledWidth,mScaledHeight);
+  }
   constrainScroll();
   if (changed) {
     calculateMinimumScaleToFit();

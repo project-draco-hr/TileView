@@ -5,7 +5,7 @@
     double recalculatedMinScale=Math.max(minimumScaleX,minimumScaleY);
     if (recalculatedMinScale != mMinScale) {
       mMinScale=recalculatedMinScale;
-      setScale(scale);
+      setScale(mScale);
     }
   }
 }

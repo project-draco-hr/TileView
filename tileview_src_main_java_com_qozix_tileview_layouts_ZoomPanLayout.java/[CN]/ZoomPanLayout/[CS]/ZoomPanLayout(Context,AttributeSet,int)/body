@@ -3,7 +3,4 @@
   setWillNotDraw(false);
   mScrollActionHandler=new ScrollActionHandler(this);
   mScroller=new Scroller(context);
-  mClip=new StaticLayout(context);
-  super.addView(mClip,-1,new LayoutParams(-1,-1));
-  updateClip();
 }
