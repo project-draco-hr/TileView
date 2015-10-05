@@ -1,5 +1,0 @@
-{
-  mTileWeakReference=new WeakReference<>(tile);
-  mTileManagerWeakReference=new WeakReference<>(tileManager);
-  last=isLast;
-}

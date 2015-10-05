@@ -1,3 +1,0 @@
-{
-  downloadThreadPool=(ThreadPoolExecutor)Executors.newCachedThreadPool();
-}

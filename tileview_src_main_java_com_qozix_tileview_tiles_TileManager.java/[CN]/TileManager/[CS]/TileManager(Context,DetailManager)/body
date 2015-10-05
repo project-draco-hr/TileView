@@ -4,5 +4,4 @@
   detailManager.addDetailLevelEventListener(this);
   handler=new TileRenderHandler(this);
   transitionListener=new TileTransitionListener(this);
-  uiThreadHandler=new Handler(Looper.getMainLooper());
 }

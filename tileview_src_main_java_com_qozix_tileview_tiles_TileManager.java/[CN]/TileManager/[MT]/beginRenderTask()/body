@@ -4,8 +4,11 @@
     return;
   }
   scheduledToRender=intersections;
-  for (  Tile tile : scheduledToRender) {
-    Runnable task=new TileRenderRunnable(this,tile);
-    downloadThreadPool.execute(task);
+  if (lastRunRenderTask != null) {
+    if (lastRunRenderTask.getStatus() != AsyncTask.Status.FINISHED) {
+      lastRunRenderTask.cancel(true);
+    }
   }
+  lastRunRenderTask=new TileRenderTask(this);
+  lastRunRenderTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 }

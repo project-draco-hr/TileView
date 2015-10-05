@@ -1,13 +1,8 @@
 {
-  uiThreadHandler.post(new Runnable(){
-    @Override public void run(){
-      isRendering=false;
-      cleanup();
-      requestRender();
-      if (renderListener != null) {
-        renderListener.onRenderComplete();
-      }
-    }
+  isRendering=false;
+  cleanup();
+  requestRender();
+  if (renderListener != null) {
+    renderListener.onRenderComplete();
   }
-);
 }
