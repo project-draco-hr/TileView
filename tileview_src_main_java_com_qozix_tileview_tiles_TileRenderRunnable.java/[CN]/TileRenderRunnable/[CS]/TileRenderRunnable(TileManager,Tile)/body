@@ -1,0 +1,4 @@
+{
+  mTileWeakReference=new WeakReference<Tile>(tile);
+  mTileManagerWeakReference=new WeakReference<TileManager>(tileManager);
+}

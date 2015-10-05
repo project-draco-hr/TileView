@@ -4,6 +4,8 @@
     return;
   }
   scheduledToRender=intersections;
-  renderPoolExecutor.clearQueue();
-  renderPoolExecutor.queue(this,getRenderList());
+  for (  Tile tile : scheduledToRender) {
+    Runnable task=new TileRenderRunnable(this,tile);
+    downloadThreadPool.execute(task);
+  }
 }

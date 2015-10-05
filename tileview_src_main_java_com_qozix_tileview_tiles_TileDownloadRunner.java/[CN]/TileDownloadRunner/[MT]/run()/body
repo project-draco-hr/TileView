@@ -1,15 +1,17 @@
 {
-  TileManager tileManager=reference.get();
-  Tile tile=this.tile.get();
+  TileManager tileManager=mTileManagerWeakReference.get();
   if (tileManager != null) {
-    if (!tileManager.getRenderIsCancelled() && tile != null) {
-      tileManager.decodeIndividualTile(tile);
-      tileManager=reference.get();
-      if (!tileManager.getRenderIsCancelled() && !TileRenderPoolExecutor.getInstance().isCancelled()) {
-        tileManager.renderIndividualTile(tile);
-      }
-      if (last) {
-        tileManager.onRenderTaskPostExecute();
+    if (!tileManager.getRenderIsCancelled()) {
+      Tile tile=mTileWeakReference.get();
+      if (tile != null) {
+        tileManager.decodeIndividualTile(tile);
+        tileManager=mTileManagerWeakReference.get();
+        if (!tileManager.getRenderIsCancelled() && !TileRenderPoolExecutor.getInstance().isCancelled()) {
+          tileManager.renderIndividualTile(tile);
+        }
+        if (last) {
+          tileManager.onRenderTaskPostExecute();
+        }
       }
     }
   }

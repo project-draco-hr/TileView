@@ -1,0 +1,4 @@
+{
+  mScale=factor;
+  invalidate();
+}

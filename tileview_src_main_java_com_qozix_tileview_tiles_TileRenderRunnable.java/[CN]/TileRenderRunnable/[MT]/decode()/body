@@ -1,0 +1,12 @@
+{
+  TileManager tileManager=mTileManagerWeakReference.get();
+  if (tileManager != null) {
+    if (!tileManager.getRenderIsCancelled()) {
+      Tile tile=mTileWeakReference.get();
+      if (tile != null) {
+        tileManager.decodeIndividualTile(tile);
+        render();
+      }
+    }
+  }
+}
