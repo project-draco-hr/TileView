@@ -1,0 +1,5 @@
+{
+  Point point=new Point(x,y);
+  markerManager.processHit(point);
+  hotSpotManager.processHit(point);
+}

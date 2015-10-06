@@ -1,11 +1,7 @@
 {
-  for (  ZoomPanListener listener : mZoomPanListeners) {
-    listener.onZoomComplete(mScale);
-    listener.onZoomPanEvent();
-  }
   int focusX=(int)scaleGestureDetector.getFocusX();
   int focusY=(int)scaleGestureDetector.getFocusY();
-  for (  GestureListener listener : mGestureListeners) {
-    listener.onPinchComplete(focusX,focusY);
+  for (  ZoomPanListener listener : mZoomPanListeners) {
+    listener.onZoom(mScale,focusX,focusY,ZoomPanListener.State.COMPLETE);
   }
 }

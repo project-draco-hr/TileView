@@ -4,5 +4,8 @@
   int dx=x - startX;
   int dy=y - startY;
   mScroller.startScroll(startX,startY,dx,dy,SLIDE_DURATION);
+  mIsBeingFlung=true;
+  flingFinalX=mScroller.getFinalX();
+  flingFinalY=mScroller.getFinalY();
   determineIfFlingComplete();
 }

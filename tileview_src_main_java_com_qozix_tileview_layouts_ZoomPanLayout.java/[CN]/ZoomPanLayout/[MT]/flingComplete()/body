@@ -1,10 +1,8 @@
 {
   if (mIsBeingFlung) {
     mIsBeingFlung=false;
-    int x=getScrollX();
-    int y=getScrollY();
-    for (    GestureListener listener : mGestureListeners) {
-      listener.onFlingComplete(x,y);
+    for (    ZoomPanListener listener : mZoomPanListeners) {
+      listener.onPan(getScrollX(),getScrollY(),ZoomPanListener.State.COMPLETE);
     }
   }
   invalidate();

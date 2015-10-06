@@ -1,6 +1,9 @@
 {
-  for (  GestureListener listener : mGestureListeners) {
-    listener.onFingerUp((int)event.getX(),(int)event.getY());
+  if (mIsDragging) {
+    mIsDragging=false;
+    for (    ZoomPanListener listener : mZoomPanListeners) {
+      listener.onPan(getScrollX(),getScrollY(),ZoomPanListener.State.COMPLETE);
+    }
   }
   return true;
 }

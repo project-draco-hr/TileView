@@ -1,10 +1,6 @@
 {
-  mScroller.forceFinished(true);
   float destination=mScale >= mMaxScale ? mMinScale : Math.min(mMaxScale,mScale * 2);
   saveScaleOrigination(event.getX(),event.getY());
   startSmoothScaleTo(destination,ZOOM_ANIMATION_DURATION);
-  for (  GestureListener listener : mGestureListeners) {
-    listener.onDoubleTap((int)event.getX(),(int)event.getY());
-  }
   return true;
 }

@@ -4,8 +4,8 @@
   maintainScrollDuringScaleOperation();
   int focusX=(int)scaleGestureDetector.getFocusX();
   int focusY=(int)scaleGestureDetector.getFocusY();
-  for (  GestureListener listener : mGestureListeners) {
-    listener.onPinch(focusX,focusY);
+  for (  ZoomPanListener listener : mZoomPanListeners) {
+    listener.onZoom(mScale,focusX,focusY,ZoomPanListener.State.PROGRESS);
   }
   return true;
 }

@@ -2,8 +2,5 @@
   if (!mScroller.isFinished()) {
     mScroller.abortAnimation();
   }
-  for (  GestureListener listener : mGestureListeners) {
-    listener.onFingerDown((int)event.getX(),(int)event.getY());
-  }
   return true;
 }

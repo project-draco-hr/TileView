@@ -1,12 +1,14 @@
 {
   if (mScroller.computeScrollOffset()) {
-    int currentX=getScrollX();
-    int currentY=getScrollY();
-    int destinationX=constrainX(mScroller.getCurrX());
-    int destinationY=constrainY(mScroller.getCurrY());
-    if (currentX != destinationX || currentY != destinationY) {
-      scrollTo(destinationX,destinationY);
-      Log.d("TileView","scrollTo called in computeScroll");
+    int startX=getScrollX();
+    int startY=getScrollY();
+    int endX=constrainX(mScroller.getCurrX());
+    int endY=constrainY(mScroller.getCurrY());
+    if (startX != endX || startY != endY) {
+      scrollTo(endX,endY);
+      for (      ZoomPanListener listener : mZoomPanListeners) {
+        listener.onPan(endX,endY,ZoomPanListener.State.PROGRESS);
+      }
     }
   }
   invalidate();

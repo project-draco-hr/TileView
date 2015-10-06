@@ -1,6 +1,3 @@
 {
-  for (  GestureListener listener : mGestureListeners) {
-    listener.onTap((int)event.getX(),(int)event.getY());
-  }
   return true;
 }

@@ -1,0 +1,4 @@
+int currentX
+int currentY
+int previousX
+int previousY

@@ -3,12 +3,12 @@
   int scrollEndY=(int)(getScrollY() + distanceY);
   scrollTo(scrollEndX,scrollEndY);
   mScrollHandler.submit();
-  for (  GestureListener listener : mGestureListeners) {
-    listener.onDrag(scrollEndX,scrollEndY);
+  ZoomPanListener.State state=mIsDragging ? ZoomPanListener.State.PROGRESS : ZoomPanListener.State.STARTED;
+  if (!mIsDragging) {
+    mIsDragging=true;
   }
   for (  ZoomPanListener listener : mZoomPanListeners) {
-    listener.onScrollChanged(scrollEndX,scrollEndY);
-    listener.onZoomPanEvent();
+    listener.onPan(scrollEndX,scrollEndY,ZoomPanListener.State.STARTED);
   }
   return true;
 }

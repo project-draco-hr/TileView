@@ -11,6 +11,5 @@
   detailManager.addDetailLevelEventListener(detailLevelEventListener);
   tileManager.setTileRenderListener(renderListener);
   addZoomPanListener(zoomPanListener);
-  addGestureListener(gestureListener);
   requestRender();
 }

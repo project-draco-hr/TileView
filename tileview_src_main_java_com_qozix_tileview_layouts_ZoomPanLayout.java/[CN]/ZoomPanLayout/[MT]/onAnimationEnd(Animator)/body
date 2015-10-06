@@ -1,0 +1,6 @@
+{
+  mIsTweening=false;
+  for (  ZoomPanListener listener : mZoomPanListeners) {
+    listener.onZoom(mScale,startFocusX,startFocusY,ZoomPanListener.State.COMPLETE);
+  }
+}
