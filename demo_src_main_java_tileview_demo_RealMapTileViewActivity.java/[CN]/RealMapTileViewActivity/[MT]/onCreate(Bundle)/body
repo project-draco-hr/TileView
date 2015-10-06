@@ -1,13 +1,12 @@
 {
   super.onCreate(savedInstanceState);
   TileView tileView=getTileView();
-  tileView.setSize(17934,13452);
+  tileView.setSize(17934 / 2,13452 / 2);
   tileView.setBackgroundColor(0xFFe7e7e7);
-  tileView.addDetailLevel(0.0625f,"tiles/map/phi-62500-%d_%d.jpg");
-  tileView.addDetailLevel(0.1250f,"tiles/map/phi-125000-%d_%d.jpg");
-  tileView.addDetailLevel(0.2500f,"tiles/map/phi-250000-%d_%d.jpg");
-  tileView.addDetailLevel(0.5000f,"tiles/map/phi-500000-%d_%d.jpg");
-  tileView.addDetailLevel(1.0000f,"tiles/map/phi-1000000-%d_%d.jpg");
+  tileView.addDetailLevel(0.1250f,"tiles/map/phi-62500-%d_%d.jpg");
+  tileView.addDetailLevel(0.2500f,"tiles/map/phi-125000-%d_%d.jpg");
+  tileView.addDetailLevel(0.5000f,"tiles/map/phi-250000-%d_%d.jpg");
+  tileView.addDetailLevel(1.0000f,"tiles/map/phi-500000-%d_%d.jpg");
   tileView.setMarkerAnchorPoints(-0.5f,-1.0f);
   tileView.defineRelativeBounds(NORTH_WEST_LONGITUDE,NORTH_WEST_LATITUDE,SOUTH_EAST_LONGITUDE,SOUTH_EAST_LATITUDE);
   Paint paint=tileView.getPathPaint();

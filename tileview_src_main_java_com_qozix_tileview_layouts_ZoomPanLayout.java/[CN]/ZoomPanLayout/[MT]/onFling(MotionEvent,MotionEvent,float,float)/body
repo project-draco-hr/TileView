@@ -3,7 +3,6 @@
   mScroller.fling(getScrollX(),getScrollY(),(int)-velocityX,(int)-velocityY,0,getLimitX(),0,getLimitY());
   for (  GestureListener listener : mGestureListeners) {
     listener.onFling(getScrollX(),getScrollY(),mScroller.getFinalX(),mScroller.getFinalY());
-    ViewCompat.postInvalidateOnAnimation(this);
   }
   return true;
 }

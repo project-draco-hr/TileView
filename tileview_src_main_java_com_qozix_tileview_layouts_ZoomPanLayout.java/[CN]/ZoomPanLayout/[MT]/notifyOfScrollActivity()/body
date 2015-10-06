@@ -6,7 +6,7 @@
   int y=getScrollY();
   if (x == lastRecordedFlingX && y == lastRecordedFlingY) {
     Log.d("TileView","complete");
-    handleScrollerAction();
+    handleScrollerComplete();
   }
  else {
     Log.d("TileView","movement, x=" + x + ", y="+ y+ ", lastRecordedX="+ lastRecordedFlingX+ ", lastRecordedY="+ lastRecordedFlingY);

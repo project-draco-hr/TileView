@@ -6,7 +6,7 @@
     int destinationY=constrainY(mScroller.getCurrY());
     if (currentX != destinationX || currentY != destinationY) {
       scrollTo(destinationX,destinationY);
-      dispatchScrollActionNotification();
+      notifyOfScrollActivity();
       Log.d("TileView","scrollTo called in computeScroll");
     }
   }

@@ -2,8 +2,6 @@
   int scrollEndX=(int)(getScrollX() + distanceX);
   int scrollEndY=(int)(getScrollY() + distanceY);
   scrollTo(scrollEndX,scrollEndY);
-  dispatchScrollActionNotification();
-  invalidate();
   for (  GestureListener listener : mGestureListeners) {
     listener.onDrag(scrollEndX,scrollEndY);
   }
