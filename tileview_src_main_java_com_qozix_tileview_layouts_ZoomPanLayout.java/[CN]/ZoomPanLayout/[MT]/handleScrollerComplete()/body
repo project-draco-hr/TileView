@@ -4,13 +4,11 @@
   for (  GestureListener listener : mGestureListeners) {
     listener.onScrollComplete(x,y);
   }
-  Log.d("TileView","onScrollComplete just fired");
   if (mIsBeingFlung) {
     mIsBeingFlung=false;
     for (    GestureListener listener : mGestureListeners) {
       listener.onFlingComplete(x,y);
     }
-    Log.d("TileView","onFlingComplete just fired");
   }
   invalidate();
 }

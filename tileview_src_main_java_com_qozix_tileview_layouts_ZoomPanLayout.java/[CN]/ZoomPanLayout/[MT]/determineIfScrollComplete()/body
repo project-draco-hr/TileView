@@ -1,0 +1,8 @@
+{
+  int x=getScrollX();
+  int y=getScrollY();
+  if (mIsBeingFlung) {
+    return x == flingFinalX && y == flingFinalY;
+  }
+  return x == lastRecordedFlingX && y == lastRecordedFlingY;
+}

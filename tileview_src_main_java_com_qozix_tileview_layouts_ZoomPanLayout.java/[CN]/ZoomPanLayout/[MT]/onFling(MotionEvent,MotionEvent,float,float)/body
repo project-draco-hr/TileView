@@ -1,8 +1,10 @@
 {
   mIsBeingFlung=true;
   mScroller.fling(getScrollX(),getScrollY(),(int)-velocityX,(int)-velocityY,0,getLimitX(),0,getLimitY());
+  flingFinalX=mScroller.getFinalX();
+  flingFinalY=mScroller.getFinalY();
   for (  GestureListener listener : mGestureListeners) {
-    listener.onFling(getScrollX(),getScrollY(),mScroller.getFinalX(),mScroller.getFinalY());
+    listener.onFling(getScrollX(),getScrollY(),flingFinalX,flingFinalY);
   }
   return true;
 }

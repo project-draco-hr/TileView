@@ -4,12 +4,11 @@
   }
   int x=getScrollX();
   int y=getScrollY();
-  if (x == lastRecordedFlingX && y == lastRecordedFlingY) {
-    Log.d("TileView","complete");
+  if (determineIfScrollComplete()) {
+    mIsBeingFlung=false;
     handleScrollerComplete();
   }
  else {
-    Log.d("TileView","movement, x=" + x + ", y="+ y+ ", lastRecordedX="+ lastRecordedFlingX+ ", lastRecordedY="+ lastRecordedFlingY);
     lastRecordedFlingX=x;
     lastRecordedFlingY=y;
     mScrollActionHandler.sendEmptyMessageDelayed(0,FLYWHEEL_TIMEOUT);
