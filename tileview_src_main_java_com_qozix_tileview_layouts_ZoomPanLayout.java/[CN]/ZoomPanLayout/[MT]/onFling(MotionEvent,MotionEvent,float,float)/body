@@ -6,5 +6,6 @@
   for (  GestureListener listener : mGestureListeners) {
     listener.onFling(getScrollX(),getScrollY(),flingFinalX,flingFinalY);
   }
+  determineIfFlingComplete();
   return true;
 }

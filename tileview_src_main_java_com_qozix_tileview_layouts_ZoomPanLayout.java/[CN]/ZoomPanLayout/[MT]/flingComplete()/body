@@ -1,11 +1,8 @@
 {
-  int x=getScrollX();
-  int y=getScrollY();
-  for (  GestureListener listener : mGestureListeners) {
-    listener.onScrollComplete(x,y);
-  }
   if (mIsBeingFlung) {
     mIsBeingFlung=false;
+    int x=getScrollX();
+    int y=getScrollY();
     for (    GestureListener listener : mGestureListeners) {
       listener.onFlingComplete(x,y);
     }

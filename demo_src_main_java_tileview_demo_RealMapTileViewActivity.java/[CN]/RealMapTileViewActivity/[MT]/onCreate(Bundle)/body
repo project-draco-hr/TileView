@@ -22,14 +22,5 @@
     tileView.addMarker(marker,point[0],point[1]);
   }
   tileView.setScale(0.3f);
-  LinearLayout linearLayout=new LinearLayout(this);
-  linearLayout.setOrientation(LinearLayout.VERTICAL);
-  View spacer=new View(this);
-  LayoutParams spacerLayoutParams=new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT);
-  spacerLayoutParams.weight=1;
-  linearLayout.addView(spacer,spacerLayoutParams);
-  LayoutParams tileViewLayoutParams=new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT);
-  tileViewLayoutParams.weight=1;
-  linearLayout.addView(tileView,tileViewLayoutParams);
-  setContentView(linearLayout);
+  setContentView(tileView);
 }

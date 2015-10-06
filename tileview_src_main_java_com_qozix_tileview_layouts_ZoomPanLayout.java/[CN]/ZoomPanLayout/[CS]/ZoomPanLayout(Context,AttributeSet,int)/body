@@ -1,7 +1,8 @@
 {
   super(context,attrs,defStyleAttr);
   setWillNotDraw(false);
-  mScrollActionHandler=new ScrollActionHandler(this);
+  mFlingHandler=new FlingHandler(this);
+  mScrollHandler=new ScrollHandler(this);
   mScroller=new Scroller(context);
   mScaleGestureDetector=new ScaleGestureDetector(context,this);
   mGestureDetector=new GestureDetector(context,this);

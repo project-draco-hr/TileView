@@ -1,4 +1,5 @@
 {
+  Log.d("TileView","ZoomPanLayout.onScrollChanged");
   for (  ZoomPanListener listener : mZoomPanListeners) {
     listener.onScrollChanged(l,t);
   }

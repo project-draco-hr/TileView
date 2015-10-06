@@ -1,0 +1,5 @@
+{
+  Log.d("TileView","submit");
+  clear();
+  sendEmptyMessageDelayed(MESSAGE,FLYWHEEL_TIMEOUT);
+}
