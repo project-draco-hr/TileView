@@ -1,6 +1,7 @@
 {
   if (!mScroller.isFinished()) {
     mScroller.abortAnimation();
+    mScrollActionHandler.clear();
   }
   return true;
 }

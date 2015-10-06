@@ -1,6 +1,0 @@
-{
-  ZoomPanLayout zoomPanLayout=mZoomPanLayoutWeakReference.get();
-  if (zoomPanLayout != null) {
-    zoomPanLayout.determineIfFlingComplete();
-  }
-}

@@ -1,0 +1,8 @@
+{
+  if (mValueAnimator == null) {
+    mValueAnimator=ValueAnimator.ofFloat(0,1);
+    mValueAnimator.addListener(this);
+    mValueAnimator.addUpdateListener(this);
+  }
+  return mValueAnimator;
+}

@@ -1,6 +1,0 @@
-{
-  Log.d("TileView","clear");
-  if (hasMessages(MESSAGE)) {
-    removeMessages(MESSAGE);
-  }
-}

@@ -1,6 +1,4 @@
 {
-  mIsTweening=true;
-  for (  ZoomPanListener listener : mZoomPanListeners) {
-    listener.onZoom(mScale,startFocusX,startFocusY,ZoomPanListener.State.STARTED);
-  }
+  mIsScaling=true;
+  broadcastProgrammaticZoomBegin(mScale,startFocusX,startFocusY);
 }

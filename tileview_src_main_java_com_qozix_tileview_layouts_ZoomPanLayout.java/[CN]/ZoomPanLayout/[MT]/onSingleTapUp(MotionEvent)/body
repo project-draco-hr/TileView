@@ -1,9 +1,7 @@
 {
   if (mIsDragging) {
     mIsDragging=false;
-    for (    ZoomPanListener listener : mZoomPanListeners) {
-      listener.onPan(getScrollX(),getScrollY(),ZoomPanListener.State.COMPLETE);
-    }
+    broadcastDragEnd(getScrollX(),getScrollY());
   }
   return true;
 }

@@ -1,4 +1,4 @@
 {
   super();
-  reference=new WeakReference<TileManager>(tm);
+  mTileManagerWeakReference=new WeakReference<TileManager>(tileManager);
 }

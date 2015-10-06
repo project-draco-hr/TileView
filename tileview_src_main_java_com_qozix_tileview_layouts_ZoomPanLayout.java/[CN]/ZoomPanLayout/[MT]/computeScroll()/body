@@ -6,10 +6,13 @@
     int endY=constrainY(mScroller.getCurrY());
     if (startX != endX || startY != endY) {
       scrollTo(endX,endY);
-      for (      ZoomPanListener listener : mZoomPanListeners) {
-        listener.onPan(endX,endY,ZoomPanListener.State.PROGRESS);
+      if (mIsFlinging) {
+        broadcastFlingUpdate(endX,endY);
       }
+ else       if (mIsSliding) {
+        broadcastProgrammaticPanUpdate(endX,endY);
+      }
+      startWatchingScrollActions();
     }
   }
-  invalidate();
 }

@@ -1,0 +1,4 @@
+{
+  clear();
+  sendEmptyMessageDelayed(MESSAGE,RENDER_THROTTLE_TIMEOUT);
+}

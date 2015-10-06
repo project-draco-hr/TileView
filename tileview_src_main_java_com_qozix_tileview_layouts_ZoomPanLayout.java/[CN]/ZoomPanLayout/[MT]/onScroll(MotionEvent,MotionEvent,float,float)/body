@@ -2,13 +2,12 @@
   int scrollEndX=(int)(getScrollX() + distanceX);
   int scrollEndY=(int)(getScrollY() + distanceY);
   scrollTo(scrollEndX,scrollEndY);
-  mScrollHandler.submit();
-  ZoomPanListener.State state=mIsDragging ? ZoomPanListener.State.PROGRESS : ZoomPanListener.State.STARTED;
   if (!mIsDragging) {
     mIsDragging=true;
+    broadcastDragBegin(scrollEndX,scrollEndY);
   }
-  for (  ZoomPanListener listener : mZoomPanListeners) {
-    listener.onPan(scrollEndX,scrollEndY,ZoomPanListener.State.STARTED);
+ else {
+    broadcastDragUpdate(scrollEndX,scrollEndY);
   }
   return true;
 }

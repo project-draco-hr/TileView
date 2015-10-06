@@ -1,3 +1,0 @@
-{
-  return getScrollX() != lastRecordedScrollX || getScrollY() != lastRecordedScrollY;
-}

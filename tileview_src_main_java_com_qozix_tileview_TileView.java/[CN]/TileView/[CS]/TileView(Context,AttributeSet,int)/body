@@ -9,7 +9,7 @@
   calloutManager=new CalloutManager(context,detailManager);
   addView(calloutManager);
   detailManager.addDetailLevelEventListener(detailLevelEventListener);
-  tileManager.setTileRenderListener(renderListener);
   addZoomPanListener(zoomPanListener);
+  mRenderThrottleHandler=new RenderThrottleHandler(this);
   requestRender();
 }

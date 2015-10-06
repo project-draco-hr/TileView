@@ -1,0 +1,4 @@
+{
+  clear();
+  sendEmptyMessageDelayed(MESSAGE,FLYWHEEL_TIMEOUT);
+}

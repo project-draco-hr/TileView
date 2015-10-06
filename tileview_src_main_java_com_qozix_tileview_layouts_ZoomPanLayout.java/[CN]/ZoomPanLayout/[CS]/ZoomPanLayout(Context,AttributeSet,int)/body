@@ -2,10 +2,7 @@
   super(context,attrs,defStyleAttr);
   setWillNotDraw(false);
   mScroller=new Scroller(context);
-  mFlingHandler=new FlingHandler(this);
-  mScrollHandler=new ScrollHandler(this);
+  mScrollActionHandler=new ScrollActionHandler(this);
   mScaleGestureDetector=new ScaleGestureDetector(context,this);
   mGestureDetector=new GestureDetector(context,this);
-  mValueAnimator.addListener(this);
-  mValueAnimator.addUpdateListener(this);
 }

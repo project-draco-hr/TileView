@@ -1,0 +1,5 @@
+{
+  super.onScrollChanged(l,t,oldl,oldt);
+  updateViewport();
+  requestThrottledRender();
+}

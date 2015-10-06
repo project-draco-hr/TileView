@@ -2,5 +2,4 @@
   x=constrainX(x);
   y=constrainY(y);
   super.scrollTo(x,y);
-  invalidate();
 }

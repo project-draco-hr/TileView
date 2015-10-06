@@ -1,4 +1,0 @@
-{
-  lastRecordedScrollX=getScrollX();
-  lastRecordedScrollY=getScrollY();
-}

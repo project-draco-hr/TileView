@@ -1,5 +1,0 @@
-{
-  for (  ZoomPanListener listener : mZoomPanListeners) {
-    listener.onPan(getScrollX(),getScrollY(),ZoomPanListener.State.COMPLETE);
-  }
-}

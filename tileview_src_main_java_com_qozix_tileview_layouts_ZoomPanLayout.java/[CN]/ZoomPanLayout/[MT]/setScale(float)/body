@@ -2,12 +2,10 @@
   scale=Math.max(scale,mMinScale);
   scale=Math.min(scale,mMaxScale);
   if (mScale != scale) {
-    float previousScale=mScale;
+    float previous=mScale;
     mScale=scale;
     updateScaledDimensions();
+    onScaleChanged(scale,previous);
     invalidate();
-    for (    ZoomPanListener listener : mZoomPanListeners) {
-      listener.onScaleChanged(mScale,previousScale);
-    }
   }
 }

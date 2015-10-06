@@ -1,0 +1,10 @@
+{
+  int x=mScroller.getFinalX();
+  int y=mScroller.getFinalY();
+  if (mIsFlinging) {
+    broadcastFlingEnd(x,y);
+  }
+ else   if (mIsSliding) {
+    broadcastProgrammaticPanEnd(x,y);
+  }
+}

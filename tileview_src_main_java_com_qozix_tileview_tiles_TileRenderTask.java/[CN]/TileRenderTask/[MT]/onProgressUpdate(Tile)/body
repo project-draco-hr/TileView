@@ -1,5 +1,5 @@
 {
-  TileManager tileManager=reference.get();
+  TileManager tileManager=mTileManagerWeakReference.get();
   if (tileManager != null) {
     if (tileManager.getRenderIsCancelled()) {
       return;
@@ -7,7 +7,7 @@
     if (isCancelled()) {
       return;
     }
-    Tile m=params[0];
-    tileManager.renderIndividualTile(m);
+    Tile tile=params[0];
+    tileManager.renderIndividualTile(tile);
   }
 }

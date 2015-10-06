@@ -2,7 +2,5 @@
   float scale=(float)valueAnimator.getAnimatedValue();
   setScale(scale);
   maintainScrollDuringScaleOperation();
-  for (  ZoomPanListener listener : mZoomPanListeners) {
-    listener.onZoom(scale,startFocusX,startFocusY,ZoomPanListener.State.PROGRESS);
-  }
+  broadcastProgrammaticZoomUpdate(scale,startFocusX,startFocusY);
 }

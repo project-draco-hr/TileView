@@ -1,5 +1,0 @@
-{
-  for (  ZoomPanListener listener : mZoomPanListeners) {
-    listener.onScrollChanged(l,t,oldl,oldt);
-  }
-}

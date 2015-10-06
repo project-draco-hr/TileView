@@ -1,0 +1,4 @@
+{
+  super.onScaleChanged(scale,previous);
+  detailManager.setScale(scale);
+}

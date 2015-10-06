@@ -1,11 +1,6 @@
 {
-  mIsBeingFlung=true;
   mScroller.fling(getScrollX(),getScrollY(),(int)-velocityX,(int)-velocityY,0,getLimitX(),0,getLimitY());
-  flingFinalX=mScroller.getFinalX();
-  flingFinalY=mScroller.getFinalY();
-  for (  ZoomPanListener listener : mZoomPanListeners) {
-    listener.onPan(getScrollX(),getScrollY(),ZoomPanListener.State.STARTED);
-  }
-  determineIfFlingComplete();
+  broadcastFlingBegin(getScrollX(),getScrollY());
+  startWatchingScrollActions();
   return true;
 }

@@ -1,5 +1,5 @@
 {
-  TileManager tileManager=reference.get();
+  TileManager tileManager=mTileManagerWeakReference.get();
   if (tileManager != null) {
     tileManager.onRenderTaskCancelled();
   }

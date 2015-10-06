@@ -1,0 +1,5 @@
+{
+  for (  ZoomPanListener listener : mZoomPanListeners) {
+    listener.onZoomUpdate(scale,focusX,focusY,ZoomPanListener.Origination.PINCH);
+  }
+}

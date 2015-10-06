@@ -1,0 +1,11 @@
+{
+  ZoomPanLayout zoomPanLayout=mZoomPanLayoutWeakReference.get();
+  if (zoomPanLayout != null) {
+    if (zoomPanLayout.getScroller().isFinished()) {
+      zoomPanLayout.onScrollerActionComplete();
+    }
+ else {
+      submit();
+    }
+  }
+}

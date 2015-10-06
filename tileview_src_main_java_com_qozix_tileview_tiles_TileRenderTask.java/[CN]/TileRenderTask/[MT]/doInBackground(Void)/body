@@ -1,9 +1,9 @@
 {
-  TileManager tileManager=reference.get();
+  TileManager tileManager=mTileManagerWeakReference.get();
   if (tileManager != null) {
     LinkedList<Tile> renderList=tileManager.getRenderList();
     for (    Tile tile : renderList) {
-      tileManager=reference.get();
+      tileManager=mTileManagerWeakReference.get();
       if (tileManager == null) {
         return null;
       }

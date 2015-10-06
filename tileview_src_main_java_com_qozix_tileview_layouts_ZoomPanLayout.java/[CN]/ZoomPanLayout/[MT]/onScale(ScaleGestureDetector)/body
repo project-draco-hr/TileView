@@ -2,10 +2,6 @@
   float currentScale=mScale * mScaleGestureDetector.getScaleFactor();
   setScale(currentScale);
   maintainScrollDuringScaleOperation();
-  int focusX=(int)scaleGestureDetector.getFocusX();
-  int focusY=(int)scaleGestureDetector.getFocusY();
-  for (  ZoomPanListener listener : mZoomPanListeners) {
-    listener.onZoom(mScale,focusX,focusY,ZoomPanListener.State.PROGRESS);
-  }
+  broadcastPinchUpdate(mScale,scaleGestureDetector.getFocusX(),scaleGestureDetector.getFocusY());
   return true;
 }

@@ -1,0 +1,5 @@
+{
+  if (hasMessages(MESSAGE)) {
+    removeMessages(MESSAGE);
+  }
+}

@@ -1,2 +1,2 @@
-int wide
-int tall
+int width
+int height
