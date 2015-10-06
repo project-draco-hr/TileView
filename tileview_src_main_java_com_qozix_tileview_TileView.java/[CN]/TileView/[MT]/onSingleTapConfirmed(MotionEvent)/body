@@ -4,5 +4,5 @@
   Point point=new Point(x,y);
   markerManager.processHit(point);
   hotSpotManager.processHit(point);
-  return super.onSingleTapUp(event);
+  return super.onSingleTapConfirmed(event);
 }
