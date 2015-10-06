@@ -1,7 +1,0 @@
-{
-  int x=(int)((mFirstFinger.x + mSecondFinger.x) * 0.5);
-  int y=(int)((mFirstFinger.y + mSecondFinger.y) * 0.5);
-  mPinchStartOffset.set(x,y);
-  mPinchStartScroll.set(getScrollX(),getScrollY());
-  mPinchStartScroll.offset(x,y);
-}

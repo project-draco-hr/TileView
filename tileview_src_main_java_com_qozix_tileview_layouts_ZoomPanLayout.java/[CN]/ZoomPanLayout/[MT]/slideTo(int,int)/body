@@ -1,0 +1,8 @@
+{
+  int startX=getScrollX();
+  int startY=getScrollY();
+  int dx=x - startX;
+  int dy=y - startY;
+  mScroller.startScroll(startX,startY,dx,dy,SLIDE_DURATION);
+  dispatchScrollActionNotification();
+}

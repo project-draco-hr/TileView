@@ -1,0 +1,13 @@
+{
+  float focusX=scaleGestureDetector.getFocusX();
+  float focusY=scaleGestureDetector.getFocusY();
+  saveScaleOrigination(focusX,focusY);
+  for (  GestureListener listener : mGestureListeners) {
+    listener.onPinchStart((int)focusX,(int)focusY);
+  }
+  for (  ZoomPanListener listener : mZoomPanListeners) {
+    listener.onZoomStart(mScale);
+    listener.onZoomPanEvent();
+  }
+  return true;
+}

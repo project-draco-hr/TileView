@@ -1,0 +1,8 @@
+{
+  if (mIsTweening) {
+    return;
+  }
+  mValueAnimator.setFloatValues(mScale,destination);
+  mValueAnimator.setDuration(duration);
+  mValueAnimator.start();
+}

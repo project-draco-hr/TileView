@@ -1,3 +1,4 @@
 {
   positionManager.setBounds(left,top,right,bottom);
+  mIsUsingRelativePositioning=true;
 }

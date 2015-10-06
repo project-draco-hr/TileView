@@ -1,5 +1,5 @@
 {
   Point point=positionManager.translate(x,y,getScale());
-  scrollToAndCenter(point);
+  scrollToAndCenter(point.x,point.y);
   requestRender();
 }

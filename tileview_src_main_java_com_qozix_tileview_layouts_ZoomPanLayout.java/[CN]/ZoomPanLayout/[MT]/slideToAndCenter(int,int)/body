@@ -1,0 +1,3 @@
+{
+  slideTo(x - getHalfWidth(),y - getHalfHeight());
+}

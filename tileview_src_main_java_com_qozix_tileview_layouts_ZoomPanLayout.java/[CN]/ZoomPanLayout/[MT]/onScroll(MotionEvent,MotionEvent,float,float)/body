@@ -1,0 +1,15 @@
+{
+  int scrollEndX=(int)(getScrollX() + distanceX);
+  int scrollEndY=(int)(getScrollY() + distanceY);
+  scrollTo(scrollEndX,scrollEndY);
+  dispatchScrollActionNotification();
+  invalidate();
+  for (  GestureListener listener : mGestureListeners) {
+    listener.onDrag(scrollEndX,scrollEndY);
+  }
+  for (  ZoomPanListener listener : mZoomPanListeners) {
+    listener.onScrollChanged(scrollEndX,scrollEndY);
+    listener.onZoomPanEvent();
+  }
+  return true;
+}

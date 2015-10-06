@@ -1,0 +1,4 @@
+{
+  x=initialX;
+  y=initialY;
+}

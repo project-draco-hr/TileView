@@ -1,4 +1,4 @@
 {
   Point point=positionManager.translate(x,y,getScale());
-  slideToPoint(point);
+  slideTo(point.x,point.y);
 }

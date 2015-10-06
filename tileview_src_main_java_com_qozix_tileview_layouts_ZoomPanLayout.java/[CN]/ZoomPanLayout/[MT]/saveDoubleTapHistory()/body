@@ -1,5 +1,0 @@
-{
-  mDoubleTapStartOffset.set(mFirstFinger.x,mFirstFinger.y);
-  mDoubleTapStartScroll.set(getScrollX(),getScrollY());
-  mDoubleTapStartScroll.offset(mDoubleTapStartOffset.x,mDoubleTapStartOffset.y);
-}

@@ -1,3 +1,0 @@
-{
-  mDoubleTapHistory.set(mFirstFinger.x,mFirstFinger.y);
-}

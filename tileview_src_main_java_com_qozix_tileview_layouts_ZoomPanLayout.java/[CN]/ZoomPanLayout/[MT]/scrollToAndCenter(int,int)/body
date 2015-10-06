@@ -1,0 +1,3 @@
+{
+  scrollTo(x - getHalfWidth(),y - getHalfHeight());
+}

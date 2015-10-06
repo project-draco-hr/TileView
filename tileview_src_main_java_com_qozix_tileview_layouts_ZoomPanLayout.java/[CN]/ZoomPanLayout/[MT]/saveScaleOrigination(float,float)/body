@@ -1,0 +1,7 @@
+{
+  mHistoricalScale=mScale;
+  startFocusX=focusX;
+  startFocusY=focusY;
+  startScaleScrollX=(int)(getScrollX() + focusX);
+  startScaleScrollY=(int)(getScrollY() + focusY);
+}

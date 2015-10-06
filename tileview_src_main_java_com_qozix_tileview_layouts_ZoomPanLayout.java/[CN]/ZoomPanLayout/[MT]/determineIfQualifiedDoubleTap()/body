@@ -1,6 +1,0 @@
-{
-  long now=System.currentTimeMillis();
-  long ellapsed=now - mLastTouchedAt;
-  mLastTouchedAt=now;
-  return (ellapsed <= DOUBLE_TAP_TIME_THRESHOLD) && (Math.abs(mFirstFinger.x - mDoubleTapHistory.x) <= SINGLE_TAP_DISTANCE_THRESHOLD) && (Math.abs(mFirstFinger.y - mDoubleTapHistory.y) <= SINGLE_TAP_DISTANCE_THRESHOLD);
-}

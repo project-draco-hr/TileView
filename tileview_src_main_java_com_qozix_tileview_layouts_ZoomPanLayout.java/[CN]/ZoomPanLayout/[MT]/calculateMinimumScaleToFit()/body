@@ -1,8 +1,8 @@
 {
   if (mShouldScaleToFit) {
-    double minimumScaleX=getWidth() / (double)mBaseWidth;
-    double minimumScaleY=getHeight() / (double)mBaseHeight;
-    double recalculatedMinScale=Math.max(minimumScaleX,minimumScaleY);
+    float minimumScaleX=getWidth() / (float)mBaseWidth;
+    float minimumScaleY=getHeight() / (float)mBaseHeight;
+    float recalculatedMinScale=Math.max(minimumScaleX,minimumScaleY);
     if (recalculatedMinScale != mMinScale) {
       mMinScale=recalculatedMinScale;
       setScale(mScale);

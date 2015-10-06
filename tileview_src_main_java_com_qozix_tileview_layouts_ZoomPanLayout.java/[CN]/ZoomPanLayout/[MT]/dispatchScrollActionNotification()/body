@@ -2,5 +2,16 @@
   if (mScrollActionHandler.hasMessages(0)) {
     mScrollActionHandler.removeMessages(0);
   }
-  mScrollActionHandler.sendEmptyMessageDelayed(0,100);
+  int x=getScrollX();
+  int y=getScrollY();
+  if (x == lastRecordedFlingX && y == lastRecordedFlingY) {
+    Log.d("TileView","complete");
+    handleScrollerAction();
+  }
+ else {
+    Log.d("TileView","movement, x=" + x + ", y="+ y+ ", lastRecordedX="+ lastRecordedFlingX+ ", lastRecordedY="+ lastRecordedFlingY);
+    lastRecordedFlingX=x;
+    lastRecordedFlingY=y;
+    mScrollActionHandler.sendEmptyMessageDelayed(0,FLYWHEEL_TIMEOUT);
+  }
 }

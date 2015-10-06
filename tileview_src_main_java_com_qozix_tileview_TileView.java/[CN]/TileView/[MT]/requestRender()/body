@@ -1,3 +1,4 @@
 {
+  Log.d("TileView","requestRender");
   tileManager.requestRender();
 }

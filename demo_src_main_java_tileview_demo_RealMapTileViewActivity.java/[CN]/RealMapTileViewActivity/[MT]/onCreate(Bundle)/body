@@ -32,5 +32,5 @@
   x=x / size;
   y=y / size;
   frameTo(x,y);
-  tileView.setScale(0.3);
+  tileView.setScale(0.3f);
 }

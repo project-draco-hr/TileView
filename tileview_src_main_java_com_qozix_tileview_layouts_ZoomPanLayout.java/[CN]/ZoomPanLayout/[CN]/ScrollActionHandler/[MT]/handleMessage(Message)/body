@@ -1,6 +1,6 @@
 {
-  ZoomPanLayout zoomPanLayout=reference.get();
+  ZoomPanLayout zoomPanLayout=mZoomPanLayoutWeakReference.get();
   if (zoomPanLayout != null) {
-    zoomPanLayout.handleScrollerAction();
+    zoomPanLayout.dispatchScrollActionNotification();
   }
 }

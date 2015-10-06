@@ -1,0 +1,7 @@
+{
+  if (mIsTweening) {
+    return;
+  }
+  saveScaleOrigination(getHalfWidth(),getHalfHeight());
+  startSmoothScaleTo(destination,duration);
+}

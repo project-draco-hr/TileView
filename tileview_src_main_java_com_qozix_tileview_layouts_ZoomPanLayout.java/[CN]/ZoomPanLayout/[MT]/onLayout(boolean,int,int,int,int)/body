@@ -3,7 +3,6 @@
     View child=getChildAt(i);
     child.layout(0,0,mScaledWidth,mScaledHeight);
   }
-  constrainScroll();
   if (changed) {
     calculateMinimumScaleToFit();
   }

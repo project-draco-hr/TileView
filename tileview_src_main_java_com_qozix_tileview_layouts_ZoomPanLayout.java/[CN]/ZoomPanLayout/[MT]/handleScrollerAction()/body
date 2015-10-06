@@ -1,14 +1,16 @@
 {
-  Point point=new Point();
-  point.x=getScrollX();
-  point.y=getScrollY();
+  int x=getScrollX();
+  int y=getScrollY();
   for (  GestureListener listener : mGestureListeners) {
-    listener.onScrollComplete(point);
+    listener.onScrollComplete(x,y);
   }
+  Log.d("TileView","onScrollComplete just fired");
   if (mIsBeingFlung) {
     mIsBeingFlung=false;
     for (    GestureListener listener : mGestureListeners) {
-      listener.onFlingComplete(point);
+      listener.onFlingComplete(x,y);
     }
+    Log.d("TileView","onFlingComplete just fired");
   }
+  invalidate();
 }

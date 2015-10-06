@@ -1,3 +1,4 @@
 {
+  mIsUsingRelativePositioning=false;
   positionManager.unsetBounds();
 }

@@ -1,0 +1,11 @@
+{
+  float currentScale=mScale * mScaleGestureDetector.getScaleFactor();
+  setScale(currentScale);
+  maintainScrollDuringScaleOperation();
+  int focusX=(int)scaleGestureDetector.getFocusX();
+  int focusY=(int)scaleGestureDetector.getFocusY();
+  for (  GestureListener listener : mGestureListeners) {
+    listener.onPinch(focusX,focusY);
+  }
+  return true;
+}

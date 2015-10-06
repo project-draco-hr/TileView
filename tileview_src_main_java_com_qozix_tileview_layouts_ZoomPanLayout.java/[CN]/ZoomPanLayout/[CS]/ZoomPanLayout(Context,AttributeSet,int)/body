@@ -3,4 +3,6 @@
   setWillNotDraw(false);
   mScrollActionHandler=new ScrollActionHandler(this);
   mScroller=new Scroller(context);
+  mScaleGestureDetector=new ScaleGestureDetector(context,this);
+  mGestureDetector=new GestureDetector(context,this);
 }

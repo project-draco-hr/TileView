@@ -1,4 +1,4 @@
 {
-  mScaledWidth=(int)(mBaseWidth * this.mScale);
-  mScaledHeight=(int)(mBaseHeight * this.mScale);
+  mScaledWidth=(int)(mBaseWidth * mScale);
+  mScaledHeight=(int)(mBaseHeight * mScale);
 }

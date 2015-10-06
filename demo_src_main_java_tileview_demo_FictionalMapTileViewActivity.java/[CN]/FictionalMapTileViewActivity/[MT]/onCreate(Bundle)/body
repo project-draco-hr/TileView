@@ -14,5 +14,5 @@
   placeMarker(R.drawable.fantasy_rohan,2108,1832);
   placeMarker(R.drawable.fantasy_troll,3267,1896);
   frameTo(3267,1896);
-  tileView.setScale(0.5);
+  tileView.setScale(0.5f);
 }
