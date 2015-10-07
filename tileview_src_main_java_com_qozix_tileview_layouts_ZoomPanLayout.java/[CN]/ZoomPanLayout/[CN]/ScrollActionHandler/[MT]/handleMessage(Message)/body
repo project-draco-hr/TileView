@@ -1,10 +1,16 @@
 {
   ZoomPanLayout zoomPanLayout=mZoomPanLayoutWeakReference.get();
   if (zoomPanLayout != null) {
-    if (zoomPanLayout.getScroller().isFinished()) {
+    Log.d("TileView","test if scroll action is complete");
+    if (zoomPanLayout.isScrollActionComplete()) {
+      Log.d("TileView","action is complete, set flinging false");
       zoomPanLayout.onScrollerActionComplete();
     }
  else {
+      ZoomPanLayout z=zoomPanLayout;
+      Scroller s=zoomPanLayout.getScroller();
+      Log.d("TileView","action is not complete: scroller=" + s.isFinished() + ", flinging="+ z.mIsFlinging+ ", sliding"+ z.mIsSliding);
+      Log.d("TileView","finalX=" + z.flingFinalX + ", currX="+ z.getScrollX()+ "finalY="+ z.flingFinalY+ ", currY="+ z.getScrollY());
       submit();
     }
   }

@@ -1,5 +1,6 @@
 {
-  if (mScroller.computeScrollOffset()) {
+  Log.d("TileView","computeScroll, scroller.isFinished=" + mScroller.isFinished());
+  if (!mScroller.isFinished() && mScroller.computeScrollOffset()) {
     int startX=getScrollX();
     int startY=getScrollY();
     int endX=constrainX(mScroller.getCurrX());
@@ -12,7 +13,9 @@
  else       if (mIsSliding) {
         broadcastProgrammaticPanUpdate(endX,endY);
       }
-      startWatchingScrollActions();
+      if (!isWatchingForScrollActionComplete) {
+        startWatchingScrollActions();
+      }
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   TileView tileView=mTileViewWeakReference.get();
   if (tileView != null) {
-    tileView.requestRender();
+    tileView.requestSafeRender();
   }
 }

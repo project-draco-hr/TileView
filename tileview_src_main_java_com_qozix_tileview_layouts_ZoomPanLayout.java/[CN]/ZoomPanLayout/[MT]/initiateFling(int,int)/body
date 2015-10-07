@@ -1,0 +1,9 @@
+{
+  mScroller.fling(getScrollX(),getScrollY(),velocityX,velocityY,0,getLimitX(),0,getLimitY());
+  flingFinalX=constrainX(mScroller.getFinalX());
+  flingFinalY=constrainY(mScroller.getFinalY());
+  mIsFlinging=true;
+  broadcastFlingBegin(getScrollX(),getScrollY());
+  ViewCompat.postInvalidateOnAnimation(this);
+  Log.d("TileView","fling started");
+}

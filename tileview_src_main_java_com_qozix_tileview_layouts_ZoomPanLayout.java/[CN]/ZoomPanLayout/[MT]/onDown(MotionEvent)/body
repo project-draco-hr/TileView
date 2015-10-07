@@ -1,7 +1,7 @@
 {
   if (!mScroller.isFinished()) {
-    mScroller.abortAnimation();
-    mScrollActionHandler.clear();
+    concludeFling();
+    concludeSlide();
   }
   return true;
 }

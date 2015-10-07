@@ -1,0 +1,11 @@
+{
+  if (mScroller.isFinished()) {
+    return true;
+  }
+  boolean atEnd=getScrollX() == flingFinalX && getScrollY() == flingFinalY;
+  if (atEnd) {
+    mScroller.forceFinished(true);
+    return true;
+  }
+  return false;
+}

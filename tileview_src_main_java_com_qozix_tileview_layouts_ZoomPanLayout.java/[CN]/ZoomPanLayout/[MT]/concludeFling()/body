@@ -1,0 +1,7 @@
+{
+  Log.d("TileView","fling ends");
+  mIsFlinging=false;
+  mScroller.forceFinished(true);
+  mScrollActionHandler.clear();
+  broadcastFlingEnd(getScrollX(),getScrollY());
+}
