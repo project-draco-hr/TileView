@@ -1,5 +1,6 @@
 {
   boolean gestureIntercept=mGestureDetector.onTouchEvent(event);
   boolean scaleIntercept=mScaleGestureDetector.onTouchEvent(event);
-  return gestureIntercept || scaleIntercept || super.onTouchEvent(event);
+  boolean touchIntercept=mTouchUpGestureDetector.onTouchEvent(event);
+  return gestureIntercept || scaleIntercept || touchIntercept|| super.onTouchEvent(event);
 }

@@ -1,6 +1,7 @@
 {
   mScroller.fling(getScrollX(),getScrollY(),(int)-velocityX,(int)-velocityY,0,getLimitX(),0,getLimitY());
-  broadcastFlingBegin(getScrollX(),getScrollY());
+  mIsFlinging=true;
   startWatchingScrollActions();
+  broadcastFlingBegin(getScrollX(),getScrollY());
   return true;
 }

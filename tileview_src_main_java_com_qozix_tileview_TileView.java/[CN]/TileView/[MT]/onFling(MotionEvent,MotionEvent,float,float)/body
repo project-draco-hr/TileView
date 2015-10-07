@@ -1,4 +1,0 @@
-{
-  suppressRender();
-  return super.onFling(event1,event2,velocityX,velocityY);
-}

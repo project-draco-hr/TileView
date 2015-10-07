@@ -1,0 +1,8 @@
+{
+  if (event.getActionMasked() == MotionEvent.ACTION_UP) {
+    if (mOnTouchUpListener != null) {
+      return mOnTouchUpListener.onTouchUp();
+    }
+  }
+  return true;
+}
