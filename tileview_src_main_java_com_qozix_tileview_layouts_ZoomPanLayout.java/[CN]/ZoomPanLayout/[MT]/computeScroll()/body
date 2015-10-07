@@ -1,6 +1,5 @@
 {
-  Log.d("TileView","computeScroll, scroller.isFinished=" + mScroller.isFinished());
-  if (!mScroller.isFinished() && mScroller.computeScrollOffset()) {
+  if (mScroller.computeScrollOffset()) {
     int startX=getScrollX();
     int startY=getScrollY();
     int endX=constrainX(mScroller.getCurrX());
@@ -13,9 +12,9 @@
  else       if (mIsSliding) {
         broadcastProgrammaticPanUpdate(endX,endY);
       }
-      if (!isWatchingForScrollActionComplete) {
-        startWatchingScrollActions();
-      }
+    }
+    if (!mScroller.isFinished()) {
+      ViewCompat.postInvalidateOnAnimation(this);
     }
   }
 }

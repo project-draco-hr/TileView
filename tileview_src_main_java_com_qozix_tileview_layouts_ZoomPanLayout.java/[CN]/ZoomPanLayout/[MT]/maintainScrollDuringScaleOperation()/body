@@ -1,6 +1,6 @@
 {
   double deltaScale=mScale / mHistoricalScale;
-  int x=(int)((startScaleScrollX * deltaScale) - startFocusX);
-  int y=(int)((startScaleScrollY * deltaScale) - startFocusY);
+  int x=(int)((mStartScaleScrollX * deltaScale) - mStartFocusX);
+  int y=(int)((mStartScaleScrollY * deltaScale) - mStartFocusY);
   scrollTo(x,y);
 }

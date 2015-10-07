@@ -2,8 +2,8 @@
   if (mIsFlinging) {
     concludeFling();
   }
- else   if (mIsSliding) {
+  if (mIsSliding) {
     concludeSlide();
   }
-  isWatchingForScrollActionComplete=false;
+  mScrollActionHandler.clear();
 }

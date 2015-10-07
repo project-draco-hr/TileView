@@ -1,4 +1,3 @@
 {
   mScrollActionHandler.submit();
-  isWatchingForScrollActionComplete=true;
 }

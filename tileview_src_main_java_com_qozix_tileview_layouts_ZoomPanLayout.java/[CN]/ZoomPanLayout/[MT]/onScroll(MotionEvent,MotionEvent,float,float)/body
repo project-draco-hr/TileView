@@ -1,6 +1,6 @@
 {
-  int scrollEndX=(int)(getScrollX() + distanceX);
-  int scrollEndY=(int)(getScrollY() + distanceY);
+  int scrollEndX=getScrollX() + (int)distanceX;
+  int scrollEndY=getScrollY() + (int)distanceY;
   scrollTo(scrollEndX,scrollEndY);
   if (!mIsDragging) {
     mIsDragging=true;

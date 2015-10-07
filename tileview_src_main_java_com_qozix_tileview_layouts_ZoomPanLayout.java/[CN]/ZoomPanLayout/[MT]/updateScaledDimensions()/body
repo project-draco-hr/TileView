@@ -1,4 +1,4 @@
 {
-  mScaledWidth=(int)(mBaseWidth * mScale);
-  mScaledHeight=(int)(mBaseHeight * mScale);
+  mScaledWidth=(int)((mBaseWidth * mScale) + 0.5);
+  mScaledHeight=(int)((mBaseHeight * mScale) + 0.5);
 }
