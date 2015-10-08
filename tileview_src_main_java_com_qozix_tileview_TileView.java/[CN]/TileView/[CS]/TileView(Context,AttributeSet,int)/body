@@ -8,8 +8,9 @@
   addView(markerManager);
   calloutManager=new CalloutManager(context,detailManager);
   addView(calloutManager);
-  detailManager.addDetailLevelEventListener(detailLevelEventListener);
-  addZoomPanListener(zoomPanListener);
+  detailManager.addDetailLevelEventListener(this);
+  tileManager.setTileRenderListener(this);
+  addZoomPanListener(this);
   mRenderThrottleHandler=new RenderThrottleHandler(this);
   requestRender();
 }
