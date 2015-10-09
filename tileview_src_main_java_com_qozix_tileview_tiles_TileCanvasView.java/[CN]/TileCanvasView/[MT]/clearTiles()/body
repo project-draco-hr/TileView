@@ -1,0 +1,6 @@
+{
+  List<Tile> condemned=(List<Tile>)mTiles.clone();
+  for (  Tile tile : condemned) {
+    tile.destroy();
+  }
+}

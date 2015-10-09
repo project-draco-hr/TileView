@@ -5,10 +5,11 @@
     m.destroy();
     alreadyRendered.remove(m);
   }
-  for (  ScalingLayout tileGroup : tileGroups.values()) {
+  for (  TileCanvasView tileGroup : tileGroups.values()) {
     if (currentTileGroup == tileGroup) {
       continue;
     }
     tileGroup.setVisibility(View.GONE);
+    tileGroup.clearTiles();
   }
 }

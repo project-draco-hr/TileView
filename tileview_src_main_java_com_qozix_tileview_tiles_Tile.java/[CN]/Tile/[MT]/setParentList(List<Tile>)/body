@@ -1,0 +1,13 @@
+{
+  if (mParentList != null) {
+    if (mParentList.contains(this)) {
+      mParentList.remove(this);
+    }
+  }
+  mParentList=parentList;
+  if (mParentList != null) {
+    if (!mParentList.contains(this)) {
+      mParentList.add(this);
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  tile.setParentList(mTiles);
+  Log.d("TileView","tile count=" + mTiles.size());
+  postInvalidate();
+}

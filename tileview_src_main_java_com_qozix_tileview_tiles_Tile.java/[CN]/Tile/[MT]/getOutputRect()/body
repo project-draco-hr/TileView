@@ -1,0 +1,10 @@
+{
+  if (mOutputRect == null) {
+    mOutputRect=new Rect();
+    mOutputRect.top=getTop();
+    mOutputRect.left=getLeft();
+    mOutputRect.bottom=mOutputRect.top + getHeight();
+    mOutputRect.right=mOutputRect.left + getWidth();
+  }
+  return mOutputRect;
+}

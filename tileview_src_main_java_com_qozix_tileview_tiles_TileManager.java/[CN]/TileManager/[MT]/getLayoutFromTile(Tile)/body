@@ -1,3 +1,0 @@
-{
-  return new FixedLayout.LayoutParams(tile.getWidth(),tile.getHeight(),tile.getLeft(),tile.getTop());
-}

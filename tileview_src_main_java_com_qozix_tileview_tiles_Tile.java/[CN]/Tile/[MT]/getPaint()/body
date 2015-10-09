@@ -1,0 +1,6 @@
+{
+  float rendered=getRendered();
+  int opacity=(int)(rendered * 255);
+  mPaint.setAlpha(opacity);
+  return mPaint;
+}

@@ -1,0 +1,4 @@
+{
+  tile.setParentList(null);
+  postInvalidate();
+}
