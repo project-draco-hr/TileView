@@ -4,6 +4,7 @@
     return tileGroups.get(levelScale);
   }
   TileCanvasView tileGroup=new TileCanvasView(getContext());
+  tileGroup.setTileCanvasDrawListener(this);
   tileGroup.setScale(1 / levelScale);
   tileGroups.put(levelScale,tileGroup);
   addView(tileGroup,new FixedLayout.LayoutParams(detailManager.getWidth(),detailManager.getHeight()));

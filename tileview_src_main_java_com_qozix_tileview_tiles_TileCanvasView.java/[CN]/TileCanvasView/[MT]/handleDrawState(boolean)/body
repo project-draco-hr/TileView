@@ -3,4 +3,9 @@
     Log.d("TileView","dirty, calling invalidate again");
     invalidate();
   }
+ else {
+    if (mTileCanvasDrawListener != null) {
+      mTileCanvasDrawListener.onCleanDrawComplete(this);
+    }
+  }
 }
