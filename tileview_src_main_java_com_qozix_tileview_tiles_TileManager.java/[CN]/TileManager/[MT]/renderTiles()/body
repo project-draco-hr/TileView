@@ -1,4 +1,5 @@
 {
+  Log.d("Tiles","TileManager.renderTiles");
   if (renderIsCancelled) {
     return;
   }

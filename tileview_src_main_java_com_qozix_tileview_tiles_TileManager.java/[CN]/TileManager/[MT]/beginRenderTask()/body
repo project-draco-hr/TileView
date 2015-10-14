@@ -1,4 +1,5 @@
 {
+  Log.d("Tiles","TileManager.beginRenderTask");
   LinkedList<Tile> intersections=detailLevelToRender.getIntersections();
   if (scheduledToRender.equals(intersections)) {
     return;
