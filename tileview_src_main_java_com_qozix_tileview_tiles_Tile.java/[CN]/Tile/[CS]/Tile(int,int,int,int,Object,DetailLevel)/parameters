@@ -3,3 +3,4 @@ int row
 int width
 int height
 Object data
+DetailLevel detailLevel

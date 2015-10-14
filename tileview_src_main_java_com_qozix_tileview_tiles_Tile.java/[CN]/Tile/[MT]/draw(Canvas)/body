@@ -1,0 +1,6 @@
+{
+  if (mBitmap != null) {
+    canvas.drawBitmap(mBitmap,getLeft(),getTop(),getPaint());
+  }
+  return getIsDirty();
+}

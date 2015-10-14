@@ -1,0 +1,6 @@
+{
+  if (dirty) {
+    Log.d("TileView","dirty, calling invalidate again");
+    invalidate();
+  }
+}

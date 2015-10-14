@@ -1,0 +1,7 @@
+{
+  boolean dirty=false;
+  for (  Tile tile : mTiles) {
+    dirty=tile.draw(canvas) || dirty;
+  }
+  return dirty;
+}
