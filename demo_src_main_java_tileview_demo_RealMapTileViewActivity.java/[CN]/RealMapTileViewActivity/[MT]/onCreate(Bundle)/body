@@ -17,5 +17,6 @@
     marker.setOnClickListener(markerClickListener);
     tileView.addMarker(marker,point[0],point[1]);
   }
+  tileView.setScale(0.3f);
   setContentView(tileView);
 }

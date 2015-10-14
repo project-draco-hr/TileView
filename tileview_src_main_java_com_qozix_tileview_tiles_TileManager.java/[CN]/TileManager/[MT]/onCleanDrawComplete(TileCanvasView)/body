@@ -1,0 +1,5 @@
+{
+  if (tileCanvasView == currentTileGroup) {
+    Log.d("Tiles","current group is done rending including transitions");
+  }
+}

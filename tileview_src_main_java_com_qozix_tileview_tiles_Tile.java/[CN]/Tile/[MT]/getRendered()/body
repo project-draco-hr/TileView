@@ -1,4 +1,7 @@
 {
+  if (!mTransitionsEnabled) {
+    return 1;
+  }
   double now=AnimationUtils.currentAnimationTimeMillis();
   double ellapsed=now - renderTimestamp;
   return (float)Math.min(1,ellapsed / duration);

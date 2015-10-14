@@ -2,11 +2,8 @@
   if (alreadyRendered.contains(tile)) {
     return;
   }
+  tile.setTransitionsEnabled(transitionsEnabled);
   tile.stampTime();
   alreadyRendered.add(tile);
   currentTileGroup.addTile(tile);
-  if (transitionsEnabled) {
-    if (transitionDuration > 0) {
-    }
-  }
 }

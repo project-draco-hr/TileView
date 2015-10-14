@@ -1,4 +1,7 @@
 {
+  if (!mTransitionsEnabled) {
+    return null;
+  }
   float rendered=getRendered();
   int opacity=(int)(rendered * 255);
   mPaint.setAlpha(opacity);

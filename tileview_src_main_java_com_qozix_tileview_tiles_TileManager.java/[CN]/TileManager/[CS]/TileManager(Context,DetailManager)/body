@@ -3,5 +3,4 @@
   detailManager=zm;
   detailManager.addDetailLevelEventListener(this);
   handler=new TileRenderHandler(this);
-  transitionListener=new TileTransitionListener(this);
 }
