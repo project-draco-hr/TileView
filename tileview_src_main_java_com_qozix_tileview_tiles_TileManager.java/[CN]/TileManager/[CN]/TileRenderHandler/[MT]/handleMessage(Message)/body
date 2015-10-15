@@ -1,6 +1,0 @@
-{
-  final TileManager tileManager=mTileManagerWeakReference.get();
-  if (tileManager != null) {
-    tileManager.renderTiles();
-  }
-}

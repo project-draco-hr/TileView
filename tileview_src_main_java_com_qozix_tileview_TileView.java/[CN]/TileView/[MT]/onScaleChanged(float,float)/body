@@ -2,4 +2,5 @@
   super.onScaleChanged(scale,previous);
   detailManager.setScale(scale);
   mScalingLayout.setScale(scale);
+  mTileCanvasViewGroup.setScale(scale);
 }

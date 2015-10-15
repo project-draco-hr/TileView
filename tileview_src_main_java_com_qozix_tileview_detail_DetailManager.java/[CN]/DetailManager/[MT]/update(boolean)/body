@@ -16,7 +16,7 @@
   }
   if (detailLevelChanged) {
     for (    DetailLevelEventListener listener : detailLevelEventListeners) {
-      listener.onDetailLevelChanged();
+      listener.onDetailLevelChanged(currentDetailLevel);
     }
   }
 }

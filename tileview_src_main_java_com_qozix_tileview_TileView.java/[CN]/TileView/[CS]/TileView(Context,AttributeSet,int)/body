@@ -1,7 +1,7 @@
 {
   super(context,attrs,defStyleAttr);
-  tileManager=new TileManager(context,detailManager);
-  addView(tileManager);
+  mTileCanvasViewGroup=new TileCanvasViewGroup(context);
+  addView(mTileCanvasViewGroup);
   pathManager=new PathManager(context,detailManager);
   addView(pathManager);
   mScalingLayout=new ScalingLayout(context);
@@ -11,7 +11,7 @@
   calloutManager=new CalloutManager(context,detailManager);
   addView(calloutManager);
   detailManager.addDetailLevelEventListener(this);
-  tileManager.setTileRenderListener(this);
+  mTileCanvasViewGroup.setTileRenderListener(this);
   addZoomPanListener(this);
   mRenderThrottleHandler=new RenderThrottleHandler(this);
   requestRender();

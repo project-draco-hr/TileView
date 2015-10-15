@@ -1,19 +1,19 @@
 {
-  TileManager tileManager=mTileManagerWeakReference.get();
-  if (tileManager != null) {
-    LinkedList<Tile> renderList=tileManager.getRenderList();
+  TileCanvasViewGroup tileCanvasViewGroup=mTileManagerWeakReference.get();
+  if (tileCanvasViewGroup != null) {
+    LinkedList<Tile> renderList=tileCanvasViewGroup.getRenderList();
     for (    Tile tile : renderList) {
-      tileManager=mTileManagerWeakReference.get();
-      if (tileManager == null) {
+      tileCanvasViewGroup=mTileManagerWeakReference.get();
+      if (tileCanvasViewGroup == null) {
         return null;
       }
-      if (tileManager.getRenderIsCancelled()) {
+      if (tileCanvasViewGroup.getRenderIsCancelled()) {
         return null;
       }
       if (isCancelled()) {
         return null;
       }
-      tileManager.decodeIndividualTile(tile);
+      tileCanvasViewGroup.decodeIndividualTile(tile);
       publishProgress(tile);
     }
   }

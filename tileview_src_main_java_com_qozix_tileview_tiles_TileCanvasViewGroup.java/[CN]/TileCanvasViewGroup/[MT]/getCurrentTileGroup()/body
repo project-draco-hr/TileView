@@ -1,0 +1,13 @@
+{
+  float levelScale=getCurrentDetailLevelScale();
+  if (tileGroups.containsKey(levelScale)) {
+    return tileGroups.get(levelScale);
+  }
+  TileCanvasView tileGroup=new TileCanvasView(getContext());
+  tileGroup.setTileCanvasDrawListener(this);
+  tileGroup.setScale(1 / levelScale);
+  tileGroups.put(levelScale,tileGroup);
+  TileView tileView=(TileView)getParent();
+  addView(tileGroup,new FixedLayout.LayoutParams(tileView.getBaseWidth(),tileView.getBaseHeight()));
+  return tileGroup;
+}

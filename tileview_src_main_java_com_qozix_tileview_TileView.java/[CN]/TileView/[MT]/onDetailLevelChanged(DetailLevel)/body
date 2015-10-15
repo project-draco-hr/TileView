@@ -1,0 +1,4 @@
+{
+  requestRender();
+  mTileCanvasViewGroup.updateTileSet(detailLevel);
+}
