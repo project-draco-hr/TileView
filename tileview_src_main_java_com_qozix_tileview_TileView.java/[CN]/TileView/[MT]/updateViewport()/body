@@ -3,5 +3,6 @@
   int top=getScrollY();
   int right=left + getWidth();
   int bottom=top + getHeight();
+  Log.d("Tiles","tv.uvp=" + getWidth() + " (should be screen size, not map size");
   detailManager.updateViewport(left,top,right,bottom);
 }

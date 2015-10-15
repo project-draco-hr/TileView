@@ -1,4 +1,5 @@
 {
   super(context);
+  setWillNotDraw(false);
   handler=new TileRenderHandler(this);
 }
