@@ -4,5 +4,4 @@
     tile.setParentTileCanvasView(this);
     invalidate();
   }
-  Log.d("Tiles","tile count=" + mTiles.size());
 }

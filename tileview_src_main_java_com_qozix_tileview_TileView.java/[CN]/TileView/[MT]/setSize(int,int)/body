@@ -2,4 +2,5 @@
   super.setSize(width,height);
   detailManager.setSize(width,height);
   positionManager.setSize(width,height);
+  mTileCanvasViewGroup.setSize(width,height);
 }

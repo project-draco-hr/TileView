@@ -1,6 +1,7 @@
 {
   super(context,attrs,defStyleAttr);
   mTileCanvasViewGroup=new TileCanvasViewGroup(context);
+  mTileCanvasViewGroup.setBackgroundColor(0xff00ff00);
   addView(mTileCanvasViewGroup);
   pathManager=new PathManager(context,detailManager);
   addView(pathManager);

@@ -1,15 +1,5 @@
 {
   measureChildren(widthMeasureSpec,heightMeasureSpec);
-  int count=getChildCount();
-  for (int i=0; i < count; i++) {
-    View child=getChildAt(i);
-    if (child.getVisibility() != GONE) {
-      LayoutParams lp=child.getLayoutParams();
-      lp.width=mBaseWidth;
-      lp.height=mBaseHeight;
-      Log.d("Tiles","zpl child.glp.width=" + child.getLayoutParams().width);
-    }
-  }
   int width=MeasureSpec.getSize(widthMeasureSpec);
   int height=MeasureSpec.getSize(heightMeasureSpec);
   width=Math.max(width,getSuggestedMinimumWidth());

@@ -2,7 +2,7 @@
   for (int i=0; i < getChildCount(); i++) {
     View child=getChildAt(i);
     if (child.getVisibility() != GONE) {
-      child.layout(0,0,getWidth(),getHeight());
+      child.layout(0,0,mBaseWidth,mBaseHeight);
     }
   }
 }
