@@ -1,6 +1,0 @@
-{
-  if (tiles.contains(this)) {
-    tiles.remove(this);
-    mParentList=null;
-  }
-}

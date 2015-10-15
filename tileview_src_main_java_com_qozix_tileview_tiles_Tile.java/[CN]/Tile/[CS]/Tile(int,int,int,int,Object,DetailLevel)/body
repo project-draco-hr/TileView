@@ -3,6 +3,8 @@
   mColumn=column;
   mWidth=width;
   mHeight=height;
+  mLeft=column * width;
+  mTop=row * height;
   mData=data;
   mDetailLevel=detailLevel;
 }

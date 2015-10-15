@@ -1,4 +1,0 @@
-{
-  tiles.add(this);
-  mParentList=tiles;
-}

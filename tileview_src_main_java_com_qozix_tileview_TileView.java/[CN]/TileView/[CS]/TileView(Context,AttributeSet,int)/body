@@ -4,6 +4,8 @@
   addView(tileManager);
   pathManager=new PathManager(context,detailManager);
   addView(pathManager);
+  mScalingLayout=new ScalingLayout(context);
+  addView(mScalingLayout);
   markerManager=new MarkerManager(context,detailManager);
   addView(markerManager);
   calloutManager=new CalloutManager(context,detailManager);

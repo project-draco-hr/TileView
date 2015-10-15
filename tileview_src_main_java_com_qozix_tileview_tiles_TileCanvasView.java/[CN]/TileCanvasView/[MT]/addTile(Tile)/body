@@ -1,5 +1,8 @@
 {
-  tile.setParentList(mTiles);
+  if (!mTiles.contains(tile)) {
+    mTiles.add(tile);
+    tile.setParentTileCanvasView(this);
+    invalidate();
+  }
   Log.d("Tiles","tile count=" + mTiles.size());
-  postInvalidate();
 }
