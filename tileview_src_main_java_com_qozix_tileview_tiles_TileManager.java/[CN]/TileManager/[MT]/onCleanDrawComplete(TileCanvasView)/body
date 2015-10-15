@@ -1,6 +1,6 @@
 {
   if (transitionsEnabled && tileCanvasView == currentTileGroup) {
     cleanup();
-    Log.d("Tiles","current group is done rending including transitions");
+    Log.d("Tiles","current group is done rendering including transitions, do cleanup");
   }
 }

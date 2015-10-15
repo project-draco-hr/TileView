@@ -1,6 +1,8 @@
 {
   isRendering=false;
-  cleanup();
+  if (!transitionsEnabled) {
+    cleanup();
+  }
   requestRender();
   if (renderListener != null) {
     renderListener.onRenderComplete();
