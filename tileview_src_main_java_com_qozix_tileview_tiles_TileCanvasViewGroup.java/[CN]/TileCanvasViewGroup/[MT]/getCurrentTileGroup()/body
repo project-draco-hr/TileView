@@ -8,6 +8,7 @@
   tileGroup.setScale(1 / levelScale);
   tileGroups.put(levelScale,tileGroup);
   TileView tileView=(TileView)getParent();
-  addView(tileGroup,new FixedLayout.LayoutParams(tileView.getBaseWidth(),tileView.getBaseHeight()));
+  Log.d("Tiles","tv.gbw=" + tileView.getBaseWidth() + ", gmw="+ getMeasuredWidth()+ ", gw="+ getWidth()+ ", lp.width="+ getLayoutParams().width);
+  addView(tileGroup);
   return tileGroup;
 }
