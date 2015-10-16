@@ -1,0 +1,11 @@
+{
+  if (mShouldDraw) {
+    mMatrix.setScale(mScale,mScale);
+    for (    DrawablePath DrawablePath : mDrawablePaths) {
+      mRecyclerPath.set(DrawablePath.path);
+      mRecyclerPath.transform(mMatrix);
+      canvas.drawPath(mRecyclerPath,DrawablePath.paint);
+    }
+  }
+  super.onDraw(canvas);
+}

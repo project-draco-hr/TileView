@@ -1,4 +1,4 @@
 {
   mTileCanvasViewGroup.clear();
-  pathManager.clear();
+  mCompositePathView.clear();
 }

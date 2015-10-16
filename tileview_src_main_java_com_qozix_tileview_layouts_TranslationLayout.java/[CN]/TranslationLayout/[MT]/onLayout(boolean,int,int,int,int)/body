@@ -6,8 +6,8 @@
       LayoutParams lp=(LayoutParams)child.getLayoutParams();
       int w=child.getMeasuredWidth();
       int h=child.getMeasuredHeight();
-      int scaledX=(int)(0.5 + (lp.x * scale));
-      int scaledY=(int)(0.5 + (lp.y * scale));
+      int scaledX=(int)(0.5 + (lp.x * mScale));
+      int scaledY=(int)(0.5 + (lp.y * mScale));
       float aX=(lp.anchorX == null) ? anchorX : lp.anchorX;
       float aY=(lp.anchorY == null) ? anchorY : lp.anchorY;
       int x=scaledX + (int)(w * aX);

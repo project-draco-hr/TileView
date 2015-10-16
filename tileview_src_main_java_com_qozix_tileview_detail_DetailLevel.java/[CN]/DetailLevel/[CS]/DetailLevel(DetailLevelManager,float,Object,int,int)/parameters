@@ -1,0 +1,5 @@
+DetailLevelManager detailLevelManager
+float scale
+Object data
+int tileWidth
+int tileHeight

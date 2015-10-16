@@ -1,5 +1,5 @@
 {
-  String value="scale=" + mScale;
+  String value="mScale=" + mScale;
   if (mData != null) {
     value=value + ", data=" + mData;
   }

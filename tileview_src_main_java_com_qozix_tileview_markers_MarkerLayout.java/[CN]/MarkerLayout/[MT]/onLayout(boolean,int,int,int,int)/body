@@ -1,0 +1,21 @@
+{
+  super.onLayout(changed,l,t,r,b);
+  for (int i=getChildCount() - 1; i >= 0; i--) {
+    View child=getChildAt(i);
+    if (child.getVisibility() != GONE) {
+      LayoutParams layoutParams=(LayoutParams)child.getLayoutParams();
+      int w=child.getMeasuredWidth();
+      int h=child.getMeasuredHeight();
+      int scaledX=(int)(0.5 + (layoutParams.x * mScale));
+      int scaledY=(int)(0.5 + (layoutParams.y * mScale));
+      float aX=(layoutParams.anchorX == null) ? anchorX : layoutParams.anchorX;
+      float aY=(layoutParams.anchorY == null) ? anchorY : layoutParams.anchorY;
+      int x=scaledX + (int)(w * aX);
+      int y=scaledY + (int)(h * aY);
+      Rect rect=mMarkerMap.get(child);
+      if (rect != null) {
+        rect.set(x,y,x + w,y + h);
+      }
+    }
+  }
+}

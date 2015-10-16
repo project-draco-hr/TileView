@@ -1,5 +1,5 @@
 {
-  detailManager.unlockDetailLevel();
-  detailManager.setScale(scale);
+  mDetailLevelManager.unlockDetailLevel();
+  mDetailLevelManager.setScale(scale);
   requestRender();
 }

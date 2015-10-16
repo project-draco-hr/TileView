@@ -1,0 +1,6 @@
+{
+  if (mMarkerMap.containsKey(view)) {
+    view.setLayoutParams(params);
+    requestLayout();
+  }
+}

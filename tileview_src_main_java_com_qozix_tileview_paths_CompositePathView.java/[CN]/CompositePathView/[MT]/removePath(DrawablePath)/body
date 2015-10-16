@@ -1,0 +1,4 @@
+{
+  mDrawablePaths.remove(path);
+  invalidate();
+}
