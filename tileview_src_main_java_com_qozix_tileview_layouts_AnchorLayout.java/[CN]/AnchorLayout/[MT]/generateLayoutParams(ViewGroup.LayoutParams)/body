@@ -1,3 +1,3 @@
 {
-  return new LayoutParams(p);
+  return new LayoutParams(layoutParams);
 }

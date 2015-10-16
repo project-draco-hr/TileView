@@ -1,5 +1,5 @@
 {
-  width=w;
-  height=h;
+  mWidth=w;
+  mHeight=h;
   update(true);
 }

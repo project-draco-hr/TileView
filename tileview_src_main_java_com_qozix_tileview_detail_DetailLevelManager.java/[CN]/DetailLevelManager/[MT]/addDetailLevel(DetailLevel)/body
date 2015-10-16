@@ -1,7 +1,7 @@
 {
-  detailLevels.addDetailLevel(detailLevel);
+  mDetailLevels.addDetailLevel(detailLevel);
   update(false);
-  for (  DetailLevelSetupListener listener : detailLevelSetupListeners) {
+  for (  DetailLevelSetupListener listener : mDetailLevelSetupListeners) {
     listener.onDetailLevelAdded();
   }
 }

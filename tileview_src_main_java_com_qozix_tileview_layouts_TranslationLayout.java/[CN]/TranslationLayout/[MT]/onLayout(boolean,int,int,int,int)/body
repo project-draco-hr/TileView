@@ -8,8 +8,8 @@
       int h=child.getMeasuredHeight();
       int scaledX=(int)(0.5 + (lp.x * mScale));
       int scaledY=(int)(0.5 + (lp.y * mScale));
-      float aX=(lp.anchorX == null) ? anchorX : lp.anchorX;
-      float aY=(lp.anchorY == null) ? anchorY : lp.anchorY;
+      float aX=(lp.anchorX == null) ? mAnchorX : lp.anchorX;
+      float aY=(lp.anchorY == null) ? mAnchorY : lp.anchorY;
       int x=scaledX + (int)(w * aX);
       int y=scaledY + (int)(h * aY);
       child.layout(x,y,x + w,y + h);

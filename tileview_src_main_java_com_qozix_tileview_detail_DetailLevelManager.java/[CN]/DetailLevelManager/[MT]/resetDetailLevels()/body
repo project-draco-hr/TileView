@@ -1,4 +1,4 @@
 {
-  detailLevels.clear();
+  mDetailLevels.clear();
   update(false);
 }

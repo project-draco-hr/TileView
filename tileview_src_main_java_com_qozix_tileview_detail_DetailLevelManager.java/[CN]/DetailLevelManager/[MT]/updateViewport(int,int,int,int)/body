@@ -1,4 +1,4 @@
 {
-  viewport.set(left,top,right,bottom);
+  mViewport.set(left,top,right,bottom);
   updateComputedViewport();
 }

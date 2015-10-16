@@ -7,8 +7,8 @@
     View child=getChildAt(i);
     if (child.getVisibility() != GONE) {
       LayoutParams lp=(LayoutParams)child.getLayoutParams();
-      float aX=(lp.anchorX == null) ? anchorX : lp.anchorX;
-      float aY=(lp.anchorY == null) ? anchorY : lp.anchorY;
+      float aX=(lp.anchorX == null) ? mAnchorX : lp.anchorX;
+      float aY=(lp.anchorY == null) ? mAnchorY : lp.anchorY;
       int computedWidth=(int)(child.getMeasuredWidth() * aX);
       int computedHeight=(int)(child.getMeasuredHeight() * aY);
       int scaledX=(int)(0.5 + (lp.x * mScale));

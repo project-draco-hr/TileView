@@ -1,3 +1,3 @@
 {
-  detailLevelEventListeners.add(l);
+  mDetailLevelEventListeners.add(l);
 }

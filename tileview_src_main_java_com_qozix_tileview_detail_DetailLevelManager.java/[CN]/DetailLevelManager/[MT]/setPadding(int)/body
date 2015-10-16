@@ -1,4 +1,4 @@
 {
-  padding=pixels;
+  mPadding=pixels;
   updateComputedViewport();
 }

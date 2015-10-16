@@ -1,22 +1,22 @@
 {
   boolean detailLevelChanged=false;
-  if (!detailLevelLocked) {
-    DetailLevel matchingLevel=detailLevels.find(getScale());
+  if (!mDetailLevelLocked) {
+    DetailLevel matchingLevel=mDetailLevels.find(getScale());
     if (matchingLevel != null) {
-      detailLevelChanged=!matchingLevel.equals(currentDetailLevel);
-      currentDetailLevel=matchingLevel;
+      detailLevelChanged=!matchingLevel.equals(mCurrentDetailLevel);
+      mCurrentDetailLevel=matchingLevel;
     }
   }
-  scaledWidth=(int)(getWidth() * getScale());
-  scaledHeight=(int)(getHeight() * getScale());
+  mScaledWidth=(int)(getWidth() * getScale());
+  mScaledHeight=(int)(getHeight() * getScale());
   if (changed) {
-    for (    DetailLevelEventListener listener : detailLevelEventListeners) {
+    for (    DetailLevelEventListener listener : mDetailLevelEventListeners) {
       listener.onDetailScaleChanged(getScale());
     }
   }
   if (detailLevelChanged) {
-    for (    DetailLevelEventListener listener : detailLevelEventListeners) {
-      listener.onDetailLevelChanged(currentDetailLevel);
+    for (    DetailLevelEventListener listener : mDetailLevelEventListeners) {
+      listener.onDetailLevelChanged(mCurrentDetailLevel);
     }
   }
 }
