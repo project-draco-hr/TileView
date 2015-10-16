@@ -2,4 +2,5 @@
   mBaseWidth=width;
   mBaseHeight=height;
   updateScaledDimensions();
+  requestLayout();
 }

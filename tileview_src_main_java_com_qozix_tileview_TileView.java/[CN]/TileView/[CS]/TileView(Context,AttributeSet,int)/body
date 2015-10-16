@@ -1,15 +1,17 @@
 {
   super(context,attrs,defStyleAttr);
-  tileManager=new TileManager(context,detailManager);
-  addView(tileManager);
-  pathManager=new PathManager(context,detailManager);
-  addView(pathManager);
-  markerManager=new MarkerManager(context,detailManager);
-  addView(markerManager);
-  calloutManager=new CalloutManager(context,detailManager);
-  addView(calloutManager);
-  detailManager.addDetailLevelEventListener(this);
-  tileManager.setTileRenderListener(this);
+  mTileCanvasViewGroup=new TileCanvasViewGroup(context);
+  addView(mTileCanvasViewGroup);
+  mCompositePathView=new CompositePathView(context);
+  addView(mCompositePathView);
+  mScalingLayout=new ScalingLayout(context);
+  addView(mScalingLayout);
+  mMarkerLayout=new MarkerLayout(context);
+  addView(mMarkerLayout);
+  mCalloutLayout=new CalloutLayout(context);
+  addView(mCalloutLayout);
+  mDetailLevelManager.addDetailLevelEventListener(this);
+  mTileCanvasViewGroup.setTileRenderListener(this);
   addZoomPanListener(this);
   mRenderThrottleHandler=new RenderThrottleHandler(this);
   requestRender();

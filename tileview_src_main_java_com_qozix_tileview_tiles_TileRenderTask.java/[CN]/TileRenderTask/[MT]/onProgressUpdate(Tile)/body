@@ -1,13 +1,13 @@
 {
-  TileManager tileManager=mTileManagerWeakReference.get();
-  if (tileManager != null) {
-    if (tileManager.getRenderIsCancelled()) {
+  TileCanvasViewGroup tileCanvasViewGroup=mTileManagerWeakReference.get();
+  if (tileCanvasViewGroup != null) {
+    if (tileCanvasViewGroup.getRenderIsCancelled()) {
       return;
     }
     if (isCancelled()) {
       return;
     }
     Tile tile=params[0];
-    tileManager.renderIndividualTile(tile);
+    tileCanvasViewGroup.renderIndividualTile(tile);
   }
 }

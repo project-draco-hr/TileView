@@ -1,4 +1,4 @@
 {
-  detailManager.lockDetailLevel();
-  detailManager.setScale(scale);
+  mDetailLevelManager.lockDetailLevel();
+  mDetailLevelManager.setScale(scale);
 }

@@ -1,4 +1,4 @@
 {
-  tileManager.clear();
-  pathManager.setShouldDraw(false);
+  mTileCanvasViewGroup.clear();
+  mCompositePathView.setShouldDraw(false);
 }

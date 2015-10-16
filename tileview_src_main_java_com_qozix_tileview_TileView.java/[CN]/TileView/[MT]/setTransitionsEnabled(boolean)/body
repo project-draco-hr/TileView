@@ -1,3 +1,3 @@
 {
-  tileManager.setTransitionsEnabled(enabled);
+  mTileCanvasViewGroup.setTransitionsEnabled(enabled);
 }

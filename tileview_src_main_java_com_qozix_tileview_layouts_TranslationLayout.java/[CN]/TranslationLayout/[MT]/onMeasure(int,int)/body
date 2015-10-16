@@ -11,8 +11,8 @@
       float aY=(lp.anchorY == null) ? anchorY : lp.anchorY;
       int computedWidth=(int)(child.getMeasuredWidth() * aX);
       int computedHeight=(int)(child.getMeasuredHeight() * aY);
-      int scaledX=(int)(0.5 + (lp.x * scale));
-      int scaledY=(int)(0.5 + (lp.y * scale));
+      int scaledX=(int)(0.5 + (lp.x * mScale));
+      int scaledY=(int)(0.5 + (lp.y * mScale));
       int right=scaledX + computedWidth;
       int bottom=scaledY + computedHeight;
       width=Math.max(width,right);

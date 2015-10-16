@@ -1,5 +1,5 @@
 {
-  if (markerManager.indexOfChild(view) > -1) {
+  if (mMarkerLayout.indexOfChild(view) > -1) {
     ViewGroup.LayoutParams params=view.getLayoutParams();
     if (params instanceof AnchorLayout.LayoutParams) {
       AnchorLayout.LayoutParams anchorLayoutParams=(AnchorLayout.LayoutParams)params;

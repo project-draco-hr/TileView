@@ -1,4 +1,4 @@
 {
-  scale=d;
+  mScale=d;
   requestLayout();
 }

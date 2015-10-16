@@ -5,7 +5,7 @@
     if (spotListener != null) {
       spotListener.onHotSpotTap(hotSpot,point.x,point.y);
     }
-    for (    HotSpotEventListener listener : listeners) {
+    for (    HotSpotEventListener listener : mHotSpotEventListeners) {
       listener.onHotSpotTap(hotSpot,point.x,point.y);
     }
   }

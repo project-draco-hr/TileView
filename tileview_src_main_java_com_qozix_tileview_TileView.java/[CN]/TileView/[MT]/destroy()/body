@@ -1,4 +1,4 @@
 {
-  tileManager.clear();
-  pathManager.clear();
+  mTileCanvasViewGroup.clear();
+  mCompositePathView.clear();
 }

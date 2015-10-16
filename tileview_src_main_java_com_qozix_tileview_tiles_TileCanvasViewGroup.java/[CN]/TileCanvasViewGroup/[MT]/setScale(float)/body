@@ -1,0 +1,5 @@
+{
+  mScale=scale;
+  Log.d("Tiles","TCVG.setScale=" + scale + ", gw="+ getWidth());
+  invalidate();
+}

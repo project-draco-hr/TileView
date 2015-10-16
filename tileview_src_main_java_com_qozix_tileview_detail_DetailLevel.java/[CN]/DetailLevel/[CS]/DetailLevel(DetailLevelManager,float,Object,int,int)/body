@@ -1,0 +1,7 @@
+{
+  mDetailLevelManager=detailLevelManager;
+  mScale=scale;
+  mData=data;
+  mTileWidth=tileWidth;
+  mTileHeight=tileHeight;
+}

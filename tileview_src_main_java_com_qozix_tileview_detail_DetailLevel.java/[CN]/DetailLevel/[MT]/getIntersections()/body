@@ -1,10 +1,10 @@
 {
   double relativeScale=getRelativeScale();
-  int drawableWidth=(int)(mDetailManager.getWidth() * getScale() * relativeScale);
-  int drawableHeight=(int)(mDetailManager.getHeight() * getScale() * relativeScale);
+  int drawableWidth=(int)(mDetailLevelManager.getWidth() * getScale() * relativeScale);
+  int drawableHeight=(int)(mDetailLevelManager.getHeight() * getScale() * relativeScale);
   double offsetWidth=(mTileWidth * relativeScale);
   double offsetHeight=(mTileHeight * relativeScale);
-  mViewport.set(mDetailManager.getComputedViewport());
+  mViewport.set(mDetailLevelManager.getComputedViewport());
   mViewport.top=Math.max(mViewport.top,0);
   mViewport.left=Math.max(mViewport.left,0);
   mViewport.right=Math.min(mViewport.right,drawableWidth);

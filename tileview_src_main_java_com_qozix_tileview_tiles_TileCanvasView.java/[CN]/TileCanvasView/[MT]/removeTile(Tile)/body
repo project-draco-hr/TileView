@@ -1,4 +1,7 @@
 {
-  tile.setParentList(null);
-  postInvalidate();
+  if (mTiles.contains(tile)) {
+    mTiles.remove(tile);
+    tile.setParentTileCanvasView(null);
+    invalidate();
+  }
 }

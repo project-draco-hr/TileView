@@ -1,7 +1,7 @@
 {
   if (o instanceof Tile) {
     Tile m=(Tile)o;
-    return (m.getRow() == getRow()) && (m.getColumn() == getColumn()) && (m.getWidth() == getWidth())&& (m.getHeight() == getHeight())&& (m.getDetailLevel() == getDetailLevel());
+    return (m.getRow() == getRow()) && (m.getColumn() == getColumn()) && (m.getDetailLevel() == getDetailLevel());
   }
   return false;
 }

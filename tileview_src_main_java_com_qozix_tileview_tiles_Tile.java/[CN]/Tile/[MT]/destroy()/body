@@ -1,5 +1,6 @@
 {
   mBitmap=null;
-  setParentList(null);
-  Log.d("Tiles","destroying tile at " + getLeft() + ", "+ getTop());
+  if (mParentTileCanvasView != null) {
+    mParentTileCanvasView.removeTile(this);
+  }
 }

@@ -1,0 +1,5 @@
+{
+  mDrawablePaths.add(DrawablePath);
+  invalidate();
+  return DrawablePath;
+}

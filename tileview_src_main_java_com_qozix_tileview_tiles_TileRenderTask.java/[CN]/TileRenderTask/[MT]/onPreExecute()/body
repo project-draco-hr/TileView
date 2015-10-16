@@ -1,6 +1,6 @@
 {
-  final TileManager tileManager=mTileManagerWeakReference.get();
-  if (tileManager != null) {
-    tileManager.onRenderTaskPreExecute();
+  final TileCanvasViewGroup tileCanvasViewGroup=mTileManagerWeakReference.get();
+  if (tileCanvasViewGroup != null) {
+    tileCanvasViewGroup.onRenderTaskPreExecute();
   }
 }

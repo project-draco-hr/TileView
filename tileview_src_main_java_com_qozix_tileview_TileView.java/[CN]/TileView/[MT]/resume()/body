@@ -1,5 +1,5 @@
 {
   updateViewport();
-  tileManager.requestRender();
-  pathManager.setShouldDraw(true);
+  mTileCanvasViewGroup.requestRender();
+  mCompositePathView.setShouldDraw(true);
 }

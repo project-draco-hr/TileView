@@ -1,6 +1,6 @@
 {
   updateViewport();
-  tileManager.updateTileSet();
-  tileManager.requestRender();
+  mTileCanvasViewGroup.updateTileSet(mDetailLevelManager.getCurrentDetailLevel());
+  mTileCanvasViewGroup.requestRender();
   redraw();
 }

@@ -1,6 +1,6 @@
 {
-  if (calloutManager.indexOfChild(view) > -1) {
-    calloutManager.removeView(view);
+  if (mCalloutLayout.indexOfChild(view) > -1) {
+    mCalloutLayout.removeView(view);
     return true;
   }
   return false;
