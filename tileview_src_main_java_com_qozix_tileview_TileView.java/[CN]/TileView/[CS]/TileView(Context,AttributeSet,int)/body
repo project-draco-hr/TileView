@@ -10,7 +10,7 @@
   addView(mMarkerLayout);
   mCalloutLayout=new CalloutLayout(context);
   addView(mCalloutLayout);
-  mDetailLevelManager.addDetailLevelEventListener(this);
+  mDetailLevelManager.setDetailLevelChangeListener(this);
   mTileCanvasViewGroup.setTileRenderListener(this);
   addZoomPanListener(this);
   mRenderThrottleHandler=new RenderThrottleHandler(this);

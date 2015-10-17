@@ -1,4 +1,9 @@
 {
   DetailLevel detailLevel=new DetailLevel(this,scale,data,tileWidth,tileHeight);
-  addDetailLevel(detailLevel);
+  if (mDetailLevelLinkedList.contains(detailLevel)) {
+    return;
+  }
+  mDetailLevelLinkedList.add(detailLevel);
+  Collections.sort(mDetailLevelLinkedList);
+  update(false);
 }

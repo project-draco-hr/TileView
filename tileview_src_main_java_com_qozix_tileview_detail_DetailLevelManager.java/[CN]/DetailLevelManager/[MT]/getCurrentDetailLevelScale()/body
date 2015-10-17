@@ -1,6 +1,0 @@
-{
-  if (mCurrentDetailLevel != null) {
-    return mCurrentDetailLevel.getScale();
-  }
-  return 1;
-}

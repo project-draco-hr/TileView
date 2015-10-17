@@ -1,4 +1,4 @@
 {
-  mDetailLevels.clear();
+  mDetailLevelLinkedList.clear();
   update(false);
 }

@@ -1,7 +1,7 @@
 {
-  if (o instanceof DetailLevel) {
-    DetailLevel zl=(DetailLevel)o;
-    return (zl.getScale() == getScale());
+  if (object instanceof DetailLevel) {
+    DetailLevel detailLevel=(DetailLevel)object;
+    return (getScale() == detailLevel.getScale());
   }
   return false;
 }

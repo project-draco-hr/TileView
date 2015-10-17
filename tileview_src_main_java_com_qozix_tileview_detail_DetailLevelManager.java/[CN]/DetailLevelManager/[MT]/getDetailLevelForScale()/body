@@ -1,0 +1,20 @@
+{
+  if (mDetailLevelLinkedList.size() == 0) {
+    return null;
+  }
+  if (mDetailLevelLinkedList.size() == 1) {
+    return mDetailLevelLinkedList.get(0);
+  }
+  DetailLevel match=null;
+  int index=mDetailLevelLinkedList.size() - 1;
+  for (int i=index; i >= 0; i--) {
+    match=mDetailLevelLinkedList.get(i);
+    if (match.getScale() < mScale) {
+      if (i < index) {
+        match=mDetailLevelLinkedList.get(i + 1);
+      }
+      break;
+    }
+  }
+  return match;
+}

@@ -1,6 +1,5 @@
 {
-  s=getAtPrecision(s);
-  boolean changed=(mScale != s);
-  mScale=s;
+  boolean changed=(mScale != scale);
+  mScale=scale;
   update(changed);
 }

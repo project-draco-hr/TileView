@@ -1,3 +1,0 @@
-{
-  this(detailLevelManager,scale,data,DEFAULT_TILE_SIZE,DEFAULT_TILE_SIZE);
-}

@@ -1,3 +1,0 @@
-{
-  this.mDetailLevels.setTileSetSelector(selector);
-}

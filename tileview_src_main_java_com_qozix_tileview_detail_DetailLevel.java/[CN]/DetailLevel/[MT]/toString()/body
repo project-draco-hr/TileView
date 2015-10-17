@@ -1,7 +1,0 @@
-{
-  String value="mScale=" + mScale;
-  if (mData != null) {
-    value=value + ", data=" + mData;
-  }
-  return value;
-}

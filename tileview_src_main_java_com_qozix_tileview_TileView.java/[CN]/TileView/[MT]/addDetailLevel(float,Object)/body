@@ -1,3 +1,3 @@
 {
-  mDetailLevelManager.addDetailLevel(detailScale,data);
+  addDetailLevel(detailScale,data,DEFAULT_TILE_SIZE,DEFAULT_TILE_SIZE);
 }

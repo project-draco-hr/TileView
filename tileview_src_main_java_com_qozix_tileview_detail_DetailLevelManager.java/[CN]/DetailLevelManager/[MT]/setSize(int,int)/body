@@ -1,5 +1,5 @@
 {
-  mWidth=w;
-  mHeight=h;
+  mBaseWidth=width;
+  mBaseHeight=height;
   update(true);
 }
