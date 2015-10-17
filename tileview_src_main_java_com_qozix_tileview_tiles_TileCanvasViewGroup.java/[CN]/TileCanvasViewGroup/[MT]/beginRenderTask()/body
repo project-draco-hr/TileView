@@ -1,10 +1,14 @@
 {
   Log.d("Tiles","TileManager.beginRenderTask");
-  LinkedList<Tile> intersections=detailLevelToRender.calculateIntersections();
-  if (scheduledToRender.equals(intersections)) {
+  DetailLevel.StateSnapshot currentDetailLevelStateSnapshot=detailLevelToRender.computeState();
+  if (currentDetailLevelStateSnapshot != null && currentDetailLevelStateSnapshot.equals(lastDetailLevelStateSnapshot)) {
+    Log.d("Tiles","same state, quit.  " + currentDetailLevelStateSnapshot + " vs "+ lastDetailLevelStateSnapshot);
     return;
   }
-  scheduledToRender=intersections;
+  Log.d("Tiles","different state, continue");
+  lastDetailLevelStateSnapshot=currentDetailLevelStateSnapshot;
+  scheduledToRender=detailLevelToRender.calculateIntersections();
+  ;
   if (lastRunRenderTask != null) {
     if (lastRunRenderTask.getStatus() != AsyncTask.Status.FINISHED) {
       lastRunRenderTask.cancel(true);

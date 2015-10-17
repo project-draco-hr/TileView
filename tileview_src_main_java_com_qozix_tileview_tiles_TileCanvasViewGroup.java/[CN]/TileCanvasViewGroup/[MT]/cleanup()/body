@@ -1,5 +1,5 @@
 {
-  LinkedList<Tile> condemned=new LinkedList<Tile>(alreadyRendered);
+  HashSet<Tile> condemned=new HashSet<Tile>(alreadyRendered);
   condemned.removeAll(scheduledToRender);
   Log.d("Tiles","about to destroy " + condemned.size() + " tiles.");
   for (  Tile m : condemned) {

@@ -1,0 +1,7 @@
+{
+  detailLevel=dl;
+  startRow=sr;
+  endRow=er;
+  startColumn=sc;
+  endColumn=ec;
+}
