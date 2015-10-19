@@ -1,4 +1,4 @@
 {
-  scale=factor;
+  mScale=factor;
   postInvalidate();
 }

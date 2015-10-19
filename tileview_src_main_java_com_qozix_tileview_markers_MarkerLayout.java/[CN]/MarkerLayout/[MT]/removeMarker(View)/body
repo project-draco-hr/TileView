@@ -1,4 +1,3 @@
 {
   removeView(view);
-  mMarkerMap.remove(view);
 }

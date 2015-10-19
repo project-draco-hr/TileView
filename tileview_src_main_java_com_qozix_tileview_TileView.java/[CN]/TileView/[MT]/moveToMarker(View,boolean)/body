@@ -1,8 +1,8 @@
 {
   if (mMarkerLayout.indexOfChild(view) > -1) {
     ViewGroup.LayoutParams params=view.getLayoutParams();
-    if (params instanceof AnchorLayout.LayoutParams) {
-      AnchorLayout.LayoutParams anchorLayoutParams=(AnchorLayout.LayoutParams)params;
+    if (params instanceof MarkerLayout.LayoutParams) {
+      MarkerLayout.LayoutParams anchorLayoutParams=(MarkerLayout.LayoutParams)params;
       int scaledX=(int)(anchorLayoutParams.x * getScale() + 0.5);
       int scaledY=(int)(anchorLayoutParams.y * getScale() + 0.5);
       if (animate) {

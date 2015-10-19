@@ -1,4 +1,4 @@
 {
-  mShouldDraw=should;
+  mShouldDraw=shouldDraw;
   invalidate();
 }

@@ -1,4 +1,4 @@
 {
-  hotSpotManager.addHotSpot(hotSpot);
+  mHotSpotManager.addHotSpot(hotSpot);
   return hotSpot;
 }

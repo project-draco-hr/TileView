@@ -1,5 +1,5 @@
 {
-  if (mMarkerMap.containsKey(view)) {
+  if (indexOfChild(view) > -1) {
     view.setLayoutParams(params);
     requestLayout();
   }

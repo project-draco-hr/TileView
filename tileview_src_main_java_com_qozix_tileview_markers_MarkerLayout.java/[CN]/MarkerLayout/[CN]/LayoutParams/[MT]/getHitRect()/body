@@ -1,0 +1,8 @@
+{
+  Rect hitRect=new Rect();
+  hitRect.left=mLeft;
+  hitRect.top=mTop;
+  hitRect.right=mRight;
+  hitRect.bottom=mBottom;
+  return hitRect;
+}

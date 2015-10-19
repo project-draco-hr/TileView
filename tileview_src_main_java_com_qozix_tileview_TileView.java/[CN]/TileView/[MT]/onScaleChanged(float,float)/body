@@ -1,7 +1,7 @@
 {
   super.onScaleChanged(scale,previous);
   mDetailLevelManager.setScale(scale);
-  hotSpotManager.setScale(scale);
+  mHotSpotManager.setScale(scale);
   mTileCanvasViewGroup.setScale(scale);
   mScalingLayout.setScale(scale);
   mCompositePathView.setScale(scale);

@@ -1,9 +1,0 @@
-{
-  for (int i=0; i < getChildCount(); i++) {
-    View child=getChildAt(i);
-    if (child.getVisibility() != GONE) {
-      LayoutParams layoutParams=(LayoutParams)child.getLayoutParams();
-      child.layout(layoutParams.mComputedX,layoutParams.mComputedY,layoutParams.mComputedX + child.getMeasuredWidth(),layoutParams.mComputedY + child.getMeasuredHeight());
-    }
-  }
-}

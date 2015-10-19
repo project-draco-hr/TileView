@@ -1,3 +1,0 @@
-{
-  mTileCanvasViewGroup.setDecoder(decoder);
-}

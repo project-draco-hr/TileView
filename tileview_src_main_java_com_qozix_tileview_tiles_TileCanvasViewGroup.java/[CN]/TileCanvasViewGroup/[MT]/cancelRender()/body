@@ -1,9 +1,9 @@
 {
-  renderIsCancelled=true;
-  if (lastRunRenderTask != null) {
-    if (lastRunRenderTask.getStatus() != AsyncTask.Status.FINISHED) {
-      lastRunRenderTask.cancel(true);
+  mRenderIsCancelled=true;
+  if (mLastRunTileRenderTask != null) {
+    if (mLastRunTileRenderTask.getStatus() != AsyncTask.Status.FINISHED) {
+      mLastRunTileRenderTask.cancel(true);
     }
   }
-  lastRunRenderTask=null;
+  mLastRunTileRenderTask=null;
 }

@@ -1,10 +1,10 @@
 {
-  isRendering=false;
-  if (!transitionsEnabled) {
+  mIsRendering=false;
+  if (!mTransitionsEnabled) {
     cleanup();
   }
   requestRender();
-  if (renderListener != null) {
-    renderListener.onRenderComplete();
+  if (mTileRenderListener != null) {
+    mTileRenderListener.onRenderComplete();
   }
 }

@@ -1,12 +1,12 @@
 {
-  boolean changed=detailLevelToRender.computeCurrentState();
+  boolean changed=mDetailLevelToRender.computeCurrentState();
   if (!changed) {
     return;
   }
-  scheduledToRender=detailLevelToRender.getVisibleTilesFromLastViewportComputation();
-  if (lastRunRenderTask != null && lastRunRenderTask.getStatus() != AsyncTask.Status.FINISHED) {
-    lastRunRenderTask.cancel(true);
+  mScheduledToRender=mDetailLevelToRender.getVisibleTilesFromLastViewportComputation();
+  if (mLastRunTileRenderTask != null && mLastRunTileRenderTask.getStatus() != AsyncTask.Status.FINISHED) {
+    mLastRunTileRenderTask.cancel(true);
   }
-  lastRunRenderTask=new TileRenderTask(this);
-  lastRunRenderTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+  mLastRunTileRenderTask=new TileRenderTask(this);
+  mLastRunTileRenderTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 }

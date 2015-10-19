@@ -1,3 +1,0 @@
-{
-  return addMarker(view,x,y,null,null);
-}

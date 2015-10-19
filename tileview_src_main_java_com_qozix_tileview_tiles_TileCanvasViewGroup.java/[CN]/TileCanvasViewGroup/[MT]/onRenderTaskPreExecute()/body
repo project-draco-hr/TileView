@@ -1,6 +1,6 @@
 {
-  isRendering=true;
-  if (renderListener != null) {
-    renderListener.onRenderStart();
+  mIsRendering=true;
+  if (mTileRenderListener != null) {
+    mTileRenderListener.onRenderStart();
   }
 }

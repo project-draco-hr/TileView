@@ -1,4 +1,4 @@
 {
-  canvas.scale(scale,scale);
+  canvas.scale(mScale,mScale);
   super.onDraw(canvas);
 }

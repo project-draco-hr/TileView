@@ -1,10 +1,10 @@
 {
-  renderIsCancelled=false;
-  renderIsSuppressed=false;
-  if (detailLevelToRender == null) {
+  mRenderIsCancelled=false;
+  mRenderIsSuppressed=false;
+  if (mDetailLevelToRender == null) {
     return;
   }
-  if (!handler.hasMessages(RENDER_FLAG)) {
-    handler.sendEmptyMessageDelayed(RENDER_FLAG,RENDER_BUFFER);
+  if (!mTileRenderHandler.hasMessages(RENDER_FLAG)) {
+    mTileRenderHandler.sendEmptyMessageDelayed(RENDER_FLAG,RENDER_BUFFER);
   }
 }

@@ -1,0 +1,12 @@
+{
+  float levelScale=getCurrentDetailLevelScale();
+  if (mTileCanvasViewHashMap.containsKey(levelScale)) {
+    return mTileCanvasViewHashMap.get(levelScale);
+  }
+  TileCanvasView tileGroup=new TileCanvasView(getContext());
+  tileGroup.setTileCanvasDrawListener(this);
+  tileGroup.setScale(1 / levelScale);
+  mTileCanvasViewHashMap.put(levelScale,tileGroup);
+  addView(tileGroup);
+  return tileGroup;
+}

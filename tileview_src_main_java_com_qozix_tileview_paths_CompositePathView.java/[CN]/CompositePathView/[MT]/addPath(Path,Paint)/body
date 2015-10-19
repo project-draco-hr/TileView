@@ -1,4 +1,7 @@
 {
+  if (paint == null) {
+    paint=mDefaultPaint;
+  }
   DrawablePath DrawablePath=new DrawablePath();
   DrawablePath.path=path;
   DrawablePath.paint=paint;

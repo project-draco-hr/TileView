@@ -1,0 +1,3 @@
+{
+  mMarkerTapListeners.remove(listener);
+}

@@ -1,4 +1,4 @@
 {
   removeAllViews();
-  return false;
+  return super.onTouchEvent(event);
 }

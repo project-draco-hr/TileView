@@ -1,14 +1,13 @@
 {
   if (dirty) {
-    Log.d("TileView","dirty, calling invalidate again");
     invalidate();
     mHasBeenDirtySinceLastCleanDraw=true;
   }
  else {
-    if (mTileCanvasDrawListener != null) {
-      if (mHasBeenDirtySinceLastCleanDraw) {
+    if (mHasBeenDirtySinceLastCleanDraw) {
+      mHasBeenDirtySinceLastCleanDraw=false;
+      if (mTileCanvasDrawListener != null) {
         mTileCanvasDrawListener.onCleanDrawComplete(this);
-        mHasBeenDirtySinceLastCleanDraw=false;
       }
     }
   }

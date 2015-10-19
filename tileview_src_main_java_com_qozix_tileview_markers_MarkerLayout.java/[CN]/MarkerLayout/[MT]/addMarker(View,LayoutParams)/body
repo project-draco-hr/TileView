@@ -1,6 +1,4 @@
 {
   addView(view,params);
-  mMarkerMap.put(view,new Rect());
-  requestLayout();
   return view;
 }

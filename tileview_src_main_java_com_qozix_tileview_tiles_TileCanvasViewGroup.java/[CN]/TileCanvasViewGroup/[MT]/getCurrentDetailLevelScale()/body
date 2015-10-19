@@ -1,6 +1,6 @@
 {
-  if (detailLevelToRender != null) {
-    return detailLevelToRender.getScale();
+  if (mDetailLevelToRender != null) {
+    return mDetailLevelToRender.getScale();
   }
   return 1;
 }

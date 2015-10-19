@@ -1,13 +1,13 @@
 {
-  detailLevelToRender=detailLevel;
-  if (detailLevelToRender == null) {
+  mDetailLevelToRender=detailLevel;
+  if (mDetailLevelToRender == null) {
     return;
   }
-  if (detailLevelToRender.equals(lastRenderedDetailLevel)) {
+  if (mDetailLevelToRender.equals(mLastRenderedDetailLevel)) {
     return;
   }
-  lastRenderedDetailLevel=detailLevelToRender;
-  currentTileGroup=getCurrentTileGroup();
-  currentTileGroup.setVisibility(View.VISIBLE);
-  currentTileGroup.bringToFront();
+  mLastRenderedDetailLevel=mDetailLevelToRender;
+  mCurrentTileCanvasView=getCurrentTileCanvasView();
+  mCurrentTileCanvasView.setVisibility(View.VISIBLE);
+  mCurrentTileCanvasView.bringToFront();
 }

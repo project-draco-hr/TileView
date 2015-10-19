@@ -1,10 +1,10 @@
 {
-  Iterator<Entry<View,Rect>> iterator=mMarkerMap.entrySet().iterator();
-  while (iterator.hasNext()) {
-    Entry<View,Rect> pairs=iterator.next();
-    Rect rect=pairs.getValue();
-    if (rect.contains(x,y)) {
-      return pairs.getKey();
+  for (int i=0; i < getChildCount(); i++) {
+    View child=getChildAt(i);
+    LayoutParams layoutParams=(LayoutParams)child.getLayoutParams();
+    Rect hitRect=layoutParams.getHitRect();
+    if (hitRect.contains(x,y)) {
+      return child;
     }
   }
   return null;
