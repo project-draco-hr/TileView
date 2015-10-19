@@ -1,5 +1,6 @@
 {
-  boolean changed=(mScale != scale);
-  mScale=scale;
-  update(changed);
+  if (mScale != scale) {
+    mScale=scale;
+    update();
+  }
 }

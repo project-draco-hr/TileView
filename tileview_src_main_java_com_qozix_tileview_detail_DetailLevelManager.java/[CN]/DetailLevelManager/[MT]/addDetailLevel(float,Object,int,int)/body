@@ -5,5 +5,5 @@
   }
   mDetailLevelLinkedList.add(detailLevel);
   Collections.sort(mDetailLevelLinkedList);
-  update(false);
+  update();
 }

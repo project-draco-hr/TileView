@@ -1,0 +1,20 @@
+{
+  double relativeScale=getRelativeScale();
+  int drawableWidth=mDetailLevelManager.getScaledWidth();
+  int drawableHeight=mDetailLevelManager.getScaledHeight();
+  double offsetWidth=mTileWidth * relativeScale;
+  double offsetHeight=mTileHeight * relativeScale;
+  Rect viewport=new Rect(mDetailLevelManager.getComputedViewport());
+  viewport.top=Math.max(viewport.top,0);
+  viewport.left=Math.max(viewport.left,0);
+  viewport.right=Math.min(viewport.right,drawableWidth);
+  viewport.bottom=Math.min(viewport.bottom,drawableHeight);
+  int rowStart=(int)Math.floor(viewport.top / offsetHeight);
+  int rowEnd=(int)Math.ceil(viewport.bottom / offsetHeight);
+  int columnStart=(int)Math.floor(viewport.left / offsetWidth);
+  int columnEnd=(int)Math.ceil(viewport.right / offsetWidth);
+  StateSnapshot stateSnapshot=new StateSnapshot(this,rowStart,rowEnd,columnStart,columnEnd);
+  boolean sameState=stateSnapshot.equals(mLastStateSnapshot);
+  mLastStateSnapshot=stateSnapshot;
+  return !sameState;
+}

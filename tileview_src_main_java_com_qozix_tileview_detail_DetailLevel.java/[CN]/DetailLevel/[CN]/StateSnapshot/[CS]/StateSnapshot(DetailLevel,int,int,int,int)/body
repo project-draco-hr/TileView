@@ -1,7 +1,7 @@
 {
-  detailLevel=dl;
-  startRow=sr;
-  endRow=er;
-  startColumn=sc;
-  endColumn=ec;
+  detailLevel=level;
+  rowStart=startRow;
+  rowEnd=endRow;
+  columnStart=startColumn;
+  columnEnd=endColumn;
 }

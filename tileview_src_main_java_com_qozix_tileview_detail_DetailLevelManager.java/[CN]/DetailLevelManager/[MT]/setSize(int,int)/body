@@ -1,5 +1,5 @@
 {
   mBaseWidth=width;
   mBaseHeight=height;
-  update(true);
+  update();
 }

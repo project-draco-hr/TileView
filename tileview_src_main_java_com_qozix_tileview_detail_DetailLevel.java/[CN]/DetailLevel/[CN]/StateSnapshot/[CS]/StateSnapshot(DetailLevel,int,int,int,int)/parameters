@@ -1,5 +1,5 @@
-DetailLevel dl
-int sr
-int er
-int sc
-int ec
+DetailLevel level
+int startRow
+int endRow
+int startColumn
+int endColumn

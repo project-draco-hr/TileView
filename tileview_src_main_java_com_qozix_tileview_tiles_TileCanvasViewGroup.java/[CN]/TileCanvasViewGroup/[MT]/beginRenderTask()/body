@@ -1,14 +1,12 @@
 {
   Log.d("Tiles","TileManager.beginRenderTask");
-  DetailLevel.StateSnapshot currentDetailLevelStateSnapshot=detailLevelToRender.computeState();
-  if (currentDetailLevelStateSnapshot != null && currentDetailLevelStateSnapshot.equals(lastDetailLevelStateSnapshot)) {
-    Log.d("Tiles","same state, quit.  " + currentDetailLevelStateSnapshot + " vs "+ lastDetailLevelStateSnapshot);
+  boolean changed=detailLevelToRender.computeCurrentState();
+  if (!changed) {
+    Log.d("Tiles","same state, quit.");
     return;
   }
   Log.d("Tiles","different state, continue");
-  lastDetailLevelStateSnapshot=currentDetailLevelStateSnapshot;
-  scheduledToRender=detailLevelToRender.calculateIntersections();
-  ;
+  scheduledToRender=detailLevelToRender.getVisibleTilesFromLastViewportComputation();
   if (lastRunRenderTask != null) {
     if (lastRunRenderTask.getStatus() != AsyncTask.Status.FINISHED) {
       lastRunRenderTask.cancel(true);

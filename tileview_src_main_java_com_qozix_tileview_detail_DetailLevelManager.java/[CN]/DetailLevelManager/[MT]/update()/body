@@ -7,8 +7,8 @@
       mCurrentDetailLevel=matchingLevel;
     }
   }
-  mScaledWidth=(int)(getBaseWidth() * getScale());
-  mScaledHeight=(int)(getBaseHeight() * getScale());
+  mScaledWidth=(int)(getBaseWidth() * getScale() + 0.5);
+  mScaledHeight=(int)(getBaseHeight() * getScale() + 0.5);
   if (detailLevelChanged) {
     if (mDetailLevelChangeListener != null) {
       mDetailLevelChangeListener.onDetailLevelChanged(mCurrentDetailLevel);

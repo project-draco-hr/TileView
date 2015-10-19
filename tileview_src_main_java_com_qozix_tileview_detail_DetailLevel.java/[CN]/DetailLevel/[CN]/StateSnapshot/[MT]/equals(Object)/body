@@ -4,7 +4,7 @@
   }
   if (o instanceof StateSnapshot) {
     StateSnapshot stateSnapshot=(StateSnapshot)o;
-    return detailLevel.equals(stateSnapshot.detailLevel) && startRow == stateSnapshot.startRow && startColumn == stateSnapshot.startColumn && endRow == stateSnapshot.endRow && endColumn == stateSnapshot.endColumn;
+    return detailLevel.equals(stateSnapshot.detailLevel) && rowStart == stateSnapshot.rowStart && columnStart == stateSnapshot.columnStart && rowEnd == stateSnapshot.rowEnd && columnEnd == stateSnapshot.columnEnd;
   }
   return false;
 }
