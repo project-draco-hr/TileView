@@ -1,8 +1,5 @@
 {
-  HashSet<Tile> intersections;
-synchronized (this) {
-    intersections=new HashSet<Tile>();
-  }
+  LinkedList<Tile> intersections=new LinkedList<Tile>();
   for (int currentRow=mLastStateSnapshot.startRow; currentRow < mLastStateSnapshot.endRow; currentRow++) {
     for (int currentColumn=mLastStateSnapshot.startColumn; currentColumn < mLastStateSnapshot.endColumn; currentColumn++) {
       Tile tile=new Tile(currentColumn,currentRow,mTileWidth,mTileHeight,mData,this);

@@ -1,7 +1,7 @@
 {
   TileCanvasViewGroup tileCanvasViewGroup=mTileManagerWeakReference.get();
   if (tileCanvasViewGroup != null) {
-    HashSet<Tile> renderList=tileCanvasViewGroup.getRenderList();
+    LinkedList<Tile> renderList=tileCanvasViewGroup.getRenderList();
     for (    Tile tile : renderList) {
       tileCanvasViewGroup=mTileManagerWeakReference.get();
       if (tileCanvasViewGroup == null) {

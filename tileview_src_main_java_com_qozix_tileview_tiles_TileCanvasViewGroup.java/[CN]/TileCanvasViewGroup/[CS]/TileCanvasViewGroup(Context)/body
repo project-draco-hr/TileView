@@ -1,8 +1,5 @@
 {
   super(context);
   setWillNotDraw(false);
-synchronized (this) {
-    scheduledToRender=new HashSet<Tile>();
-  }
   handler=new TileRenderHandler(this);
 }
