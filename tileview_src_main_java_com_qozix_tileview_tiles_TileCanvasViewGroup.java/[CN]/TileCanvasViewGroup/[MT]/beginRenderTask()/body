@@ -1,16 +1,11 @@
 {
-  Log.d("Tiles","TileManager.beginRenderTask");
   boolean changed=detailLevelToRender.computeCurrentState();
   if (!changed) {
-    Log.d("Tiles","same state, quit.");
     return;
   }
-  Log.d("Tiles","different state, continue");
   scheduledToRender=detailLevelToRender.getVisibleTilesFromLastViewportComputation();
-  if (lastRunRenderTask != null) {
-    if (lastRunRenderTask.getStatus() != AsyncTask.Status.FINISHED) {
-      lastRunRenderTask.cancel(true);
-    }
+  if (lastRunRenderTask != null && lastRunRenderTask.getStatus() != AsyncTask.Status.FINISHED) {
+    lastRunRenderTask.cancel(true);
   }
   lastRunRenderTask=new TileRenderTask(this);
   lastRunRenderTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);

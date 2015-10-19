@@ -1,7 +1,0 @@
-{
-  if (o instanceof TileList) {
-    TileList tileList=(TileList)o;
-    return rowStart == tileList.rowStart && rowEnd == tileList.rowEnd && columnStart == tileList.columnStart && columnEnd == tileList.columnEnd;
-  }
-  return false;
-}

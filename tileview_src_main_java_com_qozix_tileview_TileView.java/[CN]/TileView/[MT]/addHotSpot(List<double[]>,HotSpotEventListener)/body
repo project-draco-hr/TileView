@@ -1,5 +1,12 @@
 {
-  HotSpot hotSpot=addHotSpot(positions);
+  Path path=mCoordinateTranslater.pathFromPositions(positions);
+  RectF bounds=new RectF();
+  path.computeBounds(bounds,true);
+  Rect rect=new Rect();
+  bounds.round(rect);
+  Region clip=new Region(rect);
+  HotSpot hotSpot=new HotSpot();
+  hotSpot.setPath(path,clip);
   hotSpot.setHotSpotEventListener(listener);
-  return hotSpot;
+  return addHotSpot(hotSpot);
 }

@@ -3,14 +3,13 @@
     ViewGroup.LayoutParams params=view.getLayoutParams();
     if (params instanceof AnchorLayout.LayoutParams) {
       AnchorLayout.LayoutParams anchorLayoutParams=(AnchorLayout.LayoutParams)params;
-      int scaledX=(int)(anchorLayoutParams.x * getScale());
-      int scaledY=(int)(anchorLayoutParams.y * getScale());
-      Point point=new Point(scaledX,scaledY);
+      int scaledX=(int)(anchorLayoutParams.x * getScale() + 0.5);
+      int scaledY=(int)(anchorLayoutParams.y * getScale() + 0.5);
       if (animate) {
-        slideToAndCenter(point.x,point.y);
+        slideToAndCenter(scaledX,scaledY);
       }
  else {
-        scrollToAndCenter(point.x,point.y);
+        scrollToAndCenter(scaledX,scaledY);
       }
     }
   }

@@ -1,4 +1,0 @@
-{
-  Point point=positionManager.translate(x,y);
-  return mMarkerLayout.addMarker(view,point.x,point.y,anchorX,anchorY);
-}

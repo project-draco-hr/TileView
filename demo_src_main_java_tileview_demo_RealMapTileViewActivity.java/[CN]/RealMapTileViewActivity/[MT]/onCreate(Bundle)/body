@@ -8,14 +8,14 @@
   tileView.addDetailLevel(0.5000f,"tiles/map/phi-250000-%d_%d.jpg");
   tileView.addDetailLevel(1.0000f,"tiles/map/phi-500000-%d_%d.jpg");
   tileView.setMarkerAnchorPoints(-0.5f,-1.0f);
-  tileView.defineRelativeBounds(NORTH_WEST_LONGITUDE,NORTH_WEST_LATITUDE,SOUTH_EAST_LONGITUDE,SOUTH_EAST_LATITUDE);
+  tileView.defineBounds(NORTH_WEST_LONGITUDE,NORTH_WEST_LATITUDE,SOUTH_EAST_LONGITUDE,SOUTH_EAST_LATITUDE);
   DisplayMetrics metrics=getResources().getDisplayMetrics();
   for (  double[] point : points) {
     ImageView marker=new ImageView(this);
     marker.setTag(point);
     marker.setImageResource(Math.random() < 0.75 ? R.drawable.map_marker_normal : R.drawable.map_marker_featured);
     marker.setOnClickListener(markerClickListener);
-    tileView.addMarker(marker,point[0],point[1]);
+    tileView.addMarker(marker,point[0],point[1],null,null);
   }
   ImageView downsample=new ImageView(this);
   downsample.setImageResource(R.drawable.downsample);

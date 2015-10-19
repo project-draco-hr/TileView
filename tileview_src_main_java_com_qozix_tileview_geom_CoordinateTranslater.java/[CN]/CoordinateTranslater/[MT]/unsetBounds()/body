@@ -1,0 +1,9 @@
+{
+  mHasDefinedBounds=false;
+  mLeft=0;
+  mTop=0;
+  mRight=mWidth;
+  mBottom=mHeight;
+  mDiffX=mWidth;
+  mDiffY=mHeight;
+}

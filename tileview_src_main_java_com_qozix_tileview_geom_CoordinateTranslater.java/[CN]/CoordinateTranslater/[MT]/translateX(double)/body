@@ -1,0 +1,7 @@
+{
+  if (!mHasDefinedBounds) {
+    return (int)x;
+  }
+  double factor=(x - mLeft) / mDiffX;
+  return (int)(0.5 + (mWidth * factor));
+}

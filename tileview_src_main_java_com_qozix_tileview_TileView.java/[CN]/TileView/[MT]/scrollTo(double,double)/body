@@ -1,0 +1,3 @@
+{
+  scrollTo(mCoordinateTranslater.translateAndScaleX(x,getScale()),mCoordinateTranslater.translateAndScaleY(y,getScale()));
+}

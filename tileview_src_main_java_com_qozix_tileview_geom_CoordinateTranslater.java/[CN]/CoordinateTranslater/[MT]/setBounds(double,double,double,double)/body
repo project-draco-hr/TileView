@@ -1,0 +1,9 @@
+{
+  mHasDefinedBounds=true;
+  mLeft=left;
+  mTop=top;
+  mRight=right;
+  mBottom=bottom;
+  mDiffX=mRight - mLeft;
+  mDiffY=mBottom - mTop;
+}

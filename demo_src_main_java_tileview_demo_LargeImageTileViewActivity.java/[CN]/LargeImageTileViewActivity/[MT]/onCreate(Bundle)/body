@@ -8,6 +8,6 @@
   tileView.addDetailLevel(0.250f,"tiles/painting/250/%1_%2.jpg");
   tileView.addDetailLevel(0.125f,"tiles/painting/125/%1_%2.jpg");
   tileView.setScale(0);
-  tileView.defineRelativeBounds(0,0,1,1);
+  tileView.defineBounds(0,0,1,1);
   frameTo(0.5,0.5);
 }

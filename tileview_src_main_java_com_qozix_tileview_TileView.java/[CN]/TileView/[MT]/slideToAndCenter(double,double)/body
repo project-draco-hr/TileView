@@ -1,4 +1,3 @@
 {
-  Point point=positionManager.translate(x,y,getScale());
-  slideToAndCenter(point.x,point.y);
+  slideToAndCenter(mCoordinateTranslater.translateAndScaleX(x,getScale()),mCoordinateTranslater.translateAndScaleY(y,getScale()));
 }

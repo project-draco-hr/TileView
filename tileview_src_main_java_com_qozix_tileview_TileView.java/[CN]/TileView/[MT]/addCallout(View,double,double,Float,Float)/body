@@ -1,0 +1,3 @@
+{
+  return mCalloutLayout.addMarker(view,mCoordinateTranslater.translateX(x),mCoordinateTranslater.translateY(y),anchorX,anchorY);
+}

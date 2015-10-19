@@ -1,7 +1,3 @@
 {
-  if (mCalloutLayout.indexOfChild(view) > -1) {
-    mCalloutLayout.removeView(view);
-    return true;
-  }
-  return false;
+  mCalloutLayout.removeMarker(view);
 }

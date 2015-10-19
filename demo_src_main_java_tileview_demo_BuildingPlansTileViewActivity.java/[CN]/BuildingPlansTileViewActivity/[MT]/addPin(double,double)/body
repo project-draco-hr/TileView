@@ -1,5 +1,5 @@
 {
   ImageView imageView=new ImageView(this);
   imageView.setImageResource(R.drawable.push_pin);
-  getTileView().addMarker(imageView,x,y);
+  getTileView().addMarker(imageView,x,y,null,null);
 }
