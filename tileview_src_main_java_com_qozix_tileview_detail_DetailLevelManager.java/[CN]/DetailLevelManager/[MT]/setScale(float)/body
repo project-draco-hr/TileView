@@ -1,6 +1,4 @@
 {
-  if (mScale != scale) {
-    mScale=scale;
-    update();
-  }
+  mScale=scale;
+  update();
 }
