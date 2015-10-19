@@ -1,6 +1,0 @@
-{
-  if (hasBitmap()) {
-    return;
-  }
-  mBitmap=decoder.decode(this,context);
-}

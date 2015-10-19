@@ -1,0 +1,21 @@
+{
+  Object data=tile.getData();
+  if (data instanceof String) {
+    String unformattedFileName=(String)tile.getData();
+    String formattedFileName=String.format(unformattedFileName,tile.getColumn(),tile.getRow());
+    AssetManager assetManager=context.getAssets();
+    try {
+      InputStream inputStream=assetManager.open(formattedFileName);
+      if (inputStream != null) {
+        try {
+          return BitmapFactory.decodeStream(inputStream,null,OPTIONS);
+        }
+ catch (        OutOfMemoryError|Exception e) {
+        }
+      }
+    }
+ catch (    Exception e) {
+    }
+  }
+  return null;
+}
