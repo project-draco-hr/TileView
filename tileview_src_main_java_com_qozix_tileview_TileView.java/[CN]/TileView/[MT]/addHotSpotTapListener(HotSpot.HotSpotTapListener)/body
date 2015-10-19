@@ -1,0 +1,3 @@
+{
+  hotSpotManager.addHotSpotTapListener(listener);
+}

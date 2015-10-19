@@ -1,0 +1,12 @@
+{
+  int scaledX=(int)(x / mScale + 0.5);
+  int scaledY=(int)(y / mScale + 0.5);
+  Iterator<HotSpot> iterator=mHotSpots.descendingIterator();
+  while (iterator.hasNext()) {
+    HotSpot hotSpot=iterator.next();
+    if (hotSpot.contains(scaledX,scaledY)) {
+      return hotSpot;
+    }
+  }
+  return null;
+}
