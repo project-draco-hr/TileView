@@ -1,0 +1,4 @@
+{
+  slideToAndCenter(mCoordinateTranslater.translateAndScaleX(x,scale),mCoordinateTranslater.translateAndScaleY(y,scale));
+  smoothScaleTo(scale,SLIDE_DURATION,false);
+}

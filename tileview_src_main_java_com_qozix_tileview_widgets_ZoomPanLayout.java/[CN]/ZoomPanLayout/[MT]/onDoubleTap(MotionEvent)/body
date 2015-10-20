@@ -1,6 +1,6 @@
 {
   float destination=mScale >= mMaxScale ? mMinScale : Math.min(mMaxScale,mScale * 2);
   saveScaleOrigination(event.getX(),event.getY());
-  startSmoothScaleTo(destination,ZOOM_ANIMATION_DURATION);
+  startSmoothScaleTo(destination,ZOOM_ANIMATION_DURATION,true);
   return true;
 }

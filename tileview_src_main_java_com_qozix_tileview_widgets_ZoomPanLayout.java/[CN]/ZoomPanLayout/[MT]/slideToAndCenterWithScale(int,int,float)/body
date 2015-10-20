@@ -1,0 +1,4 @@
+{
+  slideToAndCenter((int)(x * scale),(int)(y * scale));
+  smoothScaleTo(scale,SLIDE_DURATION,false);
+}

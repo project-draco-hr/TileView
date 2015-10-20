@@ -2,6 +2,7 @@
   if (mIsScaling) {
     return;
   }
+  mShouldMaintainPositionWhileZooming=shouldMaintainPosition;
   ValueAnimator animator=getAnimator();
   animator.setFloatValues(mScale,destination);
   animator.setDuration(duration);

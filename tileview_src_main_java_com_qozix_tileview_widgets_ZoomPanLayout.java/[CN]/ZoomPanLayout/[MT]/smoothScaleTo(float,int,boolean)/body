@@ -3,5 +3,5 @@
     return;
   }
   saveScaleOrigination(getHalfWidth(),getHalfHeight());
-  startSmoothScaleTo(destination,duration);
+  startSmoothScaleTo(destination,duration,shouldMaintainPosition);
 }
