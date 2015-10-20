@@ -4,7 +4,7 @@
   }
   double now=AnimationUtils.currentAnimationTimeMillis();
   double ellapsed=now - renderTimestamp;
-  float progress=(float)Math.min(1,ellapsed / mDuration);
+  float progress=(float)Math.min(1,ellapsed / mTransitionDuration);
   if (progress == 1) {
     mTransitionsEnabled=false;
   }

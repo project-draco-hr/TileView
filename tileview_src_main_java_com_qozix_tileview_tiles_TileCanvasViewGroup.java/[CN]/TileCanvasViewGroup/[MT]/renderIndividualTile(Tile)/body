@@ -3,7 +3,7 @@
     return;
   }
   tile.setTransitionsEnabled(mTransitionsEnabled);
-  tile.setDuration(mTransitionDuration);
+  tile.setTransitionDuration(mTransitionDuration);
   tile.stampTime();
   mAlreadyRendered.add(tile);
   mCurrentTileCanvasView.addTile(tile);

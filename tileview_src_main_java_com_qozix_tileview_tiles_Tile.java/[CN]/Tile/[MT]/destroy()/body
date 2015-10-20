@@ -1,4 +1,7 @@
 {
+  if (mBitmap != null) {
+    mBitmap.recycle();
+  }
   mBitmap=null;
   if (mParentTileCanvasView != null) {
     mParentTileCanvasView.removeTile(this);

@@ -2,6 +2,9 @@
   if (!mTransitionsEnabled) {
     return null;
   }
+  if (mPaint == null) {
+    mPaint=new Paint();
+  }
   float rendered=getRendered();
   int opacity=(int)(rendered * 255);
   mPaint.setAlpha(opacity);

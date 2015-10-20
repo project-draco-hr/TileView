@@ -1,0 +1,6 @@
+{
+  if (mBitmap != null) {
+    return;
+  }
+  mBitmap=bitmapProvider.getBitmap(this,context);
+}
