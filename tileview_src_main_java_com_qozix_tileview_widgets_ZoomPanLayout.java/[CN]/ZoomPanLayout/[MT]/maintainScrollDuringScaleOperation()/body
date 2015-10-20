@@ -1,4 +1,7 @@
 {
+  if (mIsSliding) {
+    return;
+  }
   double deltaScale=mScale / mHistoricalScale;
   int x=(int)((mStartScaleScrollX * deltaScale) - mStartFocusX);
   int y=(int)((mStartScaleScrollY * deltaScale) - mStartFocusY);

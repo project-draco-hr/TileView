@@ -1,6 +1,6 @@
 {
   super.onCreate(savedInstanceState);
-  tileView=new TileView(this);
+  tileView=new NoDoubleTapTileView(this);
   tileView.setSize(17934 / 2,13452 / 2);
   tileView.setBackgroundColor(0xFFe7e7e7);
   tileView.addDetailLevel(0.1250f,"tiles/map/phi-62500-%d_%d.jpg");

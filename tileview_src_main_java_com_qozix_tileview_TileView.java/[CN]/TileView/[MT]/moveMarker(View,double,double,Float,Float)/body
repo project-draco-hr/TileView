@@ -1,3 +1,0 @@
-{
-  mMarkerLayout.moveMarker(view,mCoordinateTranslater.translateX(x),mCoordinateTranslater.translateY(y),anchorX,anchorY);
-}

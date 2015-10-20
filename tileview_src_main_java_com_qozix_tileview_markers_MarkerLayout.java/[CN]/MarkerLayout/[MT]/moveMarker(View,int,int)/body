@@ -1,3 +1,6 @@
 {
-  moveMarker(view,x,y,null,null);
+  LayoutParams layoutParams=(LayoutParams)view.getLayoutParams();
+  layoutParams.x=x;
+  layoutParams.y=y;
+  moveMarker(view,layoutParams);
 }

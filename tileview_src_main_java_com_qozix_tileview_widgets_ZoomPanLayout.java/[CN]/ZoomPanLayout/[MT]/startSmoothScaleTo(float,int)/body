@@ -2,7 +2,7 @@
   if (mIsScaling) {
     return;
   }
-  ValueAnimator animator=getAnimator();
+  ValueAnimator animator=getZoomAnimator();
   animator.setFloatValues(mScale,destination);
   animator.setDuration(duration);
   animator.start();
