@@ -1,0 +1,8 @@
+{
+  if (mValueAnimator == null) {
+    mValueAnimator=ValueAnimator.ofFloat(0,1);
+    mValueAnimator.setDuration(DEFAULT_ZOOM_PAN_ANIMATION_DURATION);
+    mValueAnimator.addUpdateListener(this);
+  }
+  return mValueAnimator;
+}

@@ -1,0 +1,3 @@
+{
+  getZoomPanAnimator().startZoomPanAndCenter(x,y,scale);
+}

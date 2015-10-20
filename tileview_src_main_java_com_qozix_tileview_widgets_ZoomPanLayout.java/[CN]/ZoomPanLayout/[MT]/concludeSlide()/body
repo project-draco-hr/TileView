@@ -1,7 +1,6 @@
 {
   if (mIsSliding) {
     mIsSliding=false;
-    mShouldScaleWhileSliding=false;
     mScroller.forceFinished(true);
     mScrollActionHandler.clear();
     broadcastProgrammaticPanEnd(getScrollX(),getScrollY());

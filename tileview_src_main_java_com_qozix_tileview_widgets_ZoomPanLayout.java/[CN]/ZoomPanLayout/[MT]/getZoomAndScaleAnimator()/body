@@ -1,8 +1,0 @@
-{
-  if (mZoomAndScaleAnimator == null) {
-    mZoomAndScaleAnimator=ValueAnimator.ofFloat(0,1);
-    mZoomAndScaleAnimator.addListener(new ZoomAndPanAnimatorListener(this));
-    mZoomAndScaleAnimator.addUpdateListener(new ZoomAndPanAnimatorUpdateListener(this));
-  }
-  return mZoomAndScaleAnimator;
-}

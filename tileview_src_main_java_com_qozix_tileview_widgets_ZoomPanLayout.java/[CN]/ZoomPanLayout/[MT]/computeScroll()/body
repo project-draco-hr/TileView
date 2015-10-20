@@ -11,15 +11,6 @@
       }
  else       if (mIsSliding) {
         broadcastProgrammaticPanUpdate(endX,endY);
-        if (mShouldScaleWhileSliding) {
-          float changeX=mScroller.getFinalX() - mScroller.getStartX();
-          float travelledX=mScroller.getCurrX() - mScroller.getStartX();
-          float completeX=Math.min(1f,travelledX / changeX);
-          float scaleChange=mScaleAtEndOfSlide - mScaleAtStartOfSlide;
-          float scaleUpdate=mScaleAtStartOfSlide + (scaleChange * completeX);
-          setScale(scaleUpdate);
-          Log.d("Scroll","completeX=" + scaleUpdate);
-        }
       }
     }
     if (!mScroller.isFinished()) {

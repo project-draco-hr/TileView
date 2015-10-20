@@ -1,0 +1,11 @@
+{
+  TileView tileView=mTileViewWeakReference.get();
+  if (tileView != null) {
+    float progress=(float)animation.getAnimatedValue();
+    int scrollX=(int)(mStartState.scrollX + (mEndState.scrollX - mStartState.scrollX) * progress);
+    int scrollY=(int)(mStartState.scrollY + (mEndState.scrollY - mStartState.scrollY) * progress);
+    float scale=mStartState.scale + (mEndState.scale - mStartState.scale) * progress;
+    tileView.scrollTo(scrollX,scrollY);
+    tileView.setScale(scale);
+  }
+}

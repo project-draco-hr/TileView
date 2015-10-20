@@ -1,7 +1,0 @@
-{
-  ZoomPanLayout zoomPanLayout=mZoomPanLayoutWeakReference.get();
-  if (zoomPanLayout != null) {
-    zoomPanLayout.mIsScaling=true;
-    zoomPanLayout.broadcastProgrammaticZoomBegin(zoomPanLayout.mScale,zoomPanLayout.mStartFocusX,zoomPanLayout.mStartFocusY);
-  }
-}

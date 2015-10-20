@@ -1,9 +1,0 @@
-{
-  ZoomPanLayout zoomPanLayout=mZoomPanLayoutWeakReference.get();
-  if (zoomPanLayout != null) {
-    float scale=(float)valueAnimator.getAnimatedValue();
-    zoomPanLayout.setScale(scale);
-    zoomPanLayout.maintainScrollDuringScaleOperation();
-    zoomPanLayout.broadcastProgrammaticZoomUpdate(scale,zoomPanLayout.mStartFocusX,zoomPanLayout.mStartFocusY);
-  }
-}
