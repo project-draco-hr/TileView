@@ -8,6 +8,6 @@
   }
   mLastRenderedDetailLevel=mDetailLevelToRender;
   mCurrentTileCanvasView=getCurrentTileCanvasView();
-  mCurrentTileCanvasView.setVisibility(View.VISIBLE);
   mCurrentTileCanvasView.bringToFront();
+  mCurrentTileCanvasView.setVisibility(View.VISIBLE);
 }

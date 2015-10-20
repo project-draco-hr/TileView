@@ -9,8 +9,8 @@
   mAlreadyRendered.removeAll(condemned);
   for (  TileCanvasView tileGroup : mTileCanvasViewHashMap.values()) {
     if (mCurrentTileCanvasView != tileGroup) {
-      tileGroup.setVisibility(View.GONE);
       tileGroup.clearTiles();
+      tileGroup.setVisibility(View.GONE);
     }
   }
   invalidate();
