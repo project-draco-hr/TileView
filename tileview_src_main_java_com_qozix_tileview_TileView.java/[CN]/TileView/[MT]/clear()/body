@@ -1,4 +1,0 @@
-{
-  mTileCanvasViewGroup.clear();
-  mCompositePathView.setShouldDraw(false);
-}

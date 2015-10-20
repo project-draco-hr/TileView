@@ -2,5 +2,5 @@
   updateViewport();
   mTileCanvasViewGroup.updateTileSet(mDetailLevelManager.getCurrentDetailLevel());
   mTileCanvasViewGroup.requestRender();
-  redraw();
+  requestLayout();
 }

@@ -1,8 +1,7 @@
 {
   int x=(int)(getScrollX() + event.getX());
   int y=(int)(getScrollY() + event.getY());
-  Point point=new Point(x,y);
-  mMarkerLayout.processHit(point);
+  mMarkerLayout.processHit(x,y);
   mHotSpotManager.processHit(x,y);
   return super.onSingleTapConfirmed(event);
 }

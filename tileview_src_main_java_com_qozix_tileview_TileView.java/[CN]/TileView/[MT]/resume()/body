@@ -1,4 +1,5 @@
 {
+  setWillNotDraw(false);
   updateViewport();
   mTileCanvasViewGroup.requestRender();
   mCompositePathView.setShouldDraw(true);

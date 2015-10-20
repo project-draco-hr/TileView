@@ -1,13 +1,5 @@
 {
-  Log.d("Tiles","TileManager.renderTiles");
-  if (mRenderIsCancelled) {
-    return;
+  if (!mRenderIsCancelled && !mRenderIsSuppressed && mDetailLevelToRender != null) {
+    beginRenderTask();
   }
-  if (mRenderIsSuppressed) {
-    return;
-  }
-  if (mDetailLevelToRender == null) {
-    return;
-  }
-  beginRenderTask();
 }

@@ -9,5 +9,6 @@
   mLastRenderedDetailLevel=mDetailLevelToRender;
   mCurrentTileCanvasView=getCurrentTileCanvasView();
   mCurrentTileCanvasView.bringToFront();
-  mCurrentTileCanvasView.setVisibility(View.VISIBLE);
+  cancelRender();
+  requestRender();
 }

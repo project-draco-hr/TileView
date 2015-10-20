@@ -1,16 +1,14 @@
 {
   LinkedList<Tile> condemned=new LinkedList<Tile>(mAlreadyRendered);
   condemned.removeAll(mScheduledToRender);
-  Log.d("Tiles","about to destroy " + condemned.size() + " tiles.");
-  for (  Tile m : condemned) {
-    m.destroy();
+  for (  Tile tile : condemned) {
+    tile.destroy();
   }
-  mCurrentTileCanvasView.invalidate();
   mAlreadyRendered.removeAll(condemned);
+  mCurrentTileCanvasView.invalidate();
   for (  TileCanvasView tileGroup : mTileCanvasViewHashMap.values()) {
     if (mCurrentTileCanvasView != tileGroup) {
       tileGroup.clearTiles();
-      tileGroup.setVisibility(View.GONE);
     }
   }
   invalidate();

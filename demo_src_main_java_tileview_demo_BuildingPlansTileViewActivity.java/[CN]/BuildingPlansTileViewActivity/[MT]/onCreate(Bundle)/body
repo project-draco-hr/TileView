@@ -8,7 +8,7 @@
   tileView.addDetailLevel(0.125f,"tiles/plans/125/%1_%2.jpg");
   tileView.defineBounds(0,0,1,1);
   tileView.setMarkerAnchorPoints(-0.5f,-0.5f);
-  tileView.addMarkerEventListener(mMarkerTapListener);
+  tileView.addMarkerTapListener(mMarkerTapListener);
   addPin(0.25,0.25);
   addPin(0.25,0.75);
   addPin(0.75,0.25);

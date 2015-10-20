@@ -1,16 +1,17 @@
 {
   if (mMarkerLayout.indexOfChild(view) > -1) {
-    ViewGroup.LayoutParams params=view.getLayoutParams();
-    if (params instanceof MarkerLayout.LayoutParams) {
-      MarkerLayout.LayoutParams anchorLayoutParams=(MarkerLayout.LayoutParams)params;
-      int scaledX=(int)(anchorLayoutParams.x * getScale() + 0.5);
-      int scaledY=(int)(anchorLayoutParams.y * getScale() + 0.5);
-      if (animate) {
-        slideToAndCenter(scaledX,scaledY);
-      }
+    throw new IllegalStateException("The view passed is not an existing marker");
+  }
+  ViewGroup.LayoutParams params=view.getLayoutParams();
+  if (params instanceof MarkerLayout.LayoutParams) {
+    MarkerLayout.LayoutParams anchorLayoutParams=(MarkerLayout.LayoutParams)params;
+    int scaledX=(int)(anchorLayoutParams.x * getScale() + 0.5);
+    int scaledY=(int)(anchorLayoutParams.y * getScale() + 0.5);
+    if (animate) {
+      slideToAndCenter(scaledX,scaledY);
+    }
  else {
-        scrollToAndCenter(scaledX,scaledY);
-      }
+      scrollToAndCenter(scaledX,scaledY);
     }
   }
 }

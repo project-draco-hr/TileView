@@ -1,0 +1,6 @@
+{
+  if (mBitmapProvider == null) {
+    mBitmapProvider=new BitmapProviderAssets();
+  }
+  return mBitmapProvider;
+}

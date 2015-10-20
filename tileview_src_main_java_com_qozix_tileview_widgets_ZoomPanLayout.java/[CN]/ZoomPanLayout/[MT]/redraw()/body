@@ -1,4 +1,0 @@
-{
-  requestLayout();
-  invalidate();
-}

@@ -1,3 +1,6 @@
 {
-  clear();
+  mTileCanvasViewGroup.clear();
+  mRenderThrottleHandler.clear();
+  mCompositePathView.setShouldDraw(false);
+  setWillNotDraw(true);
 }

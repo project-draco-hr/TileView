@@ -1,4 +1,0 @@
-{
-  mDetailLevelManager.resetDetailLevels();
-  refresh();
-}

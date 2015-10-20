@@ -5,6 +5,6 @@
     return;
   }
   if (!mTileRenderHandler.hasMessages(RENDER_FLAG)) {
-    mTileRenderHandler.sendEmptyMessageDelayed(RENDER_FLAG,RENDER_BUFFER);
+    mTileRenderHandler.sendEmptyMessageDelayed(RENDER_FLAG,mRenderBuffer);
   }
 }

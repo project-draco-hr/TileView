@@ -3,8 +3,8 @@
   if (!mTransitionsEnabled) {
     cleanup();
   }
-  requestRender();
   if (mTileRenderListener != null) {
     mTileRenderListener.onRenderComplete();
   }
+  requestRender();
 }

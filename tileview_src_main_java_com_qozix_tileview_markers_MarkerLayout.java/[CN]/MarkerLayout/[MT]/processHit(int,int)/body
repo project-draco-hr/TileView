@@ -2,10 +2,10 @@
   if (mMarkerTapListeners.isEmpty()) {
     return;
   }
-  View view=getViewFromTap(point.x,point.y);
+  View view=getViewFromTap(x,y);
   if (view != null) {
     for (    MarkerTapListener listener : mMarkerTapListeners) {
-      listener.onMarkerTap(view,point.x,point.y);
+      listener.onMarkerTap(view,x,y);
     }
   }
 }
