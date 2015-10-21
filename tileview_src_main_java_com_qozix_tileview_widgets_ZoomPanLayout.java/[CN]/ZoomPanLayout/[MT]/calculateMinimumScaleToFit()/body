@@ -3,8 +3,8 @@
     float minimumScaleX=getWidth() / (float)mBaseWidth;
     float minimumScaleY=getHeight() / (float)mBaseHeight;
     float recalculatedMinScale=Math.max(minimumScaleX,minimumScaleY);
-    if (recalculatedMinScale != mMinScale) {
-      mMinScale=recalculatedMinScale;
+    if (recalculatedMinScale != mEffectiveMinScale) {
+      mEffectiveMinScale=recalculatedMinScale;
       setScale(mScale);
     }
   }
