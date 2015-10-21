@@ -1,7 +1,6 @@
 {
   float focusX=scaleGestureDetector.getFocusX();
   float focusY=scaleGestureDetector.getFocusY();
-  saveScaleOrigination(focusX,focusY);
   broadcastPinchBegin(mScale,focusX,focusY);
   return true;
 }

@@ -1,0 +1,8 @@
+{
+  super();
+  setDuration(DEFAULT_ZOOM_PAN_ANIMATION_DURATION);
+  addUpdateListener(this);
+  setFloatValues(0f,1f);
+  setInterpolator(new ViscousFluidInterpolator());
+  mZoomPanLayoutWeakReference=new WeakReference<ZoomPanLayout>(zoomPanLayout);
+}

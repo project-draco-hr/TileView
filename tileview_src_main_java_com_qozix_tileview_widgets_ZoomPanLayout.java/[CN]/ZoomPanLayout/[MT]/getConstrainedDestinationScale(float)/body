@@ -1,0 +1,5 @@
+{
+  scale=Math.max(scale,mMinScale);
+  scale=Math.min(scale,mMaxScale);
+  return scale;
+}

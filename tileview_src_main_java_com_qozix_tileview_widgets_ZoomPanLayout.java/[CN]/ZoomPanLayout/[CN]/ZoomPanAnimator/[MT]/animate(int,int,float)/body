@@ -1,0 +1,14 @@
+{
+  ZoomPanLayout zoomPanLayout=mZoomPanLayoutWeakReference.get();
+  if (zoomPanLayout != null) {
+    mStartState.scale=zoomPanLayout.getScale();
+    mStartState.scrollX=zoomPanLayout.getScrollX();
+    mStartState.scrollY=zoomPanLayout.getScrollY();
+    mEndState.scale=scale;
+    mEndState.scrollX=x;
+    mEndState.scrollY=y;
+    mIsMutatingScale=mStartState.scale != mEndState.scale;
+    mIsMutatingScroll=mStartState.scrollX != mEndState.scrollX || mStartState.scrollY != mEndState.scrollY;
+    start();
+  }
+}

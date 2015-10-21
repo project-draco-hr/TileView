@@ -1,6 +1,0 @@
-{
-  if (mZoomPanAnimator == null) {
-    mZoomPanAnimator=new ZoomPanAnimator(this);
-  }
-  return mZoomPanAnimator;
-}

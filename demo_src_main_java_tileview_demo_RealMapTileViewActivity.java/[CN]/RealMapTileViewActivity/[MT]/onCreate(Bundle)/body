@@ -1,6 +1,6 @@
 {
   super.onCreate(savedInstanceState);
-  tileView=new NoDoubleTapTileView(this);
+  tileView=new TileView(this);
   tileView.setSize(17934 / 2,13452 / 2);
   tileView.setBackgroundColor(0xFFe7e7e7);
   tileView.addDetailLevel(0.1250f,"tiles/map/phi-62500-%d_%d.jpg");
@@ -21,5 +21,15 @@
   ImageView downsample=new ImageView(this);
   downsample.setImageResource(R.drawable.downsample);
   tileView.addView(downsample,0);
+  Button button=new Button(this);
+  button.setText("ZoomAndScale");
+  button.setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View view){
+      double[] spot=points.get(0);
+      tileView.slideToAndCenterWithScale(spot[0],spot[1],0.5f);
+    }
+  }
+);
+  tileView.addMarker(button,NORTH_WEST_LONGITUDE,NORTH_WEST_LATITUDE,0f,0f);
   setContentView(tileView);
 }

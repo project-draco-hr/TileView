@@ -1,4 +1,3 @@
 {
-  slideToAndCenter((int)(x * scale),(int)(y * scale));
-  smoothScaleTo(scale,SLIDE_DURATION,false);
+  getAnimator().animate((int)(x * scale) - getHalfWidth(),(int)(y * scale) - getHalfHeight(),scale);
 }

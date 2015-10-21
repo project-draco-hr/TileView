@@ -9,9 +9,6 @@
       if (mIsFlinging) {
         broadcastFlingUpdate(endX,endY);
       }
- else       if (mIsSliding) {
-        broadcastProgrammaticPanUpdate(endX,endY);
-      }
     }
     if (!mScroller.isFinished()) {
       ViewCompat.postInvalidateOnAnimation(this);

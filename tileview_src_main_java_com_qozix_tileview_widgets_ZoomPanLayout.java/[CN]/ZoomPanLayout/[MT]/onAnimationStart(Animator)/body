@@ -1,4 +1,0 @@
-{
-  mIsScaling=true;
-  broadcastProgrammaticZoomBegin(mScale,mStartFocusX,mStartFocusY);
-}

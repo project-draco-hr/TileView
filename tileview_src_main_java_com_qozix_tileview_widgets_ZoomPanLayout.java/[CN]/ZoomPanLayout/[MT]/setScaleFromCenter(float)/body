@@ -1,16 +1,5 @@
 {
-  scale=Math.max(scale,mMinScale);
-  scale=Math.min(scale,mMaxScale);
-  if (scale == mScale) {
-    return;
-  }
   int offsetX=getHalfWidth();
   int offsetY=getHalfHeight();
-  int scrollX=getScrollX() + offsetX;
-  int scrollY=getScrollY() + offsetY;
-  float deltaScale=scale / getScale();
-  int x=(int)(scrollX * deltaScale) - offsetX;
-  int y=(int)(scrollY * deltaScale) - offsetY;
-  setScale(scale);
-  scrollTo(x,y);
+  setScaleFromPosition(offsetX,offsetY,scale);
 }

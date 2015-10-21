@@ -1,7 +1,0 @@
-{
-  if (mIsScaling) {
-    return;
-  }
-  saveScaleOrigination(getHalfWidth(),getHalfHeight());
-  startSmoothScaleTo(destination,duration,shouldMaintainPosition);
-}

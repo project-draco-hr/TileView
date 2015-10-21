@@ -1,3 +1,0 @@
-{
-  mTileViewWeakReference=new WeakReference<TileView>(tileView);
-}

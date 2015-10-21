@@ -1,8 +1,0 @@
-{
-  float scale=(float)valueAnimator.getAnimatedValue();
-  setScale(scale);
-  if (mShouldMaintainPositionWhileZooming) {
-    maintainScrollDuringScaleOperation();
-  }
-  broadcastProgrammaticZoomUpdate(scale,mStartFocusX,mStartFocusY);
-}
