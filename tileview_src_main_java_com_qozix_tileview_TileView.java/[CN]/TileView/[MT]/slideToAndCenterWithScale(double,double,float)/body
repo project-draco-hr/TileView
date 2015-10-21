@@ -1,4 +1,4 @@
 {
   Log.d("Anim","correct slideToAndCenterWithScale called");
-  slideToAndCenterWithScale(mCoordinateTranslater.translateAndScaleX(x,getScale()),mCoordinateTranslater.translateAndScaleY(y,getScale()),scale);
+  slideToAndCenterWithScale(mCoordinateTranslater.translateAndScaleX(x,scale),mCoordinateTranslater.translateAndScaleY(y,scale),scale);
 }

@@ -5,6 +5,7 @@
     mScale=scale;
     updateScaledDimensions();
     onScaleChanged(scale,previous);
+    constrainScrollToLimits();
     invalidate();
   }
 }

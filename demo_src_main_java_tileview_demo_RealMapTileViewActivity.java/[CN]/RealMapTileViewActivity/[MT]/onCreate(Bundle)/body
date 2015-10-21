@@ -10,6 +10,10 @@
   tileView.setMarkerAnchorPoints(-0.5f,-1.0f);
   tileView.defineBounds(NORTH_WEST_LONGITUDE,NORTH_WEST_LATITUDE,SOUTH_EAST_LONGITUDE,SOUTH_EAST_LATITUDE);
   DisplayMetrics metrics=getResources().getDisplayMetrics();
+  Paint paint=tileView.getPathPaint();
+  paint.setShadowLayer(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,4,metrics),TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,2,metrics),TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,2,metrics),0x66000000);
+  paint.setPathEffect(new CornerPathEffect(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,5,metrics)));
+  tileView.drawPath(points.subList(1,5),null);
   for (  double[] point : points) {
     ImageView marker=new ImageView(this);
     marker.setTag(point);
@@ -18,9 +22,6 @@
     tileView.addMarker(marker,point[0],point[1],null,null);
   }
   tileView.setTransitionsEnabled(false);
-  ImageView downsample=new ImageView(this);
-  downsample.setImageResource(R.drawable.downsample);
-  tileView.addView(downsample,0);
   Button button=new Button(this);
   button.setText("ZoomAndScale");
   button.setOnClickListener(new View.OnClickListener(){
@@ -30,6 +31,8 @@
     }
   }
 );
-  tileView.addMarker(button,NORTH_WEST_LONGITUDE,NORTH_WEST_LATITUDE,0f,0f);
-  setContentView(tileView);
+  RelativeLayout contentView=new RelativeLayout(this);
+  contentView.addView(tileView);
+  contentView.addView(button);
+  setContentView(contentView);
 }

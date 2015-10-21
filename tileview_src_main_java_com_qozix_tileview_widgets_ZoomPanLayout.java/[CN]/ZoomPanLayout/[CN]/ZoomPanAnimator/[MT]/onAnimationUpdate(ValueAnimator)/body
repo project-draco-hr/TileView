@@ -5,7 +5,7 @@
     int scrollX=(int)(mStartState.scrollX + (mEndState.scrollX - mStartState.scrollX) * progress);
     int scrollY=(int)(mStartState.scrollY + (mEndState.scrollY - mStartState.scrollY) * progress);
     float scale=mStartState.scale + (mEndState.scale - mStartState.scale) * progress;
-    zoomPanLayout.scrollTo(scrollX,scrollY);
     zoomPanLayout.setScale(scale);
+    zoomPanLayout.scrollTo(scrollX,scrollY);
   }
 }

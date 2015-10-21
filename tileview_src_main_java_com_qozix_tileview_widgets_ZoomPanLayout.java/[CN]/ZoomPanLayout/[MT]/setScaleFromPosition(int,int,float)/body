@@ -9,6 +9,6 @@
   float deltaScale=scale / getScale();
   int x=(int)(scrollX * deltaScale) - offsetX;
   int y=(int)(scrollY * deltaScale) - offsetY;
-  setScale(scale);
   scrollTo(x,y);
+  setScale(scale);
 }

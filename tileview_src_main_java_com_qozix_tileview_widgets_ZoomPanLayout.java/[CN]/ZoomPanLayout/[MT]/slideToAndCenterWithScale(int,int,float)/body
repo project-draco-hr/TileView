@@ -1,3 +1,3 @@
 {
-  getAnimator().animate((int)(x * scale) - getHalfWidth(),(int)(y * scale) - getHalfHeight(),scale);
+  getAnimator().animate(x - getHalfWidth(),y - getHalfHeight(),scale);
 }
