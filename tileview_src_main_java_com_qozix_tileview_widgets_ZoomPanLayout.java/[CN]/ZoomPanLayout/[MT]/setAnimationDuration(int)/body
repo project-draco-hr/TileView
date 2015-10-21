@@ -1,0 +1,6 @@
+{
+  mAnimationDuration=animationDuration;
+  if (mZoomPanAnimator != null) {
+    mZoomPanAnimator.setDuration(mAnimationDuration);
+  }
+}

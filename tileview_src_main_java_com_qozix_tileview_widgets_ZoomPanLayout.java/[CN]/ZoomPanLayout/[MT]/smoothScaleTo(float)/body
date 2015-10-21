@@ -1,6 +1,3 @@
 {
-  if (mIsScaling) {
-    return;
-  }
-  getAnimator().animate(getScrollX(),getScrollY(),destination);
+  getAnimator().animateZoom(destination);
 }

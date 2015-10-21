@@ -1,6 +1,7 @@
 {
   if (mZoomPanAnimator == null) {
     mZoomPanAnimator=new ZoomPanAnimator(this);
+    mZoomPanAnimator.setDuration(mAnimationDuration);
   }
   return mZoomPanAnimator;
 }

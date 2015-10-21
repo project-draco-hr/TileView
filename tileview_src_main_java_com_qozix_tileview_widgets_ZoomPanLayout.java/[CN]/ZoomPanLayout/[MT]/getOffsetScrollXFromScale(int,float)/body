@@ -1,0 +1,5 @@
+{
+  int scrollX=getScrollX() + offsetX;
+  float deltaScale=scale / mScale;
+  return (int)(scrollX * deltaScale) - offsetX;
+}

@@ -1,6 +1,6 @@
 {
   float currentScale=mScale * mScaleGestureDetector.getScaleFactor();
   setScaleFromPosition((int)scaleGestureDetector.getFocusX(),(int)scaleGestureDetector.getFocusY(),currentScale);
-  broadcastPinchUpdate(mScale,scaleGestureDetector.getFocusX(),scaleGestureDetector.getFocusY());
+  broadcastPinchUpdate();
   return true;
 }

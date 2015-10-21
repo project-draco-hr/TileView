@@ -4,8 +4,8 @@
     float previous=mScale;
     mScale=scale;
     updateScaledDimensions();
-    onScaleChanged(scale,previous);
     constrainScrollToLimits();
+    onScaleChanged(scale,previous);
     invalidate();
   }
 }

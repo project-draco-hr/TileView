@@ -1,7 +1,3 @@
 {
-  ZoomPanLayout zoomPanLayout=mZoomPanLayoutWeakReference.get();
-  if (zoomPanLayout != null) {
-    zoomPanLayout.mIsScaling=false;
-    zoomPanLayout.broadcastProgrammaticZoomEnd(zoomPanLayout.mScale,0,0);
-  }
+  onAnimationEnd(animator);
 }

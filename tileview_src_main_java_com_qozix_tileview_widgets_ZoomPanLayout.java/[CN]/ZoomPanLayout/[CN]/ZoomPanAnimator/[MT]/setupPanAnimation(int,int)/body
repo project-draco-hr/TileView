@@ -1,0 +1,11 @@
+{
+  ZoomPanLayout zoomPanLayout=mZoomPanLayoutWeakReference.get();
+  if (zoomPanLayout != null) {
+    mStartState.x=zoomPanLayout.getScrollX();
+    mStartState.y=zoomPanLayout.getScrollY();
+    mEndState.x=x;
+    mEndState.y=y;
+    return mStartState.x != mEndState.x || mStartState.y != mEndState.y;
+  }
+  return false;
+}

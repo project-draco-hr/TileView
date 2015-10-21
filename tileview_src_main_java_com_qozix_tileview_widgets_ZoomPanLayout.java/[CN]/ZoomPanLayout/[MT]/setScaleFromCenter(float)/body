@@ -1,5 +1,3 @@
 {
-  int offsetX=getHalfWidth();
-  int offsetY=getHalfHeight();
-  setScaleFromPosition(offsetX,offsetY,scale);
+  setScaleFromPosition(getHalfWidth(),getHalfHeight(),scale);
 }

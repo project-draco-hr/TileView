@@ -1,10 +1,8 @@
 {
   super();
-  setDuration(DEFAULT_ZOOM_PAN_ANIMATION_DURATION);
   addUpdateListener(this);
   addListener(this);
   setFloatValues(0f,1f);
-  setInterpolator(new DecelerateInterpolator());
-  mZoomPanLayoutWeakReference=new WeakReference<ZoomPanLayout>(zoomPanLayout);
+  setInterpolator(new FastEaseInInterpolator());
   mZoomPanLayoutWeakReference=new WeakReference<ZoomPanLayout>(zoomPanLayout);
 }

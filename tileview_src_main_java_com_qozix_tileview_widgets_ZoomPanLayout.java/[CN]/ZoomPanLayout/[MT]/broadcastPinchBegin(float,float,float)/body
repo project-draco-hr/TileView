@@ -1,5 +1,0 @@
-{
-  for (  ZoomPanListener listener : mZoomPanListeners) {
-    listener.onZoomBegin(scale,focusX,focusY,ZoomPanListener.Origination.PINCH);
-  }
-}

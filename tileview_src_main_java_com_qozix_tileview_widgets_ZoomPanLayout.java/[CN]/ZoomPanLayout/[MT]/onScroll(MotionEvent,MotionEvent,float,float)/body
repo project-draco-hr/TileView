@@ -4,10 +4,10 @@
   scrollTo(scrollEndX,scrollEndY);
   if (!mIsDragging) {
     mIsDragging=true;
-    broadcastDragBegin(scrollEndX,scrollEndY);
+    broadcastDragBegin();
   }
  else {
-    broadcastDragUpdate(scrollEndX,scrollEndY);
+    broadcastDragUpdate();
   }
   return true;
 }

@@ -2,7 +2,6 @@
   super(context,attrs,defStyleAttr);
   setWillNotDraw(false);
   mScroller=new Scroller(context);
-  mScrollActionHandler=new ScrollActionHandler(this);
   mGestureDetector=new GestureDetector(context,this);
   mScaleGestureDetector=new ScaleGestureDetector(context,this);
   mTouchUpGestureDetector=new TouchUpGestureDetector(this);

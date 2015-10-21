@@ -1,4 +1,3 @@
 {
-  mIsSliding=true;
-  getAnimator().animate(x,y,mScale);
+  getAnimator().animatePan(x,y);
 }

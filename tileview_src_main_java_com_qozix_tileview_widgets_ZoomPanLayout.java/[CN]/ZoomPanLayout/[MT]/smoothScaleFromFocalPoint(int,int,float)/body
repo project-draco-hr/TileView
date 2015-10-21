@@ -1,0 +1,10 @@
+{
+  scale=Math.max(scale,mMinScale);
+  scale=Math.min(scale,mMaxScale);
+  if (scale == mScale) {
+    return;
+  }
+  int x=getOffsetScrollXFromScale(focusX,scale);
+  int y=getOffsetScrollYFromScale(focusY,scale);
+  getAnimator().animateZoomPan(x,y,scale);
+}

@@ -1,6 +1,0 @@
-{
-  if (mIsDragging) {
-    mIsDragging=false;
-    broadcastDragEnd(getScrollX(),getScrollY());
-  }
-}

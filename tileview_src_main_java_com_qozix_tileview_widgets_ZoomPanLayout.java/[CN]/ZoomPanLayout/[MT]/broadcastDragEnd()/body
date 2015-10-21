@@ -1,0 +1,5 @@
+{
+  for (  ZoomPanListener listener : mZoomPanListeners) {
+    listener.onPanEnd(getScrollX(),getScrollY(),ZoomPanListener.Origination.DRAG);
+  }
+}

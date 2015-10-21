@@ -1,8 +1,15 @@
 {
   ZoomPanLayout zoomPanLayout=mZoomPanLayoutWeakReference.get();
   if (zoomPanLayout != null) {
-    zoomPanLayout.mIsScaling=false;
-    Log.d("Anim","should be broadcasting programmatic zoom end");
-    zoomPanLayout.broadcastProgrammaticZoomEnd(zoomPanLayout.mScale,0,0);
+    if (mHasPendingZoomUpdates) {
+      mHasPendingZoomUpdates=false;
+      zoomPanLayout.mIsScaling=false;
+      zoomPanLayout.broadcastProgrammaticZoomEnd();
+    }
+    if (mHasPendingPanUpdates) {
+      mHasPendingPanUpdates=false;
+      zoomPanLayout.mIsSliding=false;
+      zoomPanLayout.broadcastProgrammaticPanEnd();
+    }
   }
 }

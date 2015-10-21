@@ -1,0 +1,9 @@
+{
+  ZoomPanLayout zoomPanLayout=mZoomPanLayoutWeakReference.get();
+  if (zoomPanLayout != null) {
+    mStartState.scale=zoomPanLayout.getScale();
+    mEndState.scale=scale;
+    return mStartState.scale != mEndState.scale;
+  }
+  return false;
+}

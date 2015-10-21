@@ -1,8 +1,7 @@
 {
   mScroller.fling(getScrollX(),getScrollY(),(int)-velocityX,(int)-velocityY,0,getLimitX(),0,getLimitY());
   mIsFlinging=true;
-  broadcastFlingBegin(getScrollX(),getScrollY());
   ViewCompat.postInvalidateOnAnimation(this);
-  startWatchingScrollActions();
+  broadcastFlingBegin();
   return true;
 }

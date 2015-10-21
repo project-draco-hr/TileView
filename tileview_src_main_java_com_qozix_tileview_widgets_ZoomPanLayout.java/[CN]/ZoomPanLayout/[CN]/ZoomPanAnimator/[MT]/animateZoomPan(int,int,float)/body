@@ -1,0 +1,4 @@
+{
+  animateZoom(scale);
+  animatePan(x,y);
+}

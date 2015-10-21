@@ -1,5 +1,0 @@
-{
-  for (  ZoomPanListener listener : mZoomPanListeners) {
-    listener.onPanEnd(x,y,ZoomPanListener.Origination.FLING);
-  }
-}

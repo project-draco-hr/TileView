@@ -1,8 +1,0 @@
-{
-  if (mIsFlinging) {
-    mIsFlinging=false;
-    mScroller.forceFinished(true);
-    mScrollActionHandler.clear();
-    broadcastFlingEnd(getScrollX(),getScrollY());
-  }
-}

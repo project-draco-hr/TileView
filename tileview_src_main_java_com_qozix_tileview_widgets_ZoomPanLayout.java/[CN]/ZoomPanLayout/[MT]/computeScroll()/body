@@ -7,10 +7,16 @@
     if (startX != endX || startY != endY) {
       scrollTo(endX,endY);
       if (mIsFlinging) {
-        broadcastFlingUpdate(endX,endY);
+        broadcastFlingUpdate();
       }
     }
-    if (!mScroller.isFinished()) {
+    if (mScroller.isFinished()) {
+      if (mIsFlinging) {
+        mIsFlinging=false;
+        broadcastFlingEnd();
+      }
+    }
+ else {
       ViewCompat.postInvalidateOnAnimation(this);
     }
   }

@@ -1,5 +1,5 @@
 {
   float destination=mScale >= mMaxScale ? mMinScale : Math.min(mMaxScale,mScale * 2);
-  smoothScaleFromLocation((int)event.getX(),(int)event.getY(),destination);
+  smoothScaleFromFocalPoint((int)event.getX(),(int)event.getY(),destination);
   return true;
 }

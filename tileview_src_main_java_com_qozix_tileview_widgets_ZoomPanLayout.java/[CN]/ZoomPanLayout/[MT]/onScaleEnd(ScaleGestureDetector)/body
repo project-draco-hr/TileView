@@ -1,3 +1,4 @@
 {
-  broadcastPinchEnd(mScale,scaleGestureDetector.getFocusX(),scaleGestureDetector.getFocusY());
+  mIsScaling=false;
+  broadcastPinchEnd();
 }

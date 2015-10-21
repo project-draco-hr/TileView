@@ -1,5 +1,3 @@
 {
-  int offsetX=getHalfWidth();
-  int offsetY=getHalfHeight();
-  smoothScaleFromLocation(offsetX,offsetY,scale);
+  smoothScaleFromFocalPoint(getHalfWidth(),getHalfHeight(),scale);
 }

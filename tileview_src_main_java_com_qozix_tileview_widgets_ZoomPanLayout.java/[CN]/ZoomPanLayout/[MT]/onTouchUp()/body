@@ -1,4 +1,7 @@
 {
-  concludeDrag();
+  if (mIsDragging) {
+    mIsDragging=false;
+    broadcastDragEnd();
+  }
   return true;
 }

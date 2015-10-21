@@ -2,10 +2,16 @@
   ZoomPanLayout zoomPanLayout=mZoomPanLayoutWeakReference.get();
   if (zoomPanLayout != null) {
     float progress=(float)animation.getAnimatedValue();
-    int scrollX=(int)(mStartState.scrollX + (mEndState.scrollX - mStartState.scrollX) * progress);
-    int scrollY=(int)(mStartState.scrollY + (mEndState.scrollY - mStartState.scrollY) * progress);
-    float scale=mStartState.scale + (mEndState.scale - mStartState.scale) * progress;
-    zoomPanLayout.setScale(scale);
-    zoomPanLayout.scrollTo(scrollX,scrollY);
+    if (mHasPendingZoomUpdates) {
+      float scale=mStartState.scale + (mEndState.scale - mStartState.scale) * progress;
+      zoomPanLayout.setScale(scale);
+      zoomPanLayout.broadcastProgrammaticZoomUpdate();
+    }
+    if (mHasPendingPanUpdates) {
+      int x=(int)(mStartState.x + (mEndState.x - mStartState.x) * progress);
+      int y=(int)(mStartState.y + (mEndState.y - mStartState.y) * progress);
+      zoomPanLayout.scrollTo(x,y);
+      zoomPanLayout.broadcastProgrammaticPanUpdate();
+    }
   }
 }

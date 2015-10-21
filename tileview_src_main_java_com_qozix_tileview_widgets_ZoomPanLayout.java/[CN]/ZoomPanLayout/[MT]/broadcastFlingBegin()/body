@@ -1,0 +1,5 @@
+{
+  for (  ZoomPanListener listener : mZoomPanListeners) {
+    listener.onPanBegin(mScroller.getStartX(),mScroller.getStartY(),ZoomPanListener.Origination.FLING);
+  }
+}

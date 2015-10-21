@@ -1,9 +1,0 @@
-{
-  if (mIsFlinging) {
-    concludeFling();
-  }
-  if (mIsSliding) {
-    concludeSlide();
-  }
-  mScrollActionHandler.clear();
-}

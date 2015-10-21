@@ -1,8 +1,0 @@
-{
-  if (mIsSliding) {
-    mIsSliding=false;
-    mScroller.forceFinished(true);
-    mScrollActionHandler.clear();
-    broadcastProgrammaticPanEnd(getScrollX(),getScrollY());
-  }
-}

@@ -1,0 +1,9 @@
+{
+  ZoomPanLayout zoomPanLayout=mZoomPanLayoutWeakReference.get();
+  if (zoomPanLayout != null) {
+    mHasPendingZoomUpdates=setupZoomAnimation(scale);
+    if (mHasPendingZoomUpdates) {
+      start();
+    }
+  }
+}

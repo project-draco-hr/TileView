@@ -1,9 +1,0 @@
-{
-  final float interpolated=VISCOUS_FLUID_NORMALIZE * viscousFluid(input);
-  if (interpolated > 0) {
-    Log.d("VFI","interpolated > 0, interpolated + VISCOUS_FLUID_OFFSET =" + (interpolated + VISCOUS_FLUID_OFFSET));
-    return interpolated + VISCOUS_FLUID_OFFSET;
-  }
-  Log.d("VFI","interpolated=" + interpolated);
-  return interpolated;
-}

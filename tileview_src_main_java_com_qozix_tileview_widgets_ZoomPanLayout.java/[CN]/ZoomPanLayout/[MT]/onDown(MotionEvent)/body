@@ -1,7 +1,7 @@
 {
-  if (!mScroller.isFinished()) {
-    concludeFling();
-    concludeSlide();
+  if (mIsFlinging && !mScroller.isFinished()) {
+    mScroller.forceFinished(true);
+    broadcastFlingEnd();
   }
   return true;
 }
