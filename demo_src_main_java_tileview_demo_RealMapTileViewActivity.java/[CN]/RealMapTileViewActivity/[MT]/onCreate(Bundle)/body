@@ -1,7 +1,7 @@
 {
   super.onCreate(savedInstanceState);
   tileView=new TileView(this);
-  tileView.setSize(17934 / 2,13452 / 2);
+  tileView.setSize(8967,6726);
   tileView.setBackgroundColor(0xFFe7e7e7);
   tileView.addDetailLevel(0.1250f,"tiles/map/phi-62500-%d_%d.jpg");
   tileView.addDetailLevel(0.2500f,"tiles/map/phi-125000-%d_%d.jpg");
@@ -12,6 +12,8 @@
   DisplayMetrics metrics=getResources().getDisplayMetrics();
   Paint paint=tileView.getPathPaint();
   paint.setShadowLayer(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,4,metrics),TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,2,metrics),TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,2,metrics),0x66000000);
+  paint.setColor(0x883399FF);
+  paint.setStrokeWidth(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,4,metrics));
   paint.setPathEffect(new CornerPathEffect(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,5,metrics)));
   tileView.drawPath(points.subList(1,5),null);
   for (  double[] point : points) {
@@ -22,6 +24,8 @@
     tileView.addMarker(marker,point[0],point[1],null,null);
   }
   tileView.setTransitionsEnabled(false);
+  ImageView downsample=new ImageView(this);
+  downsample.setImageResource(R.drawable.downsample);
   Button button=new Button(this);
   button.setText("ZoomAndScale");
   button.setOnClickListener(new View.OnClickListener(){

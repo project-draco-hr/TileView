@@ -4,7 +4,7 @@
   addUpdateListener(this);
   addListener(this);
   setFloatValues(0f,1f);
-  setInterpolator(new ViscousFluidInterpolator());
+  setInterpolator(new DecelerateInterpolator());
   mZoomPanLayoutWeakReference=new WeakReference<ZoomPanLayout>(zoomPanLayout);
   mZoomPanLayoutWeakReference=new WeakReference<ZoomPanLayout>(zoomPanLayout);
 }

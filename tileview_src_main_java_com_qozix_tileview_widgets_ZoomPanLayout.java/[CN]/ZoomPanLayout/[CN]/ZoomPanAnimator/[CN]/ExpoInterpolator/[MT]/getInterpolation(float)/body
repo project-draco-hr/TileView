@@ -1,0 +1,5 @@
+{
+  float interpolation=(float)(1 - Math.pow(1 - input,5));
+  Log.d("VFI","" + interpolation);
+  return interpolation;
+}
