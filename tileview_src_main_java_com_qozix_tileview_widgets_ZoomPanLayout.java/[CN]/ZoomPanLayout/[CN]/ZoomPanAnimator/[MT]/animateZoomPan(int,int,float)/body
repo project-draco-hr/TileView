@@ -1,4 +1,10 @@
 {
-  animateZoom(scale);
-  animatePan(x,y);
+  ZoomPanLayout zoomPanLayout=mZoomPanLayoutWeakReference.get();
+  if (zoomPanLayout != null) {
+    mHasPendingZoomUpdates=setupZoomAnimation(scale);
+    mHasPendingPanUpdates=setupPanAnimation(x,y);
+    if (mHasPendingPanUpdates || mHasPendingZoomUpdates) {
+      start();
+    }
+  }
 }
