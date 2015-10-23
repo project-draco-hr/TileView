@@ -1,8 +1,8 @@
 {
   super.onDraw(canvas);
   canvas.save();
-  canvas.scale(mScale,mScale);
   boolean dirty=drawTiles(canvas);
+  canvas.scale(mScale,mScale);
   canvas.restore();
   handleDrawState(dirty);
 }

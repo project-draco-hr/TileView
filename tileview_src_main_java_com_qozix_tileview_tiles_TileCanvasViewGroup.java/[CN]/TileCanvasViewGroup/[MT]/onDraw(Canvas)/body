@@ -1,5 +1,6 @@
 {
-  canvas.scale(mScale,mScale);
-  scaleCanvasBounds(canvas);
   super.onDraw(canvas);
+  canvas.save();
+  canvas.scale(mScale,mScale);
+  canvas.restore();
 }

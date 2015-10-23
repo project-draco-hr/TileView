@@ -1,0 +1,5 @@
+{
+  int width=MeasureSpec.getSize(widthMeasureSpec);
+  int height=MeasureSpec.getSize(heightMeasureSpec);
+  setMeasuredDimension(width,height);
+}
