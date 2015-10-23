@@ -1,8 +1,8 @@
 {
   int x=getScrollX();
   int y=getScrollY();
-  int constrainedX=constrainX(x);
-  int constrainedY=constrainY(y);
+  int constrainedX=getConstrainedScrollX(x);
+  int constrainedY=getConstrainedScrollY(y);
   if (x != constrainedX || y != constrainedY) {
     scrollTo(constrainedX,constrainedY);
   }

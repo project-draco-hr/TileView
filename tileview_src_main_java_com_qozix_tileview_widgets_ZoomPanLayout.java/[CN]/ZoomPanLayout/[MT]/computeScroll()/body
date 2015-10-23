@@ -2,8 +2,8 @@
   if (mScroller.computeScrollOffset()) {
     int startX=getScrollX();
     int startY=getScrollY();
-    int endX=constrainX(mScroller.getCurrX());
-    int endY=constrainY(mScroller.getCurrY());
+    int endX=getConstrainedScrollX(mScroller.getCurrX());
+    int endY=getConstrainedScrollY(mScroller.getCurrY());
     if (startX != endX || startY != endY) {
       scrollTo(endX,endY);
       if (mIsFlinging) {

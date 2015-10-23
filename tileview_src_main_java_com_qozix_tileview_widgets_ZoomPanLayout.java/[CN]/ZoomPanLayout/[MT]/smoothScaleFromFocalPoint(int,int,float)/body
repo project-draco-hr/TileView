@@ -1,9 +1,9 @@
 {
+  scale=getConstrainedDestinationScale(scale);
   if (scale == mScale) {
     return;
   }
   int x=getOffsetScrollXFromScale(focusX,scale);
-  Log.d("Scroll","scale from focal, x = " + x);
   int y=getOffsetScrollYFromScale(focusY,scale);
   getAnimator().animateZoomPan(x,y,scale);
 }

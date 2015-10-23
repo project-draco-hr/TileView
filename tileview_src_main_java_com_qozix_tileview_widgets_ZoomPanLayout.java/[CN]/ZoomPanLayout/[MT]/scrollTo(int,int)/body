@@ -1,5 +1,5 @@
 {
-  x=constrainX(x);
-  y=constrainY(y);
+  x=getConstrainedScrollX(x);
+  y=getConstrainedScrollY(y);
   super.scrollTo(x,y);
 }

@@ -3,7 +3,7 @@
   if (!changed) {
     return;
   }
-  mScheduledToRender=mDetailLevelToRender.getVisibleTilesFromLastViewportComputation();
+  mTilesScheduledToRender=mDetailLevelToRender.getVisibleTilesFromLastViewportComputation();
   if (mLastRunTileRenderTask != null && mLastRunTileRenderTask.getStatus() != AsyncTask.Status.FINISHED) {
     mLastRunTileRenderTask.cancel(true);
   }

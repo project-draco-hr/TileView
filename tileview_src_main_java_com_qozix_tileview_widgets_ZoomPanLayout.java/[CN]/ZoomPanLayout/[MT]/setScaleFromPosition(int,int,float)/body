@@ -1,6 +1,5 @@
 {
-  scale=Math.max(scale,mMinScale);
-  scale=Math.min(scale,mMaxScale);
+  scale=getConstrainedDestinationScale(scale);
   if (scale == mScale) {
     return;
   }

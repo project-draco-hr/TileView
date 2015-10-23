@@ -1,7 +1,5 @@
 {
-  int computedWidthSpec=MeasureSpec.makeMeasureSpec(mBaseWidth,MeasureSpec.EXACTLY);
-  int computedHeightSpec=MeasureSpec.makeMeasureSpec(mBaseHeight,MeasureSpec.EXACTLY);
-  measureChildren(computedWidthSpec,computedHeightSpec);
+  measureChildren(MeasureSpec.makeMeasureSpec(mBaseWidth,MeasureSpec.EXACTLY),MeasureSpec.makeMeasureSpec(mBaseHeight,MeasureSpec.EXACTLY));
   int width=MeasureSpec.getSize(widthMeasureSpec);
   int height=MeasureSpec.getSize(heightMeasureSpec);
   width=resolveSize(width,widthMeasureSpec);

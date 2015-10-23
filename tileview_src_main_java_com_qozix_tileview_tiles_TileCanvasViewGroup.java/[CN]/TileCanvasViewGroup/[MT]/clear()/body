@@ -1,12 +1,12 @@
 {
   suppressRender();
   cancelRender();
-  for (  Tile m : mScheduledToRender) {
+  for (  Tile m : mTilesScheduledToRender) {
     m.destroy();
   }
-  mScheduledToRender.clear();
-  for (  Tile m : mAlreadyRendered) {
+  mTilesScheduledToRender.clear();
+  for (  Tile m : mTilesAlreadyRendered) {
     m.destroy();
   }
-  mAlreadyRendered.clear();
+  mTilesAlreadyRendered.clear();
 }

@@ -1,10 +1,10 @@
 {
-  if (mAlreadyRendered.contains(tile)) {
+  if (mTilesAlreadyRendered.contains(tile)) {
     return;
   }
   tile.setTransitionsEnabled(mTransitionsEnabled);
   tile.setTransitionDuration(mTransitionDuration);
   tile.stampTime();
-  mAlreadyRendered.add(tile);
+  mTilesAlreadyRendered.add(tile);
   mCurrentTileCanvasView.addTile(tile);
 }
