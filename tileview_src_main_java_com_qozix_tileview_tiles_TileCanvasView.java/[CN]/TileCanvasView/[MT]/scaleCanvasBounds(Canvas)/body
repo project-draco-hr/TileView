@@ -1,0 +1,8 @@
+{
+  canvas.getClipBounds(mClipRect);
+  Log.d("TileView","original=" + mClipRect);
+  mClipRect.bottom=100000;
+  mClipRect.right=100000;
+  Log.d("TileView","modified=" + mClipRect);
+  canvas.clipRect(mClipRect,Region.Op.REPLACE);
+}
