@@ -30,8 +30,8 @@
   button.setText("ZoomAndScale");
   button.setOnClickListener(new View.OnClickListener(){
     @Override public void onClick(    View view){
-      tileView.setScaleLimits(0.1f,1.0f);
-      tileView.setScale(0.1f);
+      double[] spot=points.get(0);
+      tileView.slideToAndCenterWithScale(spot[0],spot[1],0.5f);
     }
   }
 );

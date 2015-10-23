@@ -1,9 +1,9 @@
 {
-  measureChildren(widthMeasureSpec,heightMeasureSpec);
+  int computedWidthSpec=MeasureSpec.makeMeasureSpec(mBaseWidth,MeasureSpec.EXACTLY);
+  int computedHeightSpec=MeasureSpec.makeMeasureSpec(mBaseHeight,MeasureSpec.EXACTLY);
+  measureChildren(computedWidthSpec,computedHeightSpec);
   int width=MeasureSpec.getSize(widthMeasureSpec);
   int height=MeasureSpec.getSize(heightMeasureSpec);
-  width=Math.max(width,getSuggestedMinimumWidth());
-  height=Math.max(height,getSuggestedMinimumHeight());
   width=resolveSize(width,widthMeasureSpec);
   height=resolveSize(height,heightMeasureSpec);
   setMeasuredDimension(width,height);

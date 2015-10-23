@@ -1,8 +1,10 @@
 {
-  Rect hitRect=new Rect();
-  hitRect.left=mLeft;
-  hitRect.top=mTop;
-  hitRect.right=mRight;
-  hitRect.bottom=mBottom;
-  return hitRect;
+  if (mHitRect == null) {
+    mHitRect=new Rect();
+  }
+  mHitRect.left=mLeft;
+  mHitRect.top=mTop;
+  mHitRect.right=mRight;
+  mHitRect.bottom=mBottom;
+  return mHitRect;
 }
