@@ -1,2 +1,2 @@
 View view
-boolean animate
+boolean shouldAnimate

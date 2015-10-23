@@ -1,3 +1,0 @@
-{
-  mMarkerLayout.setMarkerTapListener(listener);
-}

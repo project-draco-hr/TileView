@@ -20,14 +20,20 @@
     ImageView marker=new ImageView(this);
     marker.setTag(point);
     marker.setImageResource(Math.random() < 0.75 ? R.drawable.map_marker_normal : R.drawable.map_marker_featured);
-    marker.setOnClickListener(markerClickListener);
     tileView.addMarker(marker,point[0],point[1],null,null);
   }
+  tileView.setMarkerTapListener(markerTapListener);
   tileView.setTransitionsEnabled(false);
   ImageView downsample=new ImageView(this);
   downsample.setImageResource(R.drawable.downsample);
+  RelativeLayout contentView=new RelativeLayout(this);
+  contentView.addView(tileView);
   Button button=new Button(this);
   button.setText("ZoomAndScale");
+  RelativeLayout.LayoutParams buttonLayoutParams=new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+  buttonLayoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+  buttonLayoutParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+  contentView.addView(button,buttonLayoutParams);
   button.setOnClickListener(new View.OnClickListener(){
     @Override public void onClick(    View view){
       double[] spot=points.get(0);
@@ -35,8 +41,14 @@
     }
   }
 );
-  RelativeLayout contentView=new RelativeLayout(this);
-  contentView.addView(tileView);
-  contentView.addView(button);
+  HotSpot hotSpot=new HotSpot();
+  hotSpot.set(new Rect(0,0,100,100));
+  tileView.addHotSpot(hotSpot);
+  tileView.setHotSpotTapListener(new HotSpot.HotSpotTapListener(){
+    @Override public void onHotSpotTap(    HotSpot hotSpot,    int x,    int y){
+      Log.d("TileView","hot spot tapped");
+    }
+  }
+);
   setContentView(contentView);
 }

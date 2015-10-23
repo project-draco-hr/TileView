@@ -1,6 +1,5 @@
 {
   mDetailLevelManager.unlockDetailLevel();
   mDetailLevelManager.setScale(scale);
-  Log.d("Anim","onZoomEnd, requestRender");
   requestRender();
 }

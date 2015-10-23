@@ -1,0 +1,9 @@
+{
+  double[] position=(double[])view.getTag();
+  tileView.slideToAndCenter(position[0],position[1]);
+  SampleCallout callout=new SampleCallout(view.getContext());
+  tileView.addCallout(callout,position[0],position[1],-0.5f,-1.0f);
+  callout.transitionIn();
+  callout.setTitle("MAP CALLOUT");
+  callout.setSubtitle("Info window at coordinate:\n" + position[1] + ", "+ position[0]);
+}

@@ -7,7 +7,7 @@
     MarkerLayout.LayoutParams anchorLayoutParams=(MarkerLayout.LayoutParams)params;
     int scaledX=(int)(anchorLayoutParams.x * getScale() + 0.5);
     int scaledY=(int)(anchorLayoutParams.y * getScale() + 0.5);
-    if (animate) {
+    if (shouldAnimate) {
       slideToAndCenter(scaledX,scaledY);
     }
  else {
