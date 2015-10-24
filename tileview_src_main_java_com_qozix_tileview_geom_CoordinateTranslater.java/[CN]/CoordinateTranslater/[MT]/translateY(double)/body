@@ -3,5 +3,5 @@
     return (int)y;
   }
   double factor=(y - mTop) / mDiffY;
-  return FloatMathHelper.scale(mHeight,factor);
+  return FloatMathHelper.scale(mHeight,(float)factor);
 }

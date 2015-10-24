@@ -6,5 +6,6 @@
   if (mTileRenderListener != null) {
     mTileRenderListener.onRenderComplete();
   }
+  invalidate();
   requestRender();
 }

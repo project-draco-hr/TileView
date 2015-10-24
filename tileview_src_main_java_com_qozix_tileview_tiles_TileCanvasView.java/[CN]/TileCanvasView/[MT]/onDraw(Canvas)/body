@@ -1,7 +1,10 @@
 {
-  Log.d("TileView","TileCanvasView.onDraw (before): " + canvas.getWidth() + ", "+ canvas.getHeight());
   canvas.scale(mScale,mScale);
   boolean dirty=drawTiles(canvas);
+  Log.d("TileView","TCV.onDraw, dirty=" + dirty);
   super.onDraw(canvas);
   handleDrawState(dirty);
+  if (dirty) {
+    invalidate();
+  }
 }
