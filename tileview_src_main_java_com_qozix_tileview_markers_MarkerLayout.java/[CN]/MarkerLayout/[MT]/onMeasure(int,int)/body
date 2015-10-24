@@ -20,6 +20,5 @@
   }
   int availableWidth=MeasureSpec.getSize(widthMeasureSpec);
   int availableHeight=MeasureSpec.getSize(heightMeasureSpec);
-  Log.d("TileView","MarkerLayout.onMeasure: " + availableWidth + ", "+ availableHeight);
   setMeasuredDimension(availableWidth,availableHeight);
 }

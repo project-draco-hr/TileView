@@ -2,12 +2,7 @@
   for (int i=0; i < getChildCount(); i++) {
     View child=getChildAt(i);
     if (child.getVisibility() != GONE) {
-      if (child instanceof IScalingCanvasView) {
-        child.layout(0,0,mBufferedWidth - 100,mBufferedHeight - 100);
-      }
- else {
-        child.layout(0,0,mScaledWidth - 50,mScaledHeight - 50);
-      }
+      child.layout(0,0,mScaledWidth - 100,mScaledHeight - 100);
     }
   }
   if (changed) {

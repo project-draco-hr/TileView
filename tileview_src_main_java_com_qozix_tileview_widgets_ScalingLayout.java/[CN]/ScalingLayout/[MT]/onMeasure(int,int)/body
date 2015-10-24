@@ -1,6 +1,6 @@
 {
-  measureChildren(widthMeasureSpec,heightMeasureSpec);
-  int availableWidth=MeasureSpec.getSize(widthMeasureSpec);
-  int availableHeight=MeasureSpec.getSize(heightMeasureSpec);
+  int availableWidth=FloatMathHelper.unscale(MeasureSpec.getSize(widthMeasureSpec),mScale);
+  int availableHeight=FloatMathHelper.unscale(MeasureSpec.getSize(heightMeasureSpec),mScale);
+  measureChildren(MeasureSpec.makeMeasureSpec(availableWidth,MeasureSpec.EXACTLY),MeasureSpec.makeMeasureSpec(availableHeight,MeasureSpec.EXACTLY));
   setMeasuredDimension(availableWidth,availableHeight);
 }
