@@ -1,8 +1,7 @@
 {
-  ZoomPanLayout.LayoutParams layoutParams=(ZoomPanLayout.LayoutParams)getLayoutParams();
-  int availableWidth=(int)(layoutParams.baseWidth / mScale);
-  int availableHeight=(int)(layoutParams.baseHeight / mScale);
-  measureChildren(MeasureSpec.makeMeasureSpec(availableWidth,MeasureSpec.EXACTLY),MeasureSpec.makeMeasureSpec(availableHeight,MeasureSpec.EXACTLY));
-  Log.d("TileView","ScalingLayout.onMeasure: " + "(" + MeasureSpec.getSize(widthMeasureSpec) + ", "+ MeasureSpec.getSize(heightMeasureSpec)+ ") vs "+ "("+ layoutParams.scaledWidth+ ", "+ layoutParams.scaledHeight+ ") vs "+ "("+ layoutParams.baseWidth+ ", "+ layoutParams.baseHeight+ ") vs "+ "("+ availableWidth+ ", "+ availableHeight+ ")");
+  measureChildren(widthMeasureSpec,heightMeasureSpec);
+  int availableWidth=MeasureSpec.getSize(widthMeasureSpec);
+  int availableHeight=MeasureSpec.getSize(heightMeasureSpec);
+  Log.d("TileView","ScalingLayout.onMeasure: " + availableWidth + ", "+ availableHeight);
   setMeasuredDimension(availableWidth,availableHeight);
 }

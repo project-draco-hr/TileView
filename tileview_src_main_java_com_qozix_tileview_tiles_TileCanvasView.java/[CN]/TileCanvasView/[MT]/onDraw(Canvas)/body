@@ -1,5 +1,5 @@
 {
-  Log.d("TileView","TileCanvasView.onDraw: " + canvas.getWidth() + ", "+ canvas.getHeight());
+  Log.d("TileView","TileCanvasView.onDraw (before): " + canvas.getWidth() + ", "+ canvas.getHeight());
   canvas.scale(mScale,mScale);
   boolean dirty=drawTiles(canvas);
   super.onDraw(canvas);

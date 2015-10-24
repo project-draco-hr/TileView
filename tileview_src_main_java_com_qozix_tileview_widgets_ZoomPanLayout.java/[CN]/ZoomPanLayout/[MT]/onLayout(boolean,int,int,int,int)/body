@@ -1,11 +1,13 @@
 {
-  int computedWidth=FloatMathHelper.unscale(mBaseWidth,mScale);
-  int computedHeight=FloatMathHelper.unscale(mBaseHeight,mScale);
-  Log.d("TileView","ZoomPanLayout.onLayout: " + computedWidth + ", "+ computedHeight);
   for (int i=0; i < getChildCount(); i++) {
     View child=getChildAt(i);
     if (child.getVisibility() != GONE) {
-      child.layout(0,0,computedWidth,computedHeight);
+      if (child instanceof IScalingCanvas) {
+        child.layout(0,0,mBaseWidth - 100,mBaseHeight - 100);
+      }
+ else {
+        child.layout(0,0,mScaledWidth,mScaledHeight);
+      }
     }
   }
   if (changed) {

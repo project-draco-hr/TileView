@@ -1,4 +1,6 @@
 {
-  mScaledWidth=(int)((mBaseWidth * mScale) + 0.5);
-  mScaledHeight=(int)((mBaseHeight * mScale) + 0.5);
+  mScaledWidth=FloatMathHelper.scale(mBaseWidth,mScale);
+  mScaledHeight=FloatMathHelper.scale(mBaseHeight,mScale);
+  mBufferedWidth=FloatMathHelper.unscale(mBaseWidth,mScale);
+  mBufferedHeight=FloatMathHelper.unscale(mBaseHeight,mScale);
 }
