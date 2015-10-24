@@ -1,6 +1,12 @@
 {
   mScaledWidth=FloatMathHelper.scale(mBaseWidth,mScale);
   mScaledHeight=FloatMathHelper.scale(mBaseHeight,mScale);
-  mBufferedWidth=FloatMathHelper.unscale(mBaseWidth,mScale);
-  mBufferedHeight=FloatMathHelper.unscale(mBaseHeight,mScale);
+  if (mScale > 1) {
+    mBufferedWidth=FloatMathHelper.unscale(mBaseWidth,mScale);
+    mBufferedHeight=FloatMathHelper.unscale(mBaseHeight,mScale);
+  }
+ else {
+    mBufferedWidth=mBaseWidth;
+    mBufferedHeight=mBaseHeight;
+  }
 }

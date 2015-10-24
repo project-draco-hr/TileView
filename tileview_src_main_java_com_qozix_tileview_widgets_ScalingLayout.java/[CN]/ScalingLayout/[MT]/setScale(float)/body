@@ -1,4 +1,4 @@
 {
-  mScale=factor;
+  mScale=scale;
   invalidate();
 }
