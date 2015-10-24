@@ -32,6 +32,7 @@
   x=x / size;
   y=y / size;
   frameTo(x,y);
+  tileView.setScaleLimits(0,2);
   tileView.setScale(0.3f);
   RelativeLayout icons=new RelativeLayout(this);
   icons.setBackgroundColor(0x660000ff);
