@@ -1,15 +1,16 @@
 {
-  if (dirty) {
+  if (pending) {
     invalidate();
-    postInvalidate();
-    ViewCompat.postInvalidateOnAnimation(this);
-    mHasBeenDirtySinceLastCleanDraw=true;
+    mHasHadPendingUpdatesSinceLastCompleteDraw=true;
+    if (mTileCanvasDrawListener != null) {
+      mTileCanvasDrawListener.onDrawPending(this);
+    }
   }
  else {
-    if (mHasBeenDirtySinceLastCleanDraw) {
-      mHasBeenDirtySinceLastCleanDraw=false;
+    if (mHasHadPendingUpdatesSinceLastCompleteDraw) {
+      mHasHadPendingUpdatesSinceLastCompleteDraw=false;
       if (mTileCanvasDrawListener != null) {
-        mTileCanvasDrawListener.onCleanDrawComplete(this);
+        mTileCanvasDrawListener.onDrawComplete(this);
       }
     }
   }

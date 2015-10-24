@@ -1,10 +1,8 @@
 {
-  canvas.scale(mScale,mScale);
-  boolean dirty=drawTiles(canvas);
-  Log.d("TileView","TCV.onDraw, dirty=" + dirty);
   super.onDraw(canvas);
-  handleDrawState(dirty);
-  if (dirty) {
-    invalidate();
-  }
+  canvas.save();
+  canvas.scale(mScale,mScale);
+  boolean pending=drawTiles(canvas);
+  canvas.restore();
+  handleDrawState(pending);
 }

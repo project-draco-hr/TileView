@@ -1,7 +1,7 @@
 {
-  boolean dirty=false;
+  boolean pending=false;
   for (  Tile tile : mTiles) {
-    dirty=tile.draw(canvas) || dirty;
+    pending=tile.draw(canvas) || pending;
   }
-  return dirty;
+  return pending;
 }
