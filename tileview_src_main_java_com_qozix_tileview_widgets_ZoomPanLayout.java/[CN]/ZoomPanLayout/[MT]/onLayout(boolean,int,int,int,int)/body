@@ -1,9 +1,9 @@
 {
-  Log.d("TileView","ZoomPanLayout.onLayout: " + mScaledWidth + ", "+ mScaledHeight);
+  Log.d("TileView","ZoomPanLayout.onLayout: " + mBaseWidth + ", "+ mBaseHeight);
   for (int i=0; i < getChildCount(); i++) {
     View child=getChildAt(i);
     if (child.getVisibility() != GONE) {
-      child.layout(0,0,mScaledWidth,mScaledHeight);
+      child.layout(0,0,mBaseWidth,mBaseHeight);
     }
   }
   if (changed) {

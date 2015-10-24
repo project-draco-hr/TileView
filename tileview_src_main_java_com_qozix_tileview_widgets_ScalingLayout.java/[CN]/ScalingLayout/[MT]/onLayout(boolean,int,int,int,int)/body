@@ -1,6 +1,6 @@
 {
-  int availableWidth=(int)((r - l) / mScale);
-  int availableHeight=(int)((b - t) / mScale);
+  int availableWidth=r - l;
+  int availableHeight=b - t;
   Log.d("TileView","ScalingLayout.onLayout: " + availableWidth + ", "+ availableHeight);
   for (int i=0; i < getChildCount(); i++) {
     View child=getChildAt(i);

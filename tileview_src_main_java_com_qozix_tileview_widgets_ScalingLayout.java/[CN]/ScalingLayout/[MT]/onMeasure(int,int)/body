@@ -1,9 +1,7 @@
 {
+  measureChildren(widthMeasureSpec,heightMeasureSpec);
   int availableWidth=MeasureSpec.getSize(widthMeasureSpec);
   int availableHeight=MeasureSpec.getSize(heightMeasureSpec);
-  int childWidthSpec=MeasureSpec.makeMeasureSpec((int)(availableWidth / mScale),MeasureSpec.AT_MOST);
-  int childHeightSpec=MeasureSpec.makeMeasureSpec((int)(availableHeight / mScale),MeasureSpec.AT_MOST);
-  measureChildren(childWidthSpec,childHeightSpec);
   Log.d("TileView","ScalingLayout.onMeasure: " + availableWidth + ", "+ availableHeight);
   setMeasuredDimension(availableWidth,availableHeight);
 }
