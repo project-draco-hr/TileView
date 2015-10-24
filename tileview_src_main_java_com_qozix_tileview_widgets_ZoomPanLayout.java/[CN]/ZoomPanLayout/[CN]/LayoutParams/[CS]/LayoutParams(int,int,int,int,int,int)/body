@@ -1,0 +1,7 @@
+{
+  super(width,height);
+  this.baseWidth=baseWidth;
+  this.baseHeight=baseHeight;
+  this.scaledWidth=scaledWidth;
+  this.scaledHeight=scaledHeight;
+}
