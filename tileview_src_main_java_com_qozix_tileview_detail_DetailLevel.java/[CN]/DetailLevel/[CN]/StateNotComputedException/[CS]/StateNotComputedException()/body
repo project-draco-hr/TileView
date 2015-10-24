@@ -1,0 +1,3 @@
+{
+  super("Grid has not been computed; " + "you must call computeCurrentState at some point priot to calling " + "getVisibleTilesFromLastViewportComputation.");
+}

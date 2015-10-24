@@ -1,6 +1,6 @@
 {
   if (mLastStateSnapshot == null) {
-    throw new IllegalStateException(ILLEGAL_STATE_EXCEPTION_MESSAGE);
+    throw new StateNotComputedException();
   }
   LinkedList<Tile> intersections=new LinkedList<Tile>();
   for (int rowCurrent=mLastStateSnapshot.rowStart; rowCurrent < mLastStateSnapshot.rowEnd; rowCurrent++) {

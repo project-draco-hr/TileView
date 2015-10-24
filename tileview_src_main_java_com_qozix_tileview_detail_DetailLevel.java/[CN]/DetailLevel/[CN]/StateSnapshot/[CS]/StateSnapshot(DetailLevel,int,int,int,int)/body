@@ -1,7 +1,7 @@
 {
-  detailLevel=level;
-  rowStart=startRow;
-  rowEnd=endRow;
-  columnStart=startColumn;
-  columnEnd=endColumn;
+  this.detailLevel=detailLevel;
+  this.rowStart=rowStart;
+  this.rowEnd=rowEnd;
+  this.columnStart=columnStart;
+  this.columnEnd=columnEnd;
 }

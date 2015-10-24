@@ -1,5 +1,5 @@
-DetailLevel level
-int startRow
-int endRow
-int startColumn
-int endColumn
+DetailLevel detailLevel
+int rowStart
+int rowEnd
+int columnStart
+int columnEnd
