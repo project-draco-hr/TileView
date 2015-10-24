@@ -1,10 +1,12 @@
 {
   int availableWidth=r - l;
   int availableHeight=b - t;
+  int drawableWidth=(int)(availableWidth / mScale);
+  int drawableHeight=(int)(availableHeight / mScale);
   for (int i=0; i < getChildCount(); i++) {
     View child=getChildAt(i);
     if (child.getVisibility() != GONE) {
-      child.layout(0,0,availableWidth,availableHeight);
+      child.layout(0,0,drawableWidth,drawableHeight);
     }
   }
 }

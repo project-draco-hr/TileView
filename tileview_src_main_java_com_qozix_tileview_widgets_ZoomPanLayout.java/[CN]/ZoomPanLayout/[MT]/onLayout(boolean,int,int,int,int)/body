@@ -5,7 +5,6 @@
       child.layout(0,0,mScaledWidth,mScaledHeight);
     }
   }
-  Log.d("TileView","ZPL.onLayout, sending " + mScaledWidth + ", "+ mScaledHeight);
   if (changed) {
     calculateMinimumScaleToFit();
   }

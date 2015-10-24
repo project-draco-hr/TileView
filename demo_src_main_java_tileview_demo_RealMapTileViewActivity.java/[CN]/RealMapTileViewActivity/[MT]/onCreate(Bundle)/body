@@ -1,7 +1,7 @@
 {
   super.onCreate(savedInstanceState);
   TileView tileView=getTileView();
-  tileView.setSize(17934,13452);
+  tileView.setSize(8967,6726);
   tileView.setBackgroundColor(0xFFe7e7e7);
   tileView.addDetailLevel(0.0125f,"tiles/map/phi-62500-%d_%d.jpg");
   tileView.addDetailLevel(0.2500f,"tiles/map/phi-125000-%d_%d.jpg");
@@ -33,4 +33,13 @@
   y=y / size;
   frameTo(x,y);
   tileView.setScale(0.3f);
+  RelativeLayout icons=new RelativeLayout(this);
+  icons.setBackgroundColor(0xff0000ff);
+  ImageView trollIcon=new ImageView(this);
+  RelativeLayout.LayoutParams trollIconLayoutParams=new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,RelativeLayout.LayoutParams.WRAP_CONTENT);
+  trollIconLayoutParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+  trollIconLayoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+  trollIcon.setImageResource(R.drawable.fantasy_troll);
+  icons.addView(trollIcon,trollIconLayoutParams);
+  tileView.addScalingViewGroup(icons);
 }

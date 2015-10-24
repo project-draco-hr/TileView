@@ -1,8 +1,0 @@
-{
-  canvas.getClipBounds(mClipRect);
-  mClipRect.top*=mScale;
-  mClipRect.left*=mScale;
-  mClipRect.bottom*=mScale;
-  mClipRect.right*=mScale;
-  canvas.clipRect(mClipRect);
-}
