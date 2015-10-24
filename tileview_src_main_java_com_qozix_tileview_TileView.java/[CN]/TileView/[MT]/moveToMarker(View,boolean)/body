@@ -5,8 +5,8 @@
   ViewGroup.LayoutParams params=view.getLayoutParams();
   if (params instanceof MarkerLayout.LayoutParams) {
     MarkerLayout.LayoutParams anchorLayoutParams=(MarkerLayout.LayoutParams)params;
-    int scaledX=(int)(anchorLayoutParams.x * getScale() + 0.5);
-    int scaledY=(int)(anchorLayoutParams.y * getScale() + 0.5);
+    int scaledX=FloatMathHelper.scale(anchorLayoutParams.x,getScale());
+    int scaledY=FloatMathHelper.scale(anchorLayoutParams.y,getScale());
     if (shouldAnimate) {
       slideToAndCenter(scaledX,scaledY);
     }

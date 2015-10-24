@@ -1,4 +1,3 @@
 {
   super(context);
-  setBackgroundColor(0x4400ff00);
 }

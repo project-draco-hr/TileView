@@ -1,6 +1,5 @@
 {
   super(context);
   setWillNotDraw(false);
-  setBackgroundColor(0xffff9900);
   mTileRenderHandler=new TileRenderHandler(this);
 }

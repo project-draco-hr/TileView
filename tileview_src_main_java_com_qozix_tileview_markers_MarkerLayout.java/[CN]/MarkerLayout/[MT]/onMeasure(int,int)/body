@@ -10,8 +10,8 @@
       int actualHeight=child.getMeasuredHeight();
       float widthOffset=actualWidth * widthMultiplier;
       float heightOffset=actualHeight * heightMultiplier;
-      int scaledX=(int)(0.5 + (layoutParams.x * mScale));
-      int scaledY=(int)(0.5 + (layoutParams.y * mScale));
+      int scaledX=FloatMathHelper.scale(layoutParams.x,mScale);
+      int scaledY=FloatMathHelper.scale(layoutParams.y,mScale);
       layoutParams.mLeft=(int)(scaledX + widthOffset);
       layoutParams.mTop=(int)(scaledY + heightOffset);
       layoutParams.mRight=layoutParams.mLeft + actualWidth;

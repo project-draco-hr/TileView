@@ -1,6 +1,6 @@
 {
-  int scaledX=(int)(x / mScale + 0.5);
-  int scaledY=(int)(y / mScale + 0.5);
+  int scaledX=FloatMathHelper.unscale(x,mScale);
+  int scaledY=FloatMathHelper.unscale(y,mScale);
   Iterator<HotSpot> iterator=mHotSpots.descendingIterator();
   while (iterator.hasNext()) {
     HotSpot hotSpot=iterator.next();
