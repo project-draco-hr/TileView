@@ -1,4 +1,5 @@
 {
+  Log.d("TileView","ScalingLayout.onDraw: " + canvas.getWidth() + ", "+ canvas.getHeight());
   canvas.scale(mScale,mScale);
   super.onDraw(canvas);
 }
