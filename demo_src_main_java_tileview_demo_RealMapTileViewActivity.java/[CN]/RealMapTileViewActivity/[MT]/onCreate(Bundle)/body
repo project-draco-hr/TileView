@@ -33,6 +33,7 @@
   y=y / size;
   frameTo(x,y);
   tileView.setScaleLimits(0,2);
+  tileView.getTileCanvasViewGroup().setBackgroundResource(R.drawable.bg_gray_bordered);
   RelativeLayout icons=new RelativeLayout(this);
   ImageView trollIcon=new ImageView(this);
   RelativeLayout.LayoutParams trollIconLayoutParams=new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,RelativeLayout.LayoutParams.WRAP_CONTENT);
