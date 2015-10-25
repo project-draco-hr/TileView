@@ -14,10 +14,4 @@
   placeMarker(R.drawable.fantasy_rohan,2108,1832);
   placeMarker(R.drawable.fantasy_troll,3267,1896);
   frameTo(3267,1896);
-  tileView.setMarkerTapListener(new MarkerLayout.MarkerTapListener(){
-    @Override public void onMarkerTap(    View view,    int x,    int y){
-      getTileView().setScale(1);
-    }
-  }
-);
 }

@@ -1,4 +1,5 @@
 {
   mScale=scale;
+  mMatrix.setScale(mScale,mScale);
   invalidate();
 }

@@ -33,13 +33,5 @@
   y=y / size;
   frameTo(x,y);
   tileView.setScaleLimits(0,2);
-  tileView.getTileCanvasViewGroup().setBackgroundResource(R.drawable.bg_gray_bordered);
-  RelativeLayout icons=new RelativeLayout(this);
-  ImageView trollIcon=new ImageView(this);
-  RelativeLayout.LayoutParams trollIconLayoutParams=new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,RelativeLayout.LayoutParams.WRAP_CONTENT);
-  trollIconLayoutParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
-  trollIconLayoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-  trollIcon.setImageResource(R.drawable.fantasy_troll);
-  icons.addView(trollIcon,trollIconLayoutParams);
-  tileView.addScalingViewGroup(icons);
+  tileView.setScale(0.3f);
 }

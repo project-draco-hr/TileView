@@ -1,6 +1,5 @@
 {
   if (mShouldDraw) {
-    mMatrix.setScale(mScale,mScale);
     for (    DrawablePath drawablePath : mDrawablePaths) {
       mRecyclerPath.set(drawablePath.path);
       mRecyclerPath.transform(mMatrix);
