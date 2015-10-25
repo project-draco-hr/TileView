@@ -1,4 +1,6 @@
 {
   pause();
+  mTileCanvasViewGroup.destroy();
   mCompositePathView.clear();
+  removeAllViews();
 }

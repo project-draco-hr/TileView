@@ -1,0 +1,10 @@
+{
+  clear();
+  for (  TileCanvasView tileGroup : mTileCanvasViewHashMap.values()) {
+    tileGroup.clearTiles();
+  }
+  mTileCanvasViewHashMap.clear();
+  if (!mTileRenderHandler.hasMessages(RENDER_FLAG)) {
+    mTileRenderHandler.removeMessages(RENDER_FLAG);
+  }
+}

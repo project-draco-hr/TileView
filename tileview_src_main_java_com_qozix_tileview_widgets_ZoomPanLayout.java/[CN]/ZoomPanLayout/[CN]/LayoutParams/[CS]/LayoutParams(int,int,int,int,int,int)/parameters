@@ -1,6 +1,0 @@
-int width
-int height
-int baseWidth
-int baseHeight
-int scaledWidth
-int scaledHeight

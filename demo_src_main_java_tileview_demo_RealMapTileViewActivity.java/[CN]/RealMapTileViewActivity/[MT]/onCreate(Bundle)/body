@@ -9,7 +9,7 @@
   tileView.addDetailLevel(1.0000f,"tiles/map/phi-500000-%d_%d.jpg");
   tileView.setMarkerAnchorPoints(-0.5f,-1.0f);
   tileView.defineBounds(NORTH_WEST_LONGITUDE,NORTH_WEST_LATITUDE,SOUTH_EAST_LONGITUDE,SOUTH_EAST_LATITUDE);
-  Paint paint=tileView.getPathPaint();
+  Paint paint=tileView.getDefaultPathPaint();
   DisplayMetrics metrics=getResources().getDisplayMetrics();
   paint.setShadowLayer(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,4,metrics),TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,2,metrics),TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,2,metrics),0x66000000);
   paint.setStrokeWidth(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,5,metrics));

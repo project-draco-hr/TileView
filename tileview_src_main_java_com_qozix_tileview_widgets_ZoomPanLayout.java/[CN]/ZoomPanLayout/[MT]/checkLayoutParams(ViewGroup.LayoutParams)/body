@@ -1,3 +1,0 @@
-{
-  return layoutParams instanceof LayoutParams;
-}
