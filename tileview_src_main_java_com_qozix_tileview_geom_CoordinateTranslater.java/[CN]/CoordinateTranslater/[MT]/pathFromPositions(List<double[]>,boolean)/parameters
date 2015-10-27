@@ -1,1 +1,2 @@
 List<double[]> positions
+boolean shouldClose

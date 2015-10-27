@@ -1,4 +1,4 @@
 {
-  Path path=mCoordinateTranslater.pathFromPositions(positions);
+  Path path=mCoordinateTranslater.pathFromPositions(positions,false);
   return mCompositePathView.addPath(path,paint);
 }

@@ -1,5 +1,5 @@
 {
-  Path path=mCoordinateTranslater.pathFromPositions(positions);
+  Path path=mCoordinateTranslater.pathFromPositions(positions,true);
   RectF bounds=new RectF();
   path.computeBounds(bounds,true);
   Rect rect=new Rect();

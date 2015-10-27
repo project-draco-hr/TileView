@@ -5,6 +5,8 @@
   for (  double[] position : positions) {
     path.lineTo(translateX(position[0]),translateY(position[1]));
   }
-  path.close();
+  if (shouldClose) {
+    path.close();
+  }
   return path;
 }
