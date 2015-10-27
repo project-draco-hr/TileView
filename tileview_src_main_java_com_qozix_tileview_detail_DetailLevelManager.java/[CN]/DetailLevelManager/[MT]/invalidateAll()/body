@@ -1,0 +1,5 @@
+{
+  for (  DetailLevel detailLevel : mDetailLevelLinkedList) {
+    detailLevel.invalidate();
+  }
+}
