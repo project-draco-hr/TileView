@@ -5,7 +5,5 @@
       child.layout(0,0,mScaledWidth - 50,mScaledHeight - 50);
     }
   }
-  if (changed) {
-    calculateMinimumScaleToFit();
-  }
+  calculateMinimumScaleToFit();
 }
