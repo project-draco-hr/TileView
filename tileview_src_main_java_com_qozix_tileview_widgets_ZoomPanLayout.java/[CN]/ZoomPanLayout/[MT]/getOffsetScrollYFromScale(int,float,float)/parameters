@@ -1,0 +1,3 @@
+int offsetY
+float destinationScale
+float currentScale

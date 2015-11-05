@@ -3,8 +3,10 @@
   if (scale == mScale) {
     return;
   }
-  int x=getOffsetScrollXFromScale(offsetX,scale);
-  int y=getOffsetScrollYFromScale(offsetY,scale);
-  scrollTo(x,y);
+  int x=getOffsetScrollXFromScale(offsetX,scale,mScale);
+  int y=getOffsetScrollYFromScale(offsetY,scale,mScale);
   setScale(scale);
+  x=getConstrainedScrollX(x);
+  y=getConstrainedScrollY(y);
+  scrollTo(x,y);
 }

@@ -3,7 +3,7 @@
   if (scale == mScale) {
     return;
   }
-  int x=getOffsetScrollXFromScale(focusX,scale);
-  int y=getOffsetScrollYFromScale(focusY,scale);
+  int x=getOffsetScrollXFromScale(focusX,scale,mScale);
+  int y=getOffsetScrollYFromScale(focusY,scale,mScale);
   getAnimator().animateZoomPan(x,y,scale);
 }

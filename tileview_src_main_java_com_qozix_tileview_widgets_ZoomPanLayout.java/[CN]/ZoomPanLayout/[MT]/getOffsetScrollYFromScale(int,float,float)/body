@@ -1,5 +1,5 @@
 {
   int scrollY=getScrollY() + offsetY;
-  float deltaScale=scale / mScale;
+  float deltaScale=destinationScale / currentScale;
   return (int)(scrollY * deltaScale) - offsetY;
 }
