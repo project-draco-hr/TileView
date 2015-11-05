@@ -1,5 +1,10 @@
 {
-  measureChildren(MeasureSpec.makeMeasureSpec(mScaledWidth,MeasureSpec.EXACTLY),MeasureSpec.makeMeasureSpec(mScaledHeight,MeasureSpec.EXACTLY));
+  int childWidthMeasureSpec=MeasureSpec.makeMeasureSpec(mScaledWidth,MeasureSpec.EXACTLY);
+  int childHeightMeasureSpec=MeasureSpec.makeMeasureSpec(mScaledHeight,MeasureSpec.EXACTLY);
+  for (int i=0; i < getChildCount(); i++) {
+    View child=getChildAt(i);
+    child.measure(childWidthMeasureSpec,childHeightMeasureSpec);
+  }
   int width=MeasureSpec.getSize(widthMeasureSpec);
   int height=MeasureSpec.getSize(heightMeasureSpec);
   width=resolveSize(width,widthMeasureSpec);
