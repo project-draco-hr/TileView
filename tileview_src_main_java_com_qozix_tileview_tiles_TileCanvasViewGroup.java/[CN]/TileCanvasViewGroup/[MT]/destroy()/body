@@ -1,7 +1,7 @@
 {
   clear();
   for (  TileCanvasView tileGroup : mTileCanvasViewHashMap.values()) {
-    tileGroup.clearTiles();
+    tileGroup.clearTiles(mShouldRecycleBitmaps);
   }
   mTileCanvasViewHashMap.clear();
   if (!mTileRenderHandler.hasMessages(RENDER_FLAG)) {

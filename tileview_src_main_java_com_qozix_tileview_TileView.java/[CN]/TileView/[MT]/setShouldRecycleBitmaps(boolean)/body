@@ -1,0 +1,3 @@
+{
+  mTileCanvasViewGroup.setShouldRecycleBitmaps(shouldRecycleBitmaps);
+}

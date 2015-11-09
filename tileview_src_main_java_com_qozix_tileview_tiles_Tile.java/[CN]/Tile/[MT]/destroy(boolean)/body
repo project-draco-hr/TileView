@@ -1,5 +1,5 @@
 {
-  if (mBitmap != null && !mBitmap.isRecycled()) {
+  if (shouldRecycle && mBitmap != null && !mBitmap.isRecycled()) {
     mBitmap.recycle();
   }
   mBitmap=null;

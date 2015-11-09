@@ -2,11 +2,11 @@
   suppressRender();
   cancelRender();
   for (  Tile tile : mTilesScheduledToRender) {
-    tile.destroy();
+    tile.destroy(mShouldRecycleBitmaps);
   }
   mTilesScheduledToRender.clear();
   for (  Tile tile : mTilesAlreadyRendered) {
-    tile.destroy();
+    tile.destroy(mShouldRecycleBitmaps);
   }
   mTilesAlreadyRendered.clear();
 }

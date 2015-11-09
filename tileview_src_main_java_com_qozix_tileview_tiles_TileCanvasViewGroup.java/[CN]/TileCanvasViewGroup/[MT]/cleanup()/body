@@ -2,13 +2,13 @@
   LinkedList<Tile> condemned=new LinkedList<Tile>(mTilesAlreadyRendered);
   condemned.removeAll(mTilesScheduledToRender);
   for (  Tile tile : condemned) {
-    tile.destroy();
+    tile.destroy(mShouldRecycleBitmaps);
   }
   mTilesAlreadyRendered.removeAll(condemned);
   mCurrentTileCanvasView.invalidate();
   for (  TileCanvasView tileGroup : mTileCanvasViewHashMap.values()) {
     if (mCurrentTileCanvasView != tileGroup) {
-      tileGroup.clearTiles();
+      tileGroup.clearTiles(mShouldRecycleBitmaps);
     }
   }
   invalidate();
