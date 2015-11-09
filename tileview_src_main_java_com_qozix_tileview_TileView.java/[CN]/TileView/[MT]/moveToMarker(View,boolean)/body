@@ -1,5 +1,5 @@
 {
-  if (mMarkerLayout.indexOfChild(view) > -1) {
+  if (mMarkerLayout.indexOfChild(view) == -1) {
     throw new IllegalStateException("The view passed is not an existing marker");
   }
   ViewGroup.LayoutParams params=view.getLayoutParams();
