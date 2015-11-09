@@ -5,7 +5,9 @@
     float recalculatedMinScale=Math.max(minimumScaleX,minimumScaleY);
     if (recalculatedMinScale != mEffectiveMinScale) {
       mEffectiveMinScale=recalculatedMinScale;
-      setScale(mScale);
+      if (mScale < mEffectiveMinScale) {
+        setScale(mEffectiveMinScale);
+      }
     }
   }
 }
