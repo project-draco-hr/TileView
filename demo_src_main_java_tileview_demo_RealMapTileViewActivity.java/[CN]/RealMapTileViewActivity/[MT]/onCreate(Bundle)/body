@@ -19,7 +19,7 @@
     ImageView marker=new ImageView(this);
     marker.setTag(point);
     marker.setImageResource(Math.random() < 0.75 ? R.drawable.map_marker_normal : R.drawable.map_marker_featured);
-    marker.setOnClickListener(markerClickListener);
+    tileView.getMarkerLayout().setMarkerTapListener(markerTapListener);
     tileView.addMarker(marker,point[0],point[1],null,null);
   }
   double x=0;
