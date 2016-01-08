@@ -1,0 +1,7 @@
+{
+  if (obj instanceof HotSpot) {
+    HotSpot hotSpot=(HotSpot)obj;
+    return super.equals(hotSpot) && hotSpot.mHotSpotTapListener == mHotSpotTapListener;
+  }
+  return false;
+}
