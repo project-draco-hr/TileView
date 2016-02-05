@@ -1,0 +1,9 @@
+{
+  mShouldRenderWhilePanning=shouldRender;
+  if (shouldRender) {
+    mTileCanvasViewGroup.setRenderBuffer(TileCanvasViewGroup.FAST_RENDER_BUFFER);
+  }
+ else {
+    mTileCanvasViewGroup.setRenderBuffer(TileCanvasViewGroup.DEFAULT_RENDER_BUFFER);
+  }
+}
