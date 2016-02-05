@@ -1,0 +1,5 @@
+{
+  mShouldRenderWhilePanning=shouldRender;
+  int buffer=shouldRender ? TileCanvasViewGroup.FAST_RENDER_BUFFER : TileCanvasViewGroup.DEFAULT_RENDER_BUFFER;
+  mTileCanvasViewGroup.setRenderBuffer(buffer);
+}
