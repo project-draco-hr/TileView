@@ -1,6 +1,6 @@
 {
   LinkedList<Tile> condemned=new LinkedList<Tile>(mTilesAlreadyRendered);
-  condemned.removeAll(mTilesScheduledToRender);
+  condemned.removeAll(mTilesVisible);
   for (  Tile tile : condemned) {
     tile.destroy(mShouldRecycleBitmaps);
   }

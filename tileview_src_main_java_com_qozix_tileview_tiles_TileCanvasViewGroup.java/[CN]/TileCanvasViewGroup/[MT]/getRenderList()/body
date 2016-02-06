@@ -1,3 +1,5 @@
 {
-  return (LinkedList<Tile>)mTilesScheduledToRender.clone();
+  LinkedList<Tile> renderList=(LinkedList<Tile>)mTilesVisible.clone();
+  renderList.removeAll(mTilesAlreadyRendered);
+  return renderList;
 }
