@@ -1,7 +1,4 @@
 {
-  if (mTilesAlreadyRendered.contains(tile)) {
-    return;
-  }
   tile.setTransitionsEnabled(mTransitionsEnabled);
   tile.setTransitionDuration(mTransitionDuration);
   tile.stampTime();

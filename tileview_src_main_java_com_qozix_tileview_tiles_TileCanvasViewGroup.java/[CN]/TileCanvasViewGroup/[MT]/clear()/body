@@ -1,10 +1,10 @@
 {
   suppressRender();
   cancelRender();
-  for (  Tile tile : mTilesScheduledToRender) {
+  for (  Tile tile : mTilesVisible) {
     tile.destroy(mShouldRecycleBitmaps);
   }
-  mTilesScheduledToRender.clear();
+  mTilesVisible.clear();
   for (  Tile tile : mTilesAlreadyRendered) {
     tile.destroy(mShouldRecycleBitmaps);
   }
