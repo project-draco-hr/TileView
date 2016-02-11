@@ -1,11 +1,16 @@
 {
   mIsRendering=false;
-  if (!mTransitionsEnabled) {
-    cleanup();
+  mTileRenderHandler.post(new Runnable(){
+    @Override public void run(){
+      if (!mTransitionsEnabled) {
+        cleanup();
+      }
+      if (mTileRenderListener != null) {
+        mTileRenderListener.onRenderComplete();
+      }
+      invalidate();
+      requestRender();
+    }
   }
-  if (mTileRenderListener != null) {
-    mTileRenderListener.onRenderComplete();
-  }
-  invalidate();
-  requestRender();
+);
 }

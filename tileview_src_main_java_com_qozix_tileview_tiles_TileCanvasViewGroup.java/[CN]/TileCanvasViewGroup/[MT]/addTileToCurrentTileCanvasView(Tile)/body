@@ -1,7 +1,12 @@
 {
-  tile.setTransitionsEnabled(mTransitionsEnabled);
-  tile.setTransitionDuration(mTransitionDuration);
-  tile.stampTime();
-  mTilesAlreadyRendered.add(tile);
-  mCurrentTileCanvasView.addTile(tile);
+  mTileRenderHandler.post(new Runnable(){
+    @Override public void run(){
+      tile.setTransitionsEnabled(mTransitionsEnabled);
+      tile.setTransitionDuration(mTransitionDuration);
+      tile.stampTime();
+      mTilesAlreadyRendered.add(tile);
+      mCurrentTileCanvasView.addTile(tile);
+    }
+  }
+);
 }

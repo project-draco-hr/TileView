@@ -1,0 +1,12 @@
+{
+  android.os.Process.setThreadPriority(android.os.Process.THREAD_PRIORITY_BACKGROUND);
+  TileCanvasViewGroup tileCanvasViewGroup=mTileCanvasViewGroup.get();
+  Tile tile=mTile.get();
+  if (!Thread.interrupted() && tileCanvasViewGroup != null && !tileCanvasViewGroup.getRenderIsCancelled() && tile != null) {
+    tileCanvasViewGroup.generateTileBitmap(tile);
+    tileCanvasViewGroup.addTileToCurrentTileCanvasView(tile);
+    if (mIsLast) {
+      tileCanvasViewGroup.onRenderTaskPostExecute();
+    }
+  }
+}
