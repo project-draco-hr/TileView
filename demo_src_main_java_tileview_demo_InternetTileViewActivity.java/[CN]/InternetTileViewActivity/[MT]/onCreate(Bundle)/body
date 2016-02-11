@@ -1,0 +1,15 @@
+{
+  super.onCreate(savedInstanceState);
+  TileView tileView=getTileView();
+  tileView.setBitmapProvider(new BitmapHttpProvider());
+  tileView.setTransitionsEnabled(false);
+  tileView.setSize(3840,2160);
+  tileView.addDetailLevel(1.000f,"https://s3.amazonaws.com/tileview/tile01/100/tile_%d_%d.png");
+  tileView.addDetailLevel(0.750f,"https://s3.amazonaws.com/tileview/tile01/75/tile_%d_%d.png");
+  tileView.addDetailLevel(0.500f,"https://s3.amazonaws.com/tileview/tile01/50/tile_%d_%d.png");
+  tileView.addDetailLevel(0.250f,"https://s3.amazonaws.com/tileview/tile01/25/tile_%d_%d.png");
+  tileView.setScale(0);
+  tileView.defineBounds(0,0,1,1);
+  frameTo(0.5,0.5);
+  tileView.setShouldRenderWhilePanning(true);
+}
