@@ -1,5 +1,6 @@
 {
   mIsRendering=false;
+  mPoolExecutor.clear();
   mTileRenderHandler.post(new Runnable(){
     @Override public void run(){
       if (!mTransitionsEnabled) {

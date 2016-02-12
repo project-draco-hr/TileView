@@ -1,6 +1,6 @@
 {
   mRenderIsCancelled=true;
   if (mPoolExecutor != null) {
-    mPoolExecutor.clearQueue();
+    mPoolExecutor.cancel();
   }
 }

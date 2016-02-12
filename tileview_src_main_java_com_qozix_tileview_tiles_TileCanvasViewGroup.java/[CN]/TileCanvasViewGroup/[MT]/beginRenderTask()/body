@@ -5,7 +5,7 @@
   }
   mTilesVisible=mDetailLevelToRender.getVisibleTilesFromLastViewportComputation();
   if (mPoolExecutor != null) {
-    mPoolExecutor.clearQueue();
+    mPoolExecutor.cancel();
+    mPoolExecutor.queue(this,getRenderList());
   }
-  mPoolExecutor.queue(this,getRenderList());
 }
