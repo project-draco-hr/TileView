@@ -15,13 +15,6 @@
         return;
       }
       tileCanvasViewGroup.addTileToCurrentTileCanvasView(tile);
-      if (mIsLast) {
-        if (thread.isInterrupted()) {
-          tileCanvasViewGroup.onRenderTaskCancelled();
-          return;
-        }
-        tileCanvasViewGroup.onRenderTaskPostExecute();
-      }
     }
   }
 }

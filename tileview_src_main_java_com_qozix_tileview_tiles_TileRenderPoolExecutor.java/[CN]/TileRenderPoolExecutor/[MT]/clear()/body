@@ -1,6 +1,0 @@
-{
-synchronized (this) {
-    mQueue.clear();
-    mFutureList.clear();
-  }
-}

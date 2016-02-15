@@ -1,9 +1,10 @@
 {
   if (tiles != null && tiles.size() > 0) {
-    tileCanvasViewGroup.onRenderTaskPreExecute();
+    mViewGroup=new WeakReference<>(viewGroup);
+    viewGroup.onRenderTaskPreExecute();
     int size=tiles.size();
     for (int i=0; i < size; i++) {
-      mFutureList.add(mExecutor.submit(new TileRenderRunnable(tileCanvasViewGroup,tiles.get(i),i == size - 1)));
+      mFutureList.add(mExecutor.submit(new TileRenderRunnable(viewGroup,tiles.get(i))));
     }
   }
 }

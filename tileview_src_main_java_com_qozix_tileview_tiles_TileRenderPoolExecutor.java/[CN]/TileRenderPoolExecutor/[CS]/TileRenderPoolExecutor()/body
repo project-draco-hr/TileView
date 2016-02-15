@@ -1,5 +1,5 @@
 {
   mQueue=new LinkedBlockingDeque<>();
-  mExecutor=new ThreadPoolExecutor(CORE_POOL_SIZE,MAXIMUM_POOL_SIZE,KEEP_ALIVE_TIME,KEEP_ALIVE_TIME_UNIT,mQueue);
+  mExecutor=new CustomThreadPoolExecutor(CORE_POOL_SIZE,MAXIMUM_POOL_SIZE,KEEP_ALIVE_TIME,KEEP_ALIVE_TIME_UNIT,mQueue);
   mFutureList=new LinkedBlockingDeque<>();
 }

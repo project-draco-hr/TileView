@@ -1,5 +1,4 @@
 {
   this.mTileCanvasViewGroup=new WeakReference<>(tileCanvasViewGroup);
   this.mTile=new WeakReference<>(tile);
-  this.mIsLast=last;
 }
