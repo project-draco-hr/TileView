@@ -1,3 +1,6 @@
 {
+  if (sInstance == null) {
+    sInstance=new TileRenderPoolExecutor();
+  }
   return sInstance;
 }

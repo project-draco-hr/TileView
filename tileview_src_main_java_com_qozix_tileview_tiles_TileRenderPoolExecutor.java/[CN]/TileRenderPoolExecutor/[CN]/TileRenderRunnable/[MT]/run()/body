@@ -1,5 +1,5 @@
 {
-  android.os.Process.setThreadPriority(android.os.Process.THREAD_PRIORITY_BACKGROUND);
+  Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
   final Thread thread=Thread.currentThread();
   TileCanvasViewGroup tileCanvasViewGroup=mTileCanvasViewGroup.get();
   Tile tile=mTile.get();
