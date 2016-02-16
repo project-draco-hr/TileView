@@ -2,5 +2,5 @@
   super(context);
   setWillNotDraw(false);
   mTileRenderHandler=new TileRenderHandler(this);
-  mPoolExecutor=TileRenderPoolExecutor.getsInstance();
+  mPoolExecutor=new TileRenderPoolExecutor();
 }
