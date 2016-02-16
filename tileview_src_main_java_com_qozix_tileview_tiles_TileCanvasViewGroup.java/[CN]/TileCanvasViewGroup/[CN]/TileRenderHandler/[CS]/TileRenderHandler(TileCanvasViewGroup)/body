@@ -1,4 +1,4 @@
 {
-  super();
-  mTileManagerWeakReference=new WeakReference<TileCanvasViewGroup>(tileCanvasViewGroup);
+  super(Looper.getMainLooper());
+  mTileManagerWeakReference=new WeakReference<>(tileCanvasViewGroup);
 }

@@ -1,7 +1,6 @@
 {
   mRenderIsCancelled=true;
-  if (mLastRunTileRenderTask != null && mLastRunTileRenderTask.getStatus() != AsyncTask.Status.FINISHED) {
-    mLastRunTileRenderTask.cancel(true);
+  if (mPoolExecutor != null) {
+    mPoolExecutor.cancel();
   }
-  mLastRunTileRenderTask=null;
 }

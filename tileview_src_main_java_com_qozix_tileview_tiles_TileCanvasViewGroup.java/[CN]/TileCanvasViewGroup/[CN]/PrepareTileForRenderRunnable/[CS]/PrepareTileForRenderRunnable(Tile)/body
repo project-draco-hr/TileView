@@ -1,0 +1,3 @@
+{
+  mTile=new WeakReference<>(tile);
+}
