@@ -13,8 +13,6 @@
           }
  catch (          OutOfMemoryError oom) {
           }
-catch (          Exception e) {
-          }
         }
       }
  catch (      IOException e) {
