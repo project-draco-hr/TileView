@@ -1,0 +1,3 @@
+{
+  return mViewGroup != null && mViewGroup.get() != null;
+}
