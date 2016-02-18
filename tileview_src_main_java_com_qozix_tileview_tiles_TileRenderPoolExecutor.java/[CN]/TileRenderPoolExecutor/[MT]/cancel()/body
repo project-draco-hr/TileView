@@ -1,5 +1,8 @@
 {
 synchronized (this) {
+    if ((mViewGroup != null && mViewGroup.get() != null) && (mQueue.size() > 0 || mExecutor.getActiveCount() > 0)) {
+      mViewGroup.get().onRenderTaskCancelled();
+    }
     for (    Future f : mFutureList) {
       if (!f.isDone()) {
         f.cancel(true);

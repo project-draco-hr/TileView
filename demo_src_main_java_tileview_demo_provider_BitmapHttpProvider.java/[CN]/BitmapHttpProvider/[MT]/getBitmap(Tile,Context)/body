@@ -16,11 +16,9 @@
         }
       }
  catch (      IOException e) {
-        Log.e(TAG,"IOException " + fileName,e);
       }
     }
  catch (    MalformedURLException e1) {
-      Log.e(TAG,"MalformedURLException " + fileName,e1);
     }
   }
   return null;
