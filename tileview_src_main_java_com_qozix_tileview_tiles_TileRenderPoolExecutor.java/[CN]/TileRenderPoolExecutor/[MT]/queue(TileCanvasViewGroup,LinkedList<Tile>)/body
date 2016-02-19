@@ -3,9 +3,6 @@
     mViewGroup=new WeakReference<>(viewGroup);
     viewGroup.onRenderTaskPreExecute();
     for (    Tile tile : tiles) {
-      if (mExecutor.isShutdown() || mExecutor.isTerminating() || mExecutor.isTerminated()) {
-        return;
-      }
       mFutureList.add(mExecutor.submit(new TileRenderRunnable(viewGroup,tile)));
     }
   }
