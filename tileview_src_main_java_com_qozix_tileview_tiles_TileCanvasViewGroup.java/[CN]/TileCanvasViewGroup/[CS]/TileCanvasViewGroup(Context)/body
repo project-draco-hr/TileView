@@ -2,5 +2,4 @@
   super(context);
   setWillNotDraw(false);
   mTileRenderHandler=new TileRenderHandler(this);
-  mPoolExecutor=new TileRenderPoolExecutor();
 }

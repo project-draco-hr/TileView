@@ -1,0 +1,16 @@
+{
+  TileCanvasViewGroup tileCanvasViewGroup=mTileManagerWeakReference.get();
+  if (tileCanvasViewGroup != null) {
+    LinkedList<Tile> renderList=tileCanvasViewGroup.getRenderList();
+    for (    Tile tile : renderList) {
+      if (!isCancelled()) {
+        tileCanvasViewGroup=mTileManagerWeakReference.get();
+        if (tileCanvasViewGroup != null && !tileCanvasViewGroup.getRenderIsCancelled()) {
+          tileCanvasViewGroup.generateTileBitmap(tile);
+          publishProgress(tile);
+        }
+      }
+    }
+  }
+  return null;
+}

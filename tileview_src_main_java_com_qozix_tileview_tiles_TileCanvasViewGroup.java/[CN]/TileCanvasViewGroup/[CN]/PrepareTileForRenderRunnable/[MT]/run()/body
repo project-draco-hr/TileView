@@ -1,5 +1,0 @@
-{
-  if (mTile != null && mTile.get() != null) {
-    prepareTileForRender(mTile.get());
-  }
-}

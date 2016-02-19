@@ -1,3 +1,7 @@
 {
-  mTileRenderHandler.post(new PrepareTileForRenderRunnable(tile));
+  tile.setTransitionsEnabled(mTransitionsEnabled);
+  tile.setTransitionDuration(mTransitionDuration);
+  tile.stampTime();
+  mTilesAlreadyRendered.add(tile);
+  mCurrentTileCanvasView.addTile(tile);
 }

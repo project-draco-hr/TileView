@@ -1,4 +1,11 @@
 {
   mIsRendering=false;
-  mTileRenderHandler.post(mRenderPostExecuteRunnable);
+  if (!mTransitionsEnabled) {
+    cleanup();
+  }
+  if (mTileRenderListener != null) {
+    mTileRenderListener.onRenderComplete();
+  }
+  invalidate();
+  requestRender();
 }

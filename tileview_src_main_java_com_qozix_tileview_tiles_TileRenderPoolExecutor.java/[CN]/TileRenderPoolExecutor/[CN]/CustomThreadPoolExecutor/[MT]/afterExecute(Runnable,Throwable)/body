@@ -1,7 +1,0 @@
-{
-  super.afterExecute(r,t);
-  if (mQueue != null && mQueue.size() == 0 && mViewGroup != null && mViewGroup.get() != null && getActiveCount() == 1) {
-    mViewGroup.get().onRenderTaskPostExecute();
-    mFutureList.clear();
-  }
-}

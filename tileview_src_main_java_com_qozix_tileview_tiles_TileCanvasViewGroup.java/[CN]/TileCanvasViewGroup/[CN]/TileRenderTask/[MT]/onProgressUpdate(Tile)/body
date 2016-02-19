@@ -1,0 +1,9 @@
+{
+  if (!isCancelled()) {
+    TileCanvasViewGroup tileCanvasViewGroup=mTileManagerWeakReference.get();
+    if (tileCanvasViewGroup != null && !tileCanvasViewGroup.getRenderIsCancelled()) {
+      Tile tile=params[0];
+      tileCanvasViewGroup.addTileToCurrentTileCanvasView(tile);
+    }
+  }
+}
