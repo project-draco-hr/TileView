@@ -5,7 +5,20 @@ synchronized (this) {
     }
     for (    Future f : mFutureList) {
       if (!f.isDone()) {
-        f.cancel(true);
+        try {
+          if (f instanceof FutureTaskWithRunnableReference) {
+            FutureTaskWithRunnableReference futureTaskWithRunnableReference=(FutureTaskWithRunnableReference)f;
+            Runnable runnable=futureTaskWithRunnableReference.getRunnable();
+            if (runnable instanceof TileRenderRunnable) {
+              TileRenderRunnable tileRenderRunnable=(TileRenderRunnable)runnable;
+              tileRenderRunnable.mCancelled=true;
+            }
+          }
+          f.cancel(true);
+        }
+ catch (        Exception e) {
+          Log.d("DEBUG","Future.cancel");
+        }
       }
     }
     mQueue.clear();

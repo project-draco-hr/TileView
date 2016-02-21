@@ -1,5 +1,8 @@
 {
-  Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
+  if (mCancelled) {
+    return;
+  }
+  Process.setThreadPriority(Process.THREAD_PRIORITY_DISPLAY);
   final Thread thread=Thread.currentThread();
   TileCanvasViewGroup viewGroup=mTileCanvasViewGroup.get();
   Tile tile=mTile.get();
@@ -8,8 +11,15 @@
       return;
     }
     if (!viewGroup.getRenderIsCancelled() && tile != null) {
-      viewGroup.generateTileBitmap(tile);
-      if (tile.getBitmap() == null || thread.isInterrupted() || viewGroup.getRenderIsCancelled()) {
+      try {
+        viewGroup.generateTileBitmap(tile);
+      }
+ catch (      Exception e) {
+        Log.d("DEBUG","TileRenderRunnable.run");
+        return;
+      }
+      if (mCancelled || tile.getBitmap() == null || thread.isInterrupted() || viewGroup.getRenderIsCancelled()) {
+        tile.destroy(true);
         return;
       }
       viewGroup.addTileToCurrentTileCanvasView(tile);
