@@ -1,4 +1,5 @@
 {
   mIsRendering=false;
   mTileRenderHandler.post(mRenderPostExecuteRunnable);
+  Log.d("DEBUG","onRenderTaskPostExecute");
 }

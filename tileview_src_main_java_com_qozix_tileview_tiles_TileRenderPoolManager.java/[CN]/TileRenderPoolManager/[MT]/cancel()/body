@@ -6,7 +6,7 @@ synchronized (this) {
         tileCanvasViewGroup.onRenderTaskCancelled();
       }
     }
-    for (    Future future : mFutureLinkedBlockingDeque) {
+    for (    Future future : mFutureTileRenderRunnableHashMap.keySet()) {
       if (!future.isDone()) {
         if (mFutureTileRenderRunnableHashMap.containsKey(future)) {
           TileRenderRunnable tileRenderRunnable=mFutureTileRenderRunnableHashMap.get(future);
@@ -16,7 +16,6 @@ synchronized (this) {
       }
     }
     mRunnableLinkedBlockingDeque.clear();
-    mFutureLinkedBlockingDeque.clear();
     mFutureTileRenderRunnableHashMap.clear();
   }
 }
