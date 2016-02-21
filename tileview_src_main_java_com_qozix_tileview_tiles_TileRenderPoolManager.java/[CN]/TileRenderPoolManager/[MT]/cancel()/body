@@ -1,0 +1,22 @@
+{
+synchronized (this) {
+    if (mRunnableLinkedBlockingDeque.size() > 0 || mTileRenderThreadPoolExecutor.getActiveCount() > 0) {
+      TileCanvasViewGroup tileCanvasViewGroup=mTileCanvasViewGroupWeakReference.get();
+      if (tileCanvasViewGroup != null) {
+        tileCanvasViewGroup.onRenderTaskCancelled();
+      }
+    }
+    for (    Future future : mFutureLinkedBlockingDeque) {
+      if (!future.isDone()) {
+        if (mFutureTileRenderRunnableHashMap.containsKey(future)) {
+          TileRenderRunnable tileRenderRunnable=mFutureTileRenderRunnableHashMap.get(future);
+          tileRenderRunnable.cancel();
+        }
+        future.cancel(true);
+      }
+    }
+    mRunnableLinkedBlockingDeque.clear();
+    mFutureLinkedBlockingDeque.clear();
+    mFutureTileRenderRunnableHashMap.clear();
+  }
+}

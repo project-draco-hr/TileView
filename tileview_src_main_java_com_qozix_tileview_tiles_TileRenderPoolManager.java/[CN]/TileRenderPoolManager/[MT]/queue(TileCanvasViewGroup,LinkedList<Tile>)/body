@@ -1,0 +1,15 @@
+{
+  if (tiles != null && tiles.size() > 0) {
+    mTileCanvasViewGroupWeakReference=new WeakReference<>(viewGroup);
+    viewGroup.onRenderTaskPreExecute();
+    for (    Tile tile : tiles) {
+      if (mTileRenderThreadPoolExecutor.isShutdownOrTerminating()) {
+        return;
+      }
+      TileRenderRunnable tileRenderRunnable=new TileRenderRunnable(viewGroup,tile);
+      Future future=mTileRenderThreadPoolExecutor.submit(tileRenderRunnable);
+      mFutureTileRenderRunnableHashMap.put(future,tileRenderRunnable);
+      mFutureLinkedBlockingDeque.add(future);
+    }
+  }
+}
