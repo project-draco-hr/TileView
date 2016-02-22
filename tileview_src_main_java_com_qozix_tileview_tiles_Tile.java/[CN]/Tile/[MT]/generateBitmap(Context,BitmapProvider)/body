@@ -2,10 +2,5 @@
   if (mBitmap != null) {
     return;
   }
-  try {
-    mBitmap=bitmapProvider.getBitmap(this,context);
-  }
- catch (  Exception e) {
-    Log.d("DEBUG","Tile.generateBitmap");
-  }
+  mBitmap=bitmapProvider.getBitmap(this,context);
 }
