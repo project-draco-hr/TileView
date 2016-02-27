@@ -1,6 +1,3 @@
 {
-  if (!mTilesVisible.contains(tile)) {
-    return;
-  }
   mTileRenderHandler.post(new PrepareTileForRenderRunnable(tile));
 }

@@ -6,13 +6,11 @@ synchronized (this) {
         tileCanvasViewGroup.onRenderTaskCancelled();
       }
     }
-    for (    Future future : mFutureTileRenderRunnableHashMap.keySet()) {
+    for (    Map.Entry<Future,TileRenderRunnable> entry : mFutureTileRenderRunnableHashMap.entrySet()) {
+      Future future=entry.getKey();
       if (!future.isDone()) {
-        if (mFutureTileRenderRunnableHashMap.containsKey(future)) {
-          TileRenderRunnable tileRenderRunnable=mFutureTileRenderRunnableHashMap.get(future);
-          tileRenderRunnable.cancel();
-        }
-        future.cancel(true);
+        TileRenderRunnable tileRenderRunnable=entry.getValue();
+        tileRenderRunnable.cancel();
       }
     }
     mRunnableLinkedBlockingDeque.clear();

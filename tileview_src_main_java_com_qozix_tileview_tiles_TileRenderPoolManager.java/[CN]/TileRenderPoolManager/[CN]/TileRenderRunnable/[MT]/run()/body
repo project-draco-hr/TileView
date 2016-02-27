@@ -21,7 +21,11 @@
   try {
     tileCanvasViewGroup.generateTileBitmap(tile);
   }
- catch (  Exception e) {
+ catch (  InterruptedIOException e) {
+    Thread.currentThread().interrupt();
+    return;
+  }
+catch (  Exception e) {
     return;
   }
   if (mCancelled || tile.getBitmap() == null || thread.isInterrupted() || tileCanvasViewGroup.getRenderIsCancelled()) {

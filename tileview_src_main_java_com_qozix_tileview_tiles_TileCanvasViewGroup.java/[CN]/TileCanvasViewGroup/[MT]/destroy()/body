@@ -1,5 +1,5 @@
 {
-  mPoolExecutor.shutdown();
+  mTileRenderPoolManager.shutdown();
   clear();
   for (  TileCanvasView tileGroup : mTileCanvasViewHashMap.values()) {
     tileGroup.clearTiles(mShouldRecycleBitmaps);
