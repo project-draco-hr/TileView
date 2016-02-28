@@ -1,0 +1,8 @@
+{
+  if (mayInterrupt) {
+    Thread.currentThread().interrupt();
+  }
+  boolean isAlreadyCancelled=mCancelled;
+  mCancelled=true;
+  return !isAlreadyCancelled;
+}

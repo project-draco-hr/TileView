@@ -5,8 +5,5 @@
     tile.destroy(mShouldRecycleBitmaps);
   }
   mTilesVisible.clear();
-  for (  Tile tile : mTilesAlreadyRendered) {
-    tile.destroy(mShouldRecycleBitmaps);
-  }
-  mTilesAlreadyRendered.clear();
+  mCurrentTileCanvasView.clearTiles(mShouldRecycleBitmaps);
 }

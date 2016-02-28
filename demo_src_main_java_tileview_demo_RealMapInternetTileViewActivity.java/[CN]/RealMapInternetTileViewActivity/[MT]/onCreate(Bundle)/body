@@ -10,6 +10,5 @@
   tileView.addDetailLevel(0.5000f,"https://raw.githubusercontent.com/moagrius/TileView/master/demo/src/main/assets/tiles/map/phi-250000-%d_%d.jpg");
   tileView.addDetailLevel(1.0000f,"https://raw.githubusercontent.com/moagrius/TileView/master/demo/src/main/assets/tiles/map/phi-500000-%d_%d.jpg");
   tileView.defineBounds(0,0,1,1);
-  frameTo(0.5,0.5);
   tileView.setShouldRenderWhilePanning(true);
 }
