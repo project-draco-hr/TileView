@@ -1,6 +1,5 @@
 {
-  HashSet<Tile> condemned=(HashSet<Tile>)mTiles.clone();
-  for (  Tile tile : condemned) {
+  for (  Tile tile : mTiles) {
     tile.destroy(shouldRecycle);
   }
   invalidate();

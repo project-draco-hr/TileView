@@ -1,5 +1,5 @@
 {
-  LinkedList<Tile> renderList=(LinkedList<Tile>)mTilesVisible.clone();
-  renderList.removeAll(mCurrentTileCanvasView.getTiles());
-  return renderList;
+  Set<Tile> renderSet=new HashSet<>(mTileManager.tilesInCurrentViewport);
+  renderSet.removeAll(mTileManager.tilesAlreadyRendered);
+  return renderSet;
 }

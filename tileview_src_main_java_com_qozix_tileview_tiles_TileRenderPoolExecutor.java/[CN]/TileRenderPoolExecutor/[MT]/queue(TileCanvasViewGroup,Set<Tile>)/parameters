@@ -1,2 +1,2 @@
 TileCanvasViewGroup tileCanvasViewGroup
-List<Tile> renderList
+Set<Tile> renderList
