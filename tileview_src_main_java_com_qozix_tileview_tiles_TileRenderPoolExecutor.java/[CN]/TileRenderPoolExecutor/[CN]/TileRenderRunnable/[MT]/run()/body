@@ -1,4 +1,5 @@
 {
-  renderTile();
-  markComplete();
+  if (renderTile()) {
+    markComplete();
+  }
 }
