@@ -1,11 +1,9 @@
 {
 synchronized (this) {
-    List<TileRenderRunnable> completeTasks=new LinkedList<>();
     for (    Runnable runnable : getQueue()) {
       if (runnable instanceof TileRenderRunnable) {
         TileRenderRunnable tileRenderRunnable=(TileRenderRunnable)runnable;
         if (tileRenderRunnable.isDone()) {
-          completeTasks.add(tileRenderRunnable);
         }
  else {
           if (renderList.contains(tileRenderRunnable.getTile())) {
@@ -13,12 +11,11 @@ synchronized (this) {
           }
  else {
             tileRenderRunnable.cancel();
-            completeTasks.add(tileRenderRunnable);
+            remove(tileRenderRunnable);
           }
         }
       }
     }
-    getQueue().removeAll(completeTasks);
     if (renderList.size() > 0) {
       mTileCanvasViewGroupWeakReference=new WeakReference<>(tileCanvasViewGroup);
       tileCanvasViewGroup.onRenderTaskPreExecute();

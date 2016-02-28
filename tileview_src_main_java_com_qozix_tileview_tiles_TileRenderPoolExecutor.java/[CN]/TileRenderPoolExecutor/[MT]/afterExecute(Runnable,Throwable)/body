@@ -1,8 +1,10 @@
 {
 synchronized (this) {
     super.afterExecute(runnable,throwable);
+    Log.d("DEBUG","queue size=" + getQueue().size());
     if (getQueue().size() == 0 && getActiveCount() == 1) {
       Log.d("DEBUG","last task done");
+      purge();
       TileCanvasViewGroup tileCanvasViewGroup=mTileCanvasViewGroupWeakReference.get();
       if (tileCanvasViewGroup != null) {
         tileCanvasViewGroup.onRenderTaskPostExecute();
