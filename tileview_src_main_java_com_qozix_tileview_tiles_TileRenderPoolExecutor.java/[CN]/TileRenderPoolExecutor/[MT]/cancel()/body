@@ -1,11 +1,12 @@
 {
   if (getQueue().size() > 0 || getActiveCount() > 0) {
+    Log.d("DEBUG","queue 0, active count 0, dispatch render cancelled event");
     TileCanvasViewGroup tileCanvasViewGroup=mTileCanvasViewGroupWeakReference.get();
     if (tileCanvasViewGroup != null) {
       tileCanvasViewGroup.onRenderTaskCancelled();
+      Log.d("DEBUG","render cancelled event dispatched");
     }
   }
-  getQueue().clear();
   mCancelledTileRenderTasks.addAll(mExecutingTileRenderTasks);
   mExecutingTileRenderTasks.clear();
   stopCancelledTasks();

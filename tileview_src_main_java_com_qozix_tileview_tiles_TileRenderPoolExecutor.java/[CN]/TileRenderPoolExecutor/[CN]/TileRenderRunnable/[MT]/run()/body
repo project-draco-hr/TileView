@@ -1,4 +1,7 @@
 {
   boolean rendered=renderTile();
-  markComplete();
+  Log.d("DEBUG","was rendered:" + rendered);
+  if (rendered) {
+    markComplete();
+  }
 }
