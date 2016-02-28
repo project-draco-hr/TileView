@@ -31,7 +31,6 @@ synchronized (this) {
         task.runnable=new TileRenderRunnable();
         task.runnable.setTile(tile);
         task.runnable.setTileCanvasViewGroup(tileCanvasViewGroup);
-        task.runnable.setTileRenderPoolExecutor(this);
         task.future=submit(task.runnable);
         mExecutingTileRenderTasks.add(task);
       }

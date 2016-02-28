@@ -1,7 +1,0 @@
-{
-synchronized (this) {
-    Log.d("DEBUG","should be removing task: " + mExecutingTileRenderTasks.size());
-    mExecutingTileRenderTasks.remove(tileRenderTask);
-    Log.d("DEBUG","task should have been removed: " + mExecutingTileRenderTasks.size());
-  }
-}

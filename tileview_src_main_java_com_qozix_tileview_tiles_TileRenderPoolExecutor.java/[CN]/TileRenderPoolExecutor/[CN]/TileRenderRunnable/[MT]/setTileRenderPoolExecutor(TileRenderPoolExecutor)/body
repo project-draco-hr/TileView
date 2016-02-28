@@ -1,3 +1,0 @@
-{
-  mTileRenderPoolExecutorWeakReference=new WeakReference<>(tileRenderPoolExecutor);
-}
