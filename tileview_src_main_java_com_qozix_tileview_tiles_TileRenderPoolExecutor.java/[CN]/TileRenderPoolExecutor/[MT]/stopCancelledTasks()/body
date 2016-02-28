@@ -1,6 +1,0 @@
-{
-  for (  TileRenderTask tileRenderTask : mCancelledTileRenderTasks) {
-    tileRenderTask.cancel();
-  }
-  mCancelledTileRenderTasks.clear();
-}

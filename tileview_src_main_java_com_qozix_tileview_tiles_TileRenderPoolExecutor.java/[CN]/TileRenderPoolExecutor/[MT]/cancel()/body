@@ -8,7 +8,4 @@
     }
   }
   getQueue().clear();
-  mCancelledTileRenderTasks.addAll(mExecutingTileRenderTasks);
-  mExecutingTileRenderTasks.clear();
-  stopCancelledTasks();
 }

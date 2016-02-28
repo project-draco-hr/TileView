@@ -1,16 +1,8 @@
 {
 synchronized (this) {
     super.afterExecute(runnable,throwable);
-    Log.d("DEBUG","runnable is TileRenderRunnable: " + (runnable instanceof Future));
-    for (    TileRenderTask task : mExecutingTileRenderTasks) {
-      if (task.future == runnable) {
-        Log.d("DEBUG","future returned by afterExecute is the same one watched in execution list");
-        break;
-      }
-    }
     if (getQueue().size() == 0 && getActiveCount() == 1) {
       Log.d("DEBUG","last task done");
-      mExecutingTileRenderTasks.clear();
       TileCanvasViewGroup tileCanvasViewGroup=mTileCanvasViewGroupWeakReference.get();
       if (tileCanvasViewGroup != null) {
         tileCanvasViewGroup.onRenderTaskPostExecute();
