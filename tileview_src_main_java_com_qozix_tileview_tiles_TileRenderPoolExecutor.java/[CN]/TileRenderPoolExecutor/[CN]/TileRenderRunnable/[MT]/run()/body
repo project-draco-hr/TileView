@@ -1,6 +1,4 @@
 {
   boolean rendered=renderTile();
-  if (rendered) {
-    markComplete();
-  }
+  markComplete();
 }
