@@ -1,10 +1,3 @@
 {
-  TileRenderPoolExecutor tileRenderPoolExecutor=getTileRenderPoolExecutor();
-  if (tileRenderPoolExecutor != null) {
-    Tile tile=getTile();
-    if (tile != null) {
-      TileRenderTask tileRenderTask=tileRenderPoolExecutor.getTaskByTile(tile);
-      tileRenderPoolExecutor.removeTaskFromCurrentlyExecutingList(tileRenderTask);
-    }
-  }
+  mComplete=true;
 }
