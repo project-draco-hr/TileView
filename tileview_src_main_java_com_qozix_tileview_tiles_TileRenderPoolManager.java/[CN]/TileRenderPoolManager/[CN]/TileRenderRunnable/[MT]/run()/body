@@ -28,6 +28,9 @@
 catch (  Exception e) {
     return;
   }
+  if (mTileRenderRunnableCompleteListener != null) {
+    mTileRenderRunnableCompleteListener.onRenderComplete(tile);
+  }
   if (mCancelled || tile.getBitmap() == null || thread.isInterrupted() || tileCanvasViewGroup.getRenderIsCancelled()) {
     tile.destroy(true);
     return;
