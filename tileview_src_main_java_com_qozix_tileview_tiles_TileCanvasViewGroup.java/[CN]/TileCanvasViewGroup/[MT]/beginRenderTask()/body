@@ -4,7 +4,7 @@
     return;
   }
   mTilesVisible=mDetailLevelToRender.getVisibleTilesFromLastViewportComputation();
-  if (mTileRenderPoolManager != null) {
-    mTileRenderPoolManager.queue(this,getRenderList());
+  if (mTileRenderPoolExecutor != null) {
+    mTileRenderPoolExecutor.queue(this,getRenderList());
   }
 }

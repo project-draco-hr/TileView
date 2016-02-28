@@ -9,5 +9,5 @@
     tile.destroy(mShouldRecycleBitmaps);
   }
   mTilesAlreadyRendered.clear();
-  mTileRenderPoolManager.cancel();
+  mTileRenderPoolExecutor.cancel();
 }

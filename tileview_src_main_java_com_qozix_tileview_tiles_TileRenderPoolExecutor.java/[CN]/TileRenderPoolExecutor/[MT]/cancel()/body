@@ -1,0 +1,12 @@
+{
+  if (getQueue().size() > 0 || getActiveCount() > 0) {
+    TileCanvasViewGroup tileCanvasViewGroup=mTileCanvasViewGroupWeakReference.get();
+    if (tileCanvasViewGroup != null) {
+      tileCanvasViewGroup.onRenderTaskCancelled();
+    }
+  }
+  getQueue().clear();
+  mCancelledTileRenderTasks.addAll(mExecutingTileRenderTasks);
+  mExecutingTileRenderTasks.clear();
+  stopCancelledTasks();
+}

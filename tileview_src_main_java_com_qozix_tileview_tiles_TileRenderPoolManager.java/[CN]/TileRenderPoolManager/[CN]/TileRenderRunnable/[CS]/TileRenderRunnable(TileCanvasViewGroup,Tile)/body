@@ -1,4 +1,0 @@
-{
-  mTileCanvasViewGroup=new WeakReference<>(viewGroup);
-  mTileWeakReference=new WeakReference<>(tile);
-}

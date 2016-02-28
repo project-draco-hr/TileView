@@ -1,6 +1,6 @@
 {
   mRenderIsCancelled=true;
-  if (mTileRenderPoolManager != null) {
-    mTileRenderPoolManager.cancel();
+  if (mTileRenderPoolExecutor != null) {
+    mTileRenderPoolExecutor.cancel();
   }
 }

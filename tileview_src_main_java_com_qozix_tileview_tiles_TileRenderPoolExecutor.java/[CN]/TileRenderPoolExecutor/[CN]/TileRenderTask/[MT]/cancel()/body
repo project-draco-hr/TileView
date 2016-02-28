@@ -1,0 +1,5 @@
+{
+  future.cancel(true);
+  runnable.cancel();
+  tile.destroy(true);
+}

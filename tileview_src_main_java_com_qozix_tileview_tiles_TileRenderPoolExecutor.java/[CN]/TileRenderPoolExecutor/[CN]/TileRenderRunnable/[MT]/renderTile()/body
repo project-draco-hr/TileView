@@ -1,0 +1,37 @@
+{
+  if (mCancelled) {
+    return false;
+  }
+  Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
+  final Thread thread=Thread.currentThread();
+  if (thread.isInterrupted()) {
+    return false;
+  }
+  TileCanvasViewGroup tileCanvasViewGroup=getTileCanvasViewGroup();
+  if (tileCanvasViewGroup == null) {
+    return false;
+  }
+  if (tileCanvasViewGroup.getRenderIsCancelled()) {
+    return false;
+  }
+  Tile tile=getTile();
+  if (tile == null) {
+    return false;
+  }
+  try {
+    tileCanvasViewGroup.generateTileBitmap(tile);
+  }
+ catch (  InterruptedIOException e) {
+    Thread.currentThread().interrupt();
+    return false;
+  }
+catch (  Exception e) {
+    return false;
+  }
+  if (mCancelled || tile.getBitmap() == null || thread.isInterrupted() || tileCanvasViewGroup.getRenderIsCancelled()) {
+    tile.destroy(true);
+    return false;
+  }
+  tileCanvasViewGroup.addTileToCurrentTileCanvasView(tile);
+  return true;
+}

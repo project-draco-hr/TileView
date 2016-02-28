@@ -1,0 +1,6 @@
+{
+  if (mTileCanvasViewGroupWeakReference != null) {
+    return mTileCanvasViewGroupWeakReference.get();
+  }
+  return null;
+}

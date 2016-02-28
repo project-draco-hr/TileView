@@ -1,0 +1,10 @@
+{
+  if (tile != null) {
+    for (    TileRenderTask tileRenderTask : mExecutingTileRenderTasks) {
+      if (tile.equals(tileRenderTask.tile)) {
+        return tileRenderTask;
+      }
+    }
+  }
+  return null;
+}

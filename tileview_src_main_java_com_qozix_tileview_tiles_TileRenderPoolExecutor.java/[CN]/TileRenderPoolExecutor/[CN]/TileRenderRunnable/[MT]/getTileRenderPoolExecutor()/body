@@ -1,0 +1,6 @@
+{
+  if (mTileRenderPoolExecutorWeakReference != null) {
+    return mTileRenderPoolExecutorWeakReference.get();
+  }
+  return null;
+}
