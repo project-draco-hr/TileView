@@ -40,6 +40,7 @@ synchronized (this) {
         TileRenderRunnable runnable=new TileRenderRunnable();
         runnable.setTile(tile);
         runnable.setTileCanvasViewGroup(tileCanvasViewGroup);
+        runnable.setHandler(mHandler);
         execute(runnable);
       }
     }

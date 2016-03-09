@@ -1,0 +1,13 @@
+{
+  TileRenderRunnable tileRenderRunnable=(TileRenderRunnable)message.obj;
+  TileCanvasViewGroup tileCanvasViewGroup=tileRenderRunnable.getTileCanvasViewGroup();
+  if (tileCanvasViewGroup == null) {
+    return;
+  }
+  Tile tile=tileRenderRunnable.getTile();
+  if (tile == null) {
+    return;
+  }
+  Log.d("DEBUG","sending tile to TCVG");
+  tileCanvasViewGroup.addTileToCurrentTileCanvasView(tile);
+}

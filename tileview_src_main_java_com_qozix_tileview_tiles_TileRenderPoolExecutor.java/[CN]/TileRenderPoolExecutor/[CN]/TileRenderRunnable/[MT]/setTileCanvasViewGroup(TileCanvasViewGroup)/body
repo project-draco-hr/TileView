@@ -1,3 +1,5 @@
 {
   mTileCanvasViewGroupWeakReference=new WeakReference<>(tileCanvasViewGroup);
+  mContextWeakReference=new WeakReference<>(tileCanvasViewGroup.getContext());
+  mBitmapProviderWeakReference=new WeakReference<>(tileCanvasViewGroup.getBitmapProvider());
 }
