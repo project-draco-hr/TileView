@@ -32,6 +32,22 @@
   x=x / size;
   y=y / size;
   frameTo(x,y);
-  tileView.setScaleLimits(0,2);
-  tileView.setScale(0.3f);
+  tileView.setScale(0.5f);
+  tileView.setShouldScaleToFit(false);
+  tileView.addZoomPanListener(new TileView.ZoomPanListener(){
+    public void onPanBegin(    int x,    int y,    Origination origin){
+    }
+    @Override public void onPanUpdate(    int x,    int y,    Origination origin){
+    }
+    public void onPanEnd(    int x,    int y,    Origination origin){
+    }
+    public void onZoomBegin(    float scale,    Origination origin){
+    }
+    public void onZoomUpdate(    float scale,    Origination origin){
+      Log.d("DEBUG","scale=" + scale);
+    }
+    public void onZoomEnd(    float scale,    Origination origin){
+    }
+  }
+);
 }
