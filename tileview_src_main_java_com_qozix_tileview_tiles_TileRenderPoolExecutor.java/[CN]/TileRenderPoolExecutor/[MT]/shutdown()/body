@@ -1,4 +1,4 @@
 {
-  broadcastCancel();
   super.shutdown();
+  broadcastCancel();
 }

@@ -1,3 +1,10 @@
 {
-  mTileRenderHandler.post(new PrepareTileForRenderRunnable(tile));
+  if (!mTileManager.tilesInCurrentViewport.contains(tile)) {
+    return;
+  }
+  tile.setTransitionsEnabled(mTransitionsEnabled);
+  tile.setTransitionDuration(mTransitionDuration);
+  tile.stampTime();
+  mTileManager.tilesAlreadyRendered.add(tile);
+  mCurrentTileCanvasView.addTile(tile);
 }

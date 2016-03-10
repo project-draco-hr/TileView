@@ -1,4 +1,10 @@
 {
-  broadcastCancel();
+  for (  Runnable runnable : getQueue()) {
+    if (runnable instanceof TileRenderRunnable) {
+      TileRenderRunnable tileRenderRunnable=(TileRenderRunnable)runnable;
+      tileRenderRunnable.cancel(true);
+    }
+  }
   getQueue().clear();
+  broadcastCancel();
 }

@@ -2,7 +2,7 @@
   if (mayInterrupt) {
     Thread.currentThread().interrupt();
   }
-  boolean isAlreadyCancelled=mCancelled;
+  boolean cancelled=mCancelled;
   mCancelled=true;
-  return !isAlreadyCancelled;
+  return !cancelled;
 }

@@ -1,37 +1,33 @@
 {
-synchronized (this) {
-    for (    Runnable runnable : getQueue()) {
-      if (runnable instanceof TileRenderRunnable) {
-        TileRenderRunnable tileRenderRunnable=(TileRenderRunnable)runnable;
-        Tile tile=tileRenderRunnable.getTile();
-        if (tile == null) {
-          continue;
-        }
-        if (tileRenderRunnable.isDone()) {
-          continue;
-        }
-        if (renderList.contains(tile)) {
-          renderList.remove(tile);
-        }
+  mTileCanvasViewGroupWeakReference=new WeakReference<>(tileCanvasViewGroup);
+  tileCanvasViewGroup.onRenderTaskPreExecute();
+  for (  Runnable runnable : getQueue()) {
+    if (runnable instanceof TileRenderRunnable) {
+      TileRenderRunnable tileRenderRunnable=(TileRenderRunnable)runnable;
+      if (tileRenderRunnable.isDone() || tileRenderRunnable.isCancelled()) {
+        continue;
+      }
+      Tile tile=tileRenderRunnable.getTile();
+      if (tile == null) {
+        continue;
+      }
+      if (renderSet.contains(tile)) {
+        renderSet.remove(tile);
+      }
  else {
-          tileRenderRunnable.cancel(true);
-          remove(tileRenderRunnable);
-        }
+        tileRenderRunnable.cancel(true);
+        remove(tileRenderRunnable);
       }
     }
-    if (renderList.size() > 0) {
-      mTileCanvasViewGroupWeakReference=new WeakReference<>(tileCanvasViewGroup);
-      tileCanvasViewGroup.onRenderTaskPreExecute();
-      for (      Tile tile : renderList) {
-        if (isShutdownOrTerminating()) {
-          return;
-        }
-        TileRenderRunnable runnable=new TileRenderRunnable();
-        runnable.setTile(tile);
-        runnable.setTileCanvasViewGroup(tileCanvasViewGroup);
-        runnable.setHandler(mHandler);
-        execute(runnable);
-      }
+  }
+  for (  Tile tile : renderSet) {
+    if (isShutdownOrTerminating()) {
+      return;
     }
+    TileRenderRunnable runnable=new TileRenderRunnable();
+    runnable.setTile(tile);
+    runnable.setTileCanvasViewGroup(tileCanvasViewGroup);
+    runnable.setHandler(mHandler);
+    execute(runnable);
   }
 }
