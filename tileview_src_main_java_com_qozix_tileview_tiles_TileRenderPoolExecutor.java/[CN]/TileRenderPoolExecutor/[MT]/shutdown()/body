@@ -1,4 +1,4 @@
 {
   broadcastCancel();
-  getQueue().clear();
+  super.shutdown();
 }

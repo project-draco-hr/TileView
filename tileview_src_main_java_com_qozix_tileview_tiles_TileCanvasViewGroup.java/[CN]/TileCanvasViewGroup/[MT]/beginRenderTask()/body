@@ -4,9 +4,7 @@
     return;
   }
   Set<Tile> visibleTiles=mDetailLevelToRender.getVisibleTilesFromLastViewportComputation();
-  Log.d("DEBUG","size of tile set from DetailLevel: " + visibleTiles.size());
   mTileManager.reconcile(visibleTiles);
-  Log.d("DEBUG","size of tile set in manager: " + mTileManager.tilesInCurrentViewport.size());
   if (mTileRenderPoolExecutor != null) {
     mTileRenderPoolExecutor.queue(this,getRenderSet());
   }

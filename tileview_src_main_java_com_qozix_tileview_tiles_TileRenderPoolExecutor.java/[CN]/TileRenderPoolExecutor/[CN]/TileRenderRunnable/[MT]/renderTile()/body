@@ -28,11 +28,5 @@
   if (mCancelled || tile.getBitmap() == null || thread.isInterrupted()) {
     return false;
   }
-  Handler handler=getHandler();
-  if (handler == null) {
-    return false;
-  }
-  Message message=handler.obtainMessage(0,this);
-  message.sendToTarget();
   return true;
 }

@@ -1,6 +1,12 @@
 {
-  if (renderTile()) {
-    Log.d("DEBUG","tile rendered");
+  boolean rendered=renderTile();
+  Handler handler=getHandler();
+  if (handler != null) {
+    int status=rendered ? TileRenderHandler.RENDER_COMPLETE : TileRenderHandler.RENDER_INCOMPLETE;
+    Message message=handler.obtainMessage(status,this);
+    message.sendToTarget();
+  }
+  if (rendered) {
     markComplete();
   }
 }

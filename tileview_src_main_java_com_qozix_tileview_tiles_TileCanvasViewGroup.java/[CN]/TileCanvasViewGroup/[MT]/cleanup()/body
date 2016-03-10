@@ -1,5 +1,5 @@
 {
-  clearTilesOutOfViewport();
+  clearOutOfViewportTiles();
   for (  TileCanvasView tileGroup : mTileCanvasViewHashMap.values()) {
     if (mCurrentTileCanvasView != tileGroup) {
       tileGroup.clearTiles(mShouldRecycleBitmaps);

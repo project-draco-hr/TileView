@@ -1,0 +1,4 @@
+{
+  broadcastCancel();
+  return super.shutdownNow();
+}

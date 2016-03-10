@@ -1,29 +1,19 @@
 {
 synchronized (this) {
-    List<String> positions=new LinkedList<>();
-    for (    Tile tile : renderList) {
-      positions.add(tile.getColumn() + ":" + tile.getRow());
-    }
-    Log.d("DEBUG","visible tiles: " + TextUtils.join(",",positions));
     for (    Runnable runnable : getQueue()) {
       if (runnable instanceof TileRenderRunnable) {
         TileRenderRunnable tileRenderRunnable=(TileRenderRunnable)runnable;
         Tile tile=tileRenderRunnable.getTile();
         if (tile == null) {
-          Log.d("DEBUG","skipping null tile");
           continue;
         }
         if (tileRenderRunnable.isDone()) {
-          Log.d("DEBUG","tile at " + tile.getColumn() + ", "+ tile.getRow()+ " is in queue but is done already");
           continue;
         }
-        Log.d("DEBUG","tile at " + tile.getColumn() + ", "+ tile.getRow()+ " is in queue");
         if (renderList.contains(tile)) {
-          Log.d("DEBUG","removing tile at " + tile.getColumn() + ", "+ tile.getRow());
           renderList.remove(tile);
         }
  else {
-          Log.d("DEBUG","tile is not in current visible viewport, cancelling tile at " + tile.getColumn() + ", "+ tile.getRow());
           tileRenderRunnable.cancel(true);
           remove(tileRenderRunnable);
         }
@@ -34,7 +24,6 @@ synchronized (this) {
       tileCanvasViewGroup.onRenderTaskPreExecute();
       for (      Tile tile : renderList) {
         if (isShutdownOrTerminating()) {
-          Log.d("DEBUG","skipping tile at " + tile.getColumn() + ", "+ tile.getRow());
           return;
         }
         TileRenderRunnable runnable=new TileRenderRunnable();

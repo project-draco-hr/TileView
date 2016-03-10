@@ -33,6 +33,8 @@
   y=y / size;
   frameTo(x,y);
   tileView.setScale(0.5f);
+  tileView.setShouldRenderWhilePanning(true);
+  tileView.setTransitionsEnabled(false);
   tileView.setShouldScaleToFit(false);
   tileView.addZoomPanListener(new TileView.ZoomPanListener(){
     public void onPanBegin(    int x,    int y,    Origination origin){

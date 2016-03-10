@@ -1,8 +1,6 @@
 {
   Set<Tile> condemned=new HashSet<>(mTileManager.tilesAlreadyRendered);
-  Log.d("DEBUG","condemned before removing all still in viewport: " + condemned.size());
   condemned.removeAll(mTileManager.tilesInCurrentViewport);
-  Log.d("DEBUG","condemned after removing all still in viewport: " + condemned.size());
   mTileManager.tilesAlreadyRendered.removeAll(condemned);
   for (  Tile tile : condemned) {
     tile.destroy(mShouldRecycleBitmaps);
