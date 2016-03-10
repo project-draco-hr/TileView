@@ -1,33 +1,34 @@
 {
   if (mCancelled) {
-    return false;
+    return TileRenderHandler.Status.INCOMPLETE;
   }
   Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
   final Thread thread=Thread.currentThread();
   if (thread.isInterrupted()) {
-    return false;
+    return TileRenderHandler.Status.INCOMPLETE;
   }
   Tile tile=getTile();
   if (tile == null) {
-    return false;
+    return TileRenderHandler.Status.INCOMPLETE;
   }
   Context context=getContext();
   if (context == null) {
-    return false;
+    return TileRenderHandler.Status.INCOMPLETE;
   }
   BitmapProvider bitmapProvider=getBitmapProvider();
   if (bitmapProvider == null) {
-    return false;
+    return TileRenderHandler.Status.INCOMPLETE;
   }
   try {
     tile.generateBitmap(context,bitmapProvider);
   }
- catch (  Exception e) {
-    return false;
+ catch (  Throwable throwable) {
+    mThrowable=throwable;
+    return TileRenderHandler.Status.ERROR;
   }
   if (mCancelled || tile.getBitmap() == null || thread.isInterrupted()) {
     tile.destroy(true);
-    return false;
+    return TileRenderHandler.Status.INCOMPLETE;
   }
-  return true;
+  return TileRenderHandler.Status.COMPLETE;
 }

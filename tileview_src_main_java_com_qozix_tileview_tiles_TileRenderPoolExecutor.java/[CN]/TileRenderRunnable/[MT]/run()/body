@@ -1,0 +1,11 @@
+{
+  TileRenderHandler.Status status=renderTile();
+  Handler handler=getHandler();
+  if (handler != null) {
+    Message message=handler.obtainMessage(status.getMessageCode(),this);
+    message.sendToTarget();
+  }
+  if (status == TileRenderHandler.Status.COMPLETE) {
+    mComplete=true;
+  }
+}

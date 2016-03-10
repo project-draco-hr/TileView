@@ -1,0 +1,22 @@
+{
+  TileRenderRunnable tileRenderRunnable=(TileRenderRunnable)message.obj;
+  TileCanvasViewGroup tileCanvasViewGroup=tileRenderRunnable.getTileCanvasViewGroup();
+  if (tileCanvasViewGroup == null) {
+    return;
+  }
+  Tile tile=tileRenderRunnable.getTile();
+  if (tile == null) {
+    return;
+  }
+switch (message.what) {
+case RENDER_ERROR:
+    tileCanvasViewGroup.handleTileRenderException(tileRenderRunnable.getThrowable());
+  break;
+case RENDER_COMPLETE:
+tileCanvasViewGroup.addTileToCurrentTileCanvasView(tile);
+break;
+case RENDER_INCOMPLETE:
+Log.w(TileRenderPoolExecutor.class.getSimpleName(),"Tile was queued but was not rendered");
+break;
+}
+}
