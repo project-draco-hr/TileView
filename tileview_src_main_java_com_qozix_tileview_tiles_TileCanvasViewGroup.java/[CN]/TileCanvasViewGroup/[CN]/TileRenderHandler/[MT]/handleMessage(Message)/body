@@ -1,5 +1,5 @@
 {
-  final TileCanvasViewGroup tileCanvasViewGroup=mTileManagerWeakReference.get();
+  final TileCanvasViewGroup tileCanvasViewGroup=mTileCanvasViewGroupWeakReference.get();
   if (tileCanvasViewGroup != null) {
     tileCanvasViewGroup.renderTiles();
   }

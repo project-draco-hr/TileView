@@ -1,10 +1,10 @@
 {
-  if (!mTileManager.tilesInCurrentViewport.contains(tile)) {
+  if (!tilesInCurrentViewport.contains(tile)) {
     return;
   }
   tile.setTransitionsEnabled(mTransitionsEnabled);
   tile.setTransitionDuration(mTransitionDuration);
   tile.stampTime();
-  mTileManager.tilesAlreadyRendered.add(tile);
+  tilesAlreadyRendered.add(tile);
   mCurrentTileCanvasView.addTile(tile);
 }

@@ -16,7 +16,6 @@ case RENDER_COMPLETE:
 tileCanvasViewGroup.addTileToCurrentTileCanvasView(tile);
 break;
 case RENDER_INCOMPLETE:
-Log.w(TileRenderPoolExecutor.class.getSimpleName(),"Tile was queued but was not rendered");
 break;
 }
 }

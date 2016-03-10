@@ -2,7 +2,7 @@
   if (mCancelled) {
     return TileRenderHandler.Status.INCOMPLETE;
   }
-  Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
+  android.os.Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
   final Thread thread=Thread.currentThread();
   if (thread.isInterrupted()) {
     return TileRenderHandler.Status.INCOMPLETE;

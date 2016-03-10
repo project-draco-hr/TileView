@@ -1,5 +1,0 @@
-{
-  List<Runnable> tasks=super.shutdownNow();
-  broadcastCancel();
-  return tasks;
-}

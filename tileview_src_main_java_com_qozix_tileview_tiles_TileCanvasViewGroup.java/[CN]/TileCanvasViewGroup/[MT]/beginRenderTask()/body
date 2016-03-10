@@ -4,7 +4,7 @@
     return;
   }
   Set<Tile> visibleTiles=mDetailLevelToRender.getVisibleTilesFromLastViewportComputation();
-  mTileManager.reconcile(visibleTiles);
+  reconcile(visibleTiles);
   if (mTileRenderPoolExecutor != null) {
     mTileRenderPoolExecutor.queue(this,getRenderSet());
   }
