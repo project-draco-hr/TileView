@@ -26,6 +26,7 @@
     return false;
   }
   if (mCancelled || tile.getBitmap() == null || thread.isInterrupted()) {
+    tile.destroy(true);
     return false;
   }
   return true;
