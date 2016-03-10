@@ -1,4 +1,4 @@
 {
   mIsRendering=false;
-  mTileRenderHandler.post(mRenderPostExecuteRunnable);
+  mTileRenderThrottleHandler.post(mRenderPostExecuteRunnable);
 }

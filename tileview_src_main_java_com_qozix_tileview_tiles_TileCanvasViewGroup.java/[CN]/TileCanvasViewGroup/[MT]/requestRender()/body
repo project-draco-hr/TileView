@@ -4,7 +4,7 @@
   if (mDetailLevelToRender == null) {
     return;
   }
-  if (!mTileRenderHandler.hasMessages(RENDER_FLAG)) {
-    mTileRenderHandler.sendEmptyMessageDelayed(RENDER_FLAG,mRenderBuffer);
+  if (!mTileRenderThrottleHandler.hasMessages(RENDER_FLAG)) {
+    mTileRenderThrottleHandler.sendEmptyMessageDelayed(RENDER_FLAG,mRenderBuffer);
   }
 }
