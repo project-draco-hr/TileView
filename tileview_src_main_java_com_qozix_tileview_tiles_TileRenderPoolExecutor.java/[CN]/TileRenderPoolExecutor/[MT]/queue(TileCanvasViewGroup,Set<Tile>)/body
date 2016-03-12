@@ -1,5 +1,7 @@
 {
   mTileCanvasViewGroupWeakReference=new WeakReference<>(tileCanvasViewGroup);
+  final Context context=tileCanvasViewGroup.getContext();
+  final BitmapProvider bitmapProvider=tileCanvasViewGroup.getBitmapProvider();
   tileCanvasViewGroup.onRenderTaskPreExecute();
   for (  Runnable runnable : getQueue()) {
     if (runnable instanceof TileRenderRunnable) {
@@ -26,7 +28,8 @@
     }
     TileRenderRunnable runnable=new TileRenderRunnable();
     runnable.setTile(tile);
-    runnable.setTileCanvasViewGroup(tileCanvasViewGroup);
+    runnable.setContext(context);
+    runnable.setBitmapProvider(bitmapProvider);
     runnable.setHandler(mHandler);
     execute(runnable);
   }

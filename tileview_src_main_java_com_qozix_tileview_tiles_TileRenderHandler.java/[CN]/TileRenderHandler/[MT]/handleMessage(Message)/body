@@ -1,6 +1,6 @@
 {
   TileRenderRunnable tileRenderRunnable=(TileRenderRunnable)message.obj;
-  TileCanvasViewGroup tileCanvasViewGroup=tileRenderRunnable.getTileCanvasViewGroup();
+  TileCanvasViewGroup tileCanvasViewGroup=getTileCanvasViewGroup();
   if (tileCanvasViewGroup == null) {
     return;
   }
