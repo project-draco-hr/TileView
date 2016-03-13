@@ -32,8 +32,8 @@
   x=x / size;
   y=y / size;
   frameTo(x,y);
+  tileView.setScaleLimits(0,2);
   tileView.setScale(0.5f);
   tileView.setShouldRenderWhilePanning(true);
   tileView.setTransitionsEnabled(false);
-  tileView.setShouldScaleToFit(false);
 }

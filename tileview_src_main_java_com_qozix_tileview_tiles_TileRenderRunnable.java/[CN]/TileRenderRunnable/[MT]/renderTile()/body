@@ -3,8 +3,7 @@
     return TileRenderHandler.Status.INCOMPLETE;
   }
   android.os.Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
-  final Thread thread=Thread.currentThread();
-  if (thread.isInterrupted()) {
+  if (mThread.isInterrupted()) {
     return TileRenderHandler.Status.INCOMPLETE;
   }
   Tile tile=getTile();
@@ -26,7 +25,7 @@
     mThrowable=throwable;
     return TileRenderHandler.Status.ERROR;
   }
-  if (mCancelled || tile.getBitmap() == null || thread.isInterrupted()) {
+  if (mCancelled || tile.getBitmap() == null || mThread.isInterrupted()) {
     tile.destroy(true);
     return TileRenderHandler.Status.INCOMPLETE;
   }

@@ -1,5 +1,6 @@
 {
   mTileCanvasViewGroupWeakReference=new WeakReference<>(tileCanvasViewGroup);
+  mHandler.setTileCanvasViewGroup(tileCanvasViewGroup);
   final Context context=tileCanvasViewGroup.getContext();
   final BitmapProvider bitmapProvider=tileCanvasViewGroup.getBitmapProvider();
   tileCanvasViewGroup.onRenderTaskPreExecute();

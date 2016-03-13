@@ -15,7 +15,5 @@ case RENDER_ERROR:
 case RENDER_COMPLETE:
 tileCanvasViewGroup.addTileToCurrentTileCanvasView(tile);
 break;
-case RENDER_INCOMPLETE:
-break;
 }
 }
