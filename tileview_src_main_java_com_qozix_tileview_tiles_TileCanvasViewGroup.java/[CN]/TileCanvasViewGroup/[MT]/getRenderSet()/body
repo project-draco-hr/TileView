@@ -1,5 +1,5 @@
 {
-  Set<Tile> renderSet=new HashSet<>(tilesInCurrentViewport);
-  renderSet.removeAll(tilesAlreadyRendered);
+  Set<Tile> renderSet=new HashSet<>(mTilesInCurrentViewport);
+  renderSet.removeAll(mTilesAlreadyRendered);
   return renderSet;
 }

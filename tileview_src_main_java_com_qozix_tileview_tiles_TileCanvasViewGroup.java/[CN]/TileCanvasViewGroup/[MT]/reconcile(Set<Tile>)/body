@@ -1,10 +1,10 @@
 {
-  for (  Tile tile : tilesInCurrentViewport) {
+  for (  Tile tile : mTilesInCurrentViewport) {
     if (!recentlyComputedVisibleTileSet.contains(tile)) {
-      tilesNotInCurrentViewport.add(tile);
+      mTilesNotInCurrentViewport.add(tile);
     }
   }
-  tilesInCurrentViewport.addAll(recentlyComputedVisibleTileSet);
-  tilesInCurrentViewport.removeAll(tilesNotInCurrentViewport);
-  tilesNotInCurrentViewport.clear();
+  mTilesInCurrentViewport.addAll(recentlyComputedVisibleTileSet);
+  mTilesInCurrentViewport.removeAll(mTilesNotInCurrentViewport);
+  mTilesNotInCurrentViewport.clear();
 }
