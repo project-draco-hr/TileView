@@ -1,0 +1,19 @@
+{
+  TileRenderRunnable tileRenderRunnable=(TileRenderRunnable)message.obj;
+  TileCanvasViewGroup tileCanvasViewGroup=getTileCanvasViewGroup();
+  if (tileCanvasViewGroup == null) {
+    return;
+  }
+  Tile tile=tileRenderRunnable.getTile();
+  if (tile == null) {
+    return;
+  }
+switch (message.what) {
+case RENDER_ERROR:
+    tileCanvasViewGroup.handleTileRenderException(tileRenderRunnable.getThrowable());
+  break;
+case RENDER_COMPLETE:
+tileCanvasViewGroup.addTileToCurrentTileCanvasView(tile);
+break;
+}
+}

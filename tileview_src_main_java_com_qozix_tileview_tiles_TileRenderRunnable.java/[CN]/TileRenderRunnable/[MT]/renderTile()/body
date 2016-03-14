@@ -1,0 +1,33 @@
+{
+  if (mCancelled) {
+    return TileRenderHandler.Status.INCOMPLETE;
+  }
+  android.os.Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
+  if (mThread.isInterrupted()) {
+    return TileRenderHandler.Status.INCOMPLETE;
+  }
+  Tile tile=getTile();
+  if (tile == null) {
+    return TileRenderHandler.Status.INCOMPLETE;
+  }
+  Context context=getContext();
+  if (context == null) {
+    return TileRenderHandler.Status.INCOMPLETE;
+  }
+  BitmapProvider bitmapProvider=getBitmapProvider();
+  if (bitmapProvider == null) {
+    return TileRenderHandler.Status.INCOMPLETE;
+  }
+  try {
+    tile.generateBitmap(context,bitmapProvider);
+  }
+ catch (  Throwable throwable) {
+    mThrowable=throwable;
+    return TileRenderHandler.Status.ERROR;
+  }
+  if (mCancelled || tile.getBitmap() == null || mThread.isInterrupted()) {
+    tile.destroy(true);
+    return TileRenderHandler.Status.INCOMPLETE;
+  }
+  return TileRenderHandler.Status.COMPLETE;
+}

@@ -1,5 +1,6 @@
 {
   super(context);
   setWillNotDraw(false);
-  mTileRenderHandler=new TileRenderHandler(this);
+  mTileRenderThrottleHandler=new TileRenderThrottleHandler(this);
+  mTileRenderPoolExecutor=new TileRenderPoolExecutor();
 }

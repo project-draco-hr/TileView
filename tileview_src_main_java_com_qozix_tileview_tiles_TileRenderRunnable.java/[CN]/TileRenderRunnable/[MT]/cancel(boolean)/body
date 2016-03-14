@@ -1,0 +1,8 @@
+{
+  if (mayInterrupt && mThread != null) {
+    mThread.interrupt();
+  }
+  boolean cancelled=mCancelled;
+  mCancelled=true;
+  return !cancelled;
+}

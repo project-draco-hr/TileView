@@ -1,0 +1,6 @@
+{
+  if (mTileWeakReference != null) {
+    return mTileWeakReference.get();
+  }
+  return null;
+}
