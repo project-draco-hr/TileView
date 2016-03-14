@@ -1,0 +1,9 @@
+{
+  Set<Tile> condemned=new HashSet<>(mTilesAlreadyRendered);
+  condemned.removeAll(mTilesInCurrentViewport);
+  mTilesAlreadyRendered.removeAll(condemned);
+  for (  Tile tile : condemned) {
+    tile.destroy(mShouldRecycleBitmaps);
+  }
+  mCurrentTileCanvasView.invalidate();
+}

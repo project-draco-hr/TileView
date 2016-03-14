@@ -1,0 +1,3 @@
+{
+  mContextWeakReference=new WeakReference<>(context);
+}

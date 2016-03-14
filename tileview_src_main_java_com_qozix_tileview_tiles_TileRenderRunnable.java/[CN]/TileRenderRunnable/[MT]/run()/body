@@ -1,0 +1,15 @@
+{
+  mThread=Thread.currentThread();
+  TileRenderHandler.Status status=renderTile();
+  if (status == TileRenderHandler.Status.INCOMPLETE) {
+    return;
+  }
+  if (status == TileRenderHandler.Status.COMPLETE) {
+    mComplete=true;
+  }
+  Handler handler=getHandler();
+  if (handler != null) {
+    Message message=handler.obtainMessage(status.getMessageCode(),this);
+    message.sendToTarget();
+  }
+}

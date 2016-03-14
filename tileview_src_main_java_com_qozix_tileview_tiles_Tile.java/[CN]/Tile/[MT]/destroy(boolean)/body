@@ -1,9 +1,3 @@
 {
-  if (shouldRecycle && mBitmap != null && !mBitmap.isRecycled()) {
-    mBitmap.recycle();
-  }
-  mBitmap=null;
-  if (mParentTileCanvasView != null) {
-    mParentTileCanvasView.removeTile(this);
-  }
+  destroy(shouldRecycle,true);
 }

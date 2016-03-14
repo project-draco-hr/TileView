@@ -1,0 +1,6 @@
+{
+  if (mHandlerWeakReference == null) {
+    return null;
+  }
+  return mHandlerWeakReference.get();
+}

@@ -1,11 +1,5 @@
 {
-  LinkedList<Tile> condemned=new LinkedList<Tile>(mTilesAlreadyRendered);
-  condemned.removeAll(mTilesVisible);
-  for (  Tile tile : condemned) {
-    tile.destroy(mShouldRecycleBitmaps);
-  }
-  mTilesAlreadyRendered.removeAll(condemned);
-  mCurrentTileCanvasView.invalidate();
+  clearOutOfViewportTiles();
   for (  TileCanvasView tileGroup : mTileCanvasViewHashMap.values()) {
     if (mCurrentTileCanvasView != tileGroup) {
       tileGroup.clearTiles(mShouldRecycleBitmaps);

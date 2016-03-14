@@ -3,10 +3,9 @@
   if (!changed) {
     return;
   }
-  mTilesVisible=mDetailLevelToRender.getVisibleTilesFromLastViewportComputation();
-  if (mLastRunTileRenderTask != null && mLastRunTileRenderTask.getStatus() != AsyncTask.Status.FINISHED) {
-    mLastRunTileRenderTask.cancel(true);
+  Set<Tile> visibleTiles=mDetailLevelToRender.getVisibleTilesFromLastViewportComputation();
+  reconcile(visibleTiles);
+  if (mTileRenderPoolExecutor != null) {
+    mTileRenderPoolExecutor.queue(this,getRenderSet());
   }
-  mLastRunTileRenderTask=new TileRenderTask(this);
-  mLastRunTileRenderTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 }

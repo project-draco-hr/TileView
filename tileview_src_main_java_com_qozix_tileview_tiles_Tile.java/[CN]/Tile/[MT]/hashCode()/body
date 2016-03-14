@@ -1,0 +1,7 @@
+{
+  int hash=17;
+  hash=hash * 31 + getColumn();
+  hash=hash * 31 + getRow();
+  hash=hash * 31 + (int)(1000 * getDetailLevel().getScale());
+  return hash;
+}
