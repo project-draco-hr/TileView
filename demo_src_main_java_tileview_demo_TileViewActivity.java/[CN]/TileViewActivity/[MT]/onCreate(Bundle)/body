@@ -1,5 +1,7 @@
 {
   super.onCreate(savedInstanceState);
   tileView=new TileView(this);
+  tileView.setId(R.id.tileview_id);
+  tileView.setSaveEnabled(true);
   setContentView(tileView);
 }

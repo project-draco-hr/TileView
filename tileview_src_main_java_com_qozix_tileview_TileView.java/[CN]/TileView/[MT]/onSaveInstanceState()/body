@@ -1,0 +1,8 @@
+{
+  Parcelable superState=super.onSaveInstanceState();
+  SavedState ss=new SavedState(superState);
+  ss.mScale=getScale();
+  ss.mSavedCenterX=getScrollX() + getHalfWidth();
+  ss.mSavedCenterY=getScrollY() + getHalfHeight();
+  return ss;
+}
