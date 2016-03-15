@@ -1,0 +1,6 @@
+{
+  super.writeToParcel(out,flags);
+  out.writeFloat(scale);
+  out.writeInt(savedCenterX);
+  out.writeInt(savedCenterY);
+}

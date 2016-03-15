@@ -1,0 +1,6 @@
+{
+  super(in);
+  scale=in.readFloat();
+  savedCenterX=in.readInt();
+  savedCenterY=in.readInt();
+}

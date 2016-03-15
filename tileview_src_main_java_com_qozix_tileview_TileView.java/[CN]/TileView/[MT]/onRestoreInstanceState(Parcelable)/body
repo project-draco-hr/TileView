@@ -1,0 +1,11 @@
+{
+  final SavedState ss=(SavedState)state;
+  super.onRestoreInstanceState(ss.getSuperState());
+  setScale(ss.scale);
+  post(new Runnable(){
+    @Override public void run(){
+      scrollToAndCenter(ss.savedCenterX,ss.savedCenterY);
+    }
+  }
+);
+}
