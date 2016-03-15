@@ -1,6 +1,7 @@
 {
-  float destination=mScale >= mMaxScale ? mMinScale : mScale * 2;
-  destination=getConstrainedDestinationScale(destination);
+  float destination=(float)(Math.pow(2,Math.floor(Math.log(mScale * 2) / Math.log(2))));
+  float effectiveDestination=mShouldLoopScale && mScale >= mMaxScale ? mMinScale : destination;
+  destination=getConstrainedDestinationScale(effectiveDestination);
   smoothScaleFromFocalPoint((int)event.getX(),(int)event.getY(),destination);
   return true;
 }
