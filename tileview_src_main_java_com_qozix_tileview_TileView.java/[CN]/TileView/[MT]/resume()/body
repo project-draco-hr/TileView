@@ -1,8 +1,8 @@
 {
   setWillNotDraw(false);
   updateViewport();
-  mCompositePathView.setShouldDraw(true);
   mTileCanvasViewGroup.updateTileSet(mDetailLevelManager.getCurrentDetailLevel());
   requestRender();
   requestLayout();
+  Log.d("DEBUG","resume");
 }
