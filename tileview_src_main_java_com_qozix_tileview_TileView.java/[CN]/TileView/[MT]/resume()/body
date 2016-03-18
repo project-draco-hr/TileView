@@ -4,5 +4,4 @@
   mTileCanvasViewGroup.updateTileSet(mDetailLevelManager.getCurrentDetailLevel());
   requestRender();
   requestLayout();
-  Log.d("DEBUG","resume");
 }
