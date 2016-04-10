@@ -1,0 +1,3 @@
+{
+  return translateAbsoluteToRelativeY(FloatMathHelper.unscale(y,scale));
+}

@@ -1,0 +1,3 @@
+{
+  return translateAbsoluteToRelativeX(FloatMathHelper.unscale(x,scale));
+}

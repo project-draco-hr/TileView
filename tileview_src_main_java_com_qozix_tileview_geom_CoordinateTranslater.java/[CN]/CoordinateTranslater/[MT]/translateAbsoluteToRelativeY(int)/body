@@ -1,4 +1,4 @@
 {
   double factor=y / mHeight;
-  return mTop + (factor * mBottom);
+  return mTop + (factor * mDiffY);
 }
