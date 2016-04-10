@@ -1,0 +1,4 @@
+{
+  double factor=x / mWidth;
+  return mLeft + (factor * mRight);
+}
