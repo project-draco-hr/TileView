@@ -1,3 +1,15 @@
 {
-  return y >= mTop && y <= mBottom && x >= mLeft && x <= mRight;
+  double top=mTop;
+  double bottom=mBottom;
+  double left=mLeft;
+  double right=mRight;
+  if (mTop > mBottom) {
+    top=mBottom;
+    bottom=mTop;
+  }
+  if (mLeft > mRight) {
+    left=mRight;
+    right=mLeft;
+  }
+  return y >= top && y <= bottom && x >= left && x <= right;
 }
