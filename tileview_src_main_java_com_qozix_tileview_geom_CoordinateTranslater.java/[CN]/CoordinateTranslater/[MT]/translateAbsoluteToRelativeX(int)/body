@@ -1,4 +1,3 @@
 {
-  double factor=x / mWidth;
-  return mLeft + (factor * mDiffX);
+  return translateAbsoluteToRelativeX((float)x);
 }
