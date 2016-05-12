@@ -1,4 +1,6 @@
 {
-  mDetailLevelManager.lockDetailLevel();
+  if (!mShouldUpdateDetailLevelWhileZooming) {
+    mDetailLevelManager.lockDetailLevel();
+  }
   mDetailLevelManager.setScale(scale);
 }
