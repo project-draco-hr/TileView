@@ -1,4 +1,3 @@
 {
-  double factor=y / mHeight;
-  return mTop + (factor * mDiffY);
+  return translateAbsoluteToRelativeY((float)y);
 }

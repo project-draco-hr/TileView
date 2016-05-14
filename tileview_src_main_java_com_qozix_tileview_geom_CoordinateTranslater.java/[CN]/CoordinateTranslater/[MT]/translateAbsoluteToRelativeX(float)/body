@@ -1,0 +1,3 @@
+{
+  return mLeft + (x * mDiffX / mWidth);
+}
