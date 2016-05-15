@@ -1,6 +1,6 @@
 {
   boolean changed=mDetailLevelToRender.computeCurrentState();
-  if (!changed) {
+  if (!changed && mDetailLevelToRender.equals(mLastRenderedDetailLevel)) {
     return;
   }
   Set<Tile> visibleTiles=mDetailLevelToRender.getVisibleTilesFromLastViewportComputation();
