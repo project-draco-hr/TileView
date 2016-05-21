@@ -3,10 +3,10 @@
   if (mDetailLevelToRender == null) {
     return;
   }
-  if (mDetailLevelToRender.equals(mLastRenderedDetailLevel)) {
+  if (mDetailLevelToRender.equals(mLastRequestedDetailLevel)) {
     return;
   }
-  mLastRenderedDetailLevel=mDetailLevelToRender;
+  mLastRequestedDetailLevel=mDetailLevelToRender;
   mCurrentTileCanvasView=getCurrentTileCanvasView();
   mCurrentTileCanvasView.bringToFront();
   cancelRender();
