@@ -1,4 +1,3 @@
 {
-  mShouldScaleToFit=shouldScaleToFit;
-  calculateMinimumScaleToFit();
+  setMinimumScaleMode(shouldScaleToFit ? MinimumScaleMode.FILL : MinimumScaleMode.NONE);
 }

@@ -1,6 +1,6 @@
 {
-  float currentMinumumScale=mShouldScaleToFit ? mEffectiveMinScale : mMinScale;
-  scale=Math.max(scale,currentMinumumScale);
+  float currentMinimumScale=mMinimumScaleMode == MinimumScaleMode.NONE ? mMinScale : mEffectiveMinScale;
+  scale=Math.max(scale,currentMinimumScale);
   scale=Math.min(scale,mMaxScale);
   return scale;
 }
