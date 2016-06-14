@@ -1,0 +1,9 @@
+{
+switch (mMinimumScaleMode) {
+case FILL:
+    return Math.max(minimumScaleX,minimumScaleY);
+case FIT:
+  return Math.min(minimumScaleX,minimumScaleY);
+}
+return mMinScale;
+}

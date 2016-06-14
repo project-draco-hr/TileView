@@ -1,13 +1,11 @@
 {
-  if (mMinimumScaleMode != MinimumScaleMode.NONE) {
-    float minimumScaleX=getWidth() / (float)mBaseWidth;
-    float minimumScaleY=getHeight() / (float)mBaseHeight;
-    float recalculatedMinScale=mMinimumScaleMode == MinimumScaleMode.FILL ? Math.max(minimumScaleX,minimumScaleY) : Math.min(minimumScaleX,minimumScaleY);
-    if (recalculatedMinScale != mEffectiveMinScale) {
-      mEffectiveMinScale=recalculatedMinScale;
-      if (mScale < mEffectiveMinScale) {
-        setScale(mEffectiveMinScale);
-      }
+  float minimumScaleX=getWidth() / (float)mBaseWidth;
+  float minimumScaleY=getHeight() / (float)mBaseHeight;
+  float recalculatedMinScale=calculatedMinScale(minimumScaleX,minimumScaleY);
+  if (recalculatedMinScale != mEffectiveMinScale) {
+    mEffectiveMinScale=recalculatedMinScale;
+    if (mScale < mEffectiveMinScale) {
+      setScale(mEffectiveMinScale);
     }
   }
 }
