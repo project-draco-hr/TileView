@@ -1,13 +1,11 @@
 {
-  if (mShouldScaleToFit) {
-    float minimumScaleX=getWidth() / (float)mBaseWidth;
-    float minimumScaleY=getHeight() / (float)mBaseHeight;
-    float recalculatedMinScale=Math.max(minimumScaleX,minimumScaleY);
-    if (recalculatedMinScale != mEffectiveMinScale) {
-      mEffectiveMinScale=recalculatedMinScale;
-      if (mScale < mEffectiveMinScale) {
-        setScale(mEffectiveMinScale);
-      }
+  float minimumScaleX=getWidth() / (float)mBaseWidth;
+  float minimumScaleY=getHeight() / (float)mBaseHeight;
+  float recalculatedMinScale=calculatedMinScale(minimumScaleX,minimumScaleY);
+  if (recalculatedMinScale != mEffectiveMinScale) {
+    mEffectiveMinScale=recalculatedMinScale;
+    if (mScale < mEffectiveMinScale) {
+      setScale(mEffectiveMinScale);
     }
   }
 }

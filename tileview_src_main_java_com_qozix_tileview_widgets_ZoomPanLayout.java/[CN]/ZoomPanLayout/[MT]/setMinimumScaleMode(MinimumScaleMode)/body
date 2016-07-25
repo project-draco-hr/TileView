@@ -1,0 +1,4 @@
+{
+  mMinimumScaleMode=minimumScaleMode;
+  calculateMinimumScaleToFit();
+}
