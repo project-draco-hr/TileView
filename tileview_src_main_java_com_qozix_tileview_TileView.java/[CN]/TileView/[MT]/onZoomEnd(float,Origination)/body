@@ -1,5 +1,7 @@
 {
-  mDetailLevelManager.unlockDetailLevel();
+  if (origin == null) {
+    mTileCanvasViewGroup.resumeRender();
+  }
   mDetailLevelManager.setScale(scale);
   requestRender();
 }

@@ -1,0 +1,16 @@
+{
+  if (!mTransitionsEnabled) {
+    return;
+  }
+  if (mRenderTimeStamp == null) {
+    mRenderTimeStamp=AnimationUtils.currentAnimationTimeMillis();
+    mProgress=0;
+    return;
+  }
+  double elapsed=AnimationUtils.currentAnimationTimeMillis() - mRenderTimeStamp;
+  mProgress=(float)Math.min(1,elapsed / mTransitionDuration);
+  if (mProgress == 1f) {
+    mRenderTimeStamp=null;
+    mTransitionsEnabled=false;
+  }
+}

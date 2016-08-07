@@ -3,9 +3,10 @@
   if (!changed && mDetailLevelToRender.equals(mLastRenderedDetailLevel)) {
     return;
   }
-  Set<Tile> visibleTiles=mDetailLevelToRender.getVisibleTilesFromLastViewportComputation();
-  reconcile(visibleTiles);
-  if (mTileRenderPoolExecutor != null) {
-    mTileRenderPoolExecutor.queue(this,getRenderSet());
+  mDetailLevelToRender.computeVisibleTilesFromViewport();
+  cleanup();
+  boolean wereTilesAdded=mTilesInCurrentViewport.addAll(mDetailLevelToRender.getVisibleTilesFromLastViewportComputation());
+  if (wereTilesAdded) {
+    mTileRenderPoolExecutor.queue(this,mTilesInCurrentViewport);
   }
 }

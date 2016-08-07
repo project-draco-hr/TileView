@@ -1,9 +1,14 @@
 {
-  clearOutOfViewportTiles();
-  for (  TileCanvasView tileGroup : mTileCanvasViewHashMap.values()) {
-    if (mCurrentTileCanvasView != tileGroup) {
-      tileGroup.clearTiles(mShouldRecycleBitmaps);
+  if (mDetailLevelToRender == null || !mDetailLevelToRender.hasComputedState()) {
+    return;
+  }
+  Set<Tile> recentlyComputedVisibleTileSet=mDetailLevelToRender.getVisibleTilesFromLastViewportComputation();
+  Iterator<Tile> tilesInCurrentViewportIterator=mTilesInCurrentViewport.iterator();
+  while (tilesInCurrentViewportIterator.hasNext()) {
+    Tile tile=tilesInCurrentViewportIterator.next();
+    if (!recentlyComputedVisibleTileSet.contains(tile)) {
+      tile.reset();
+      tilesInCurrentViewportIterator.remove();
     }
   }
-  invalidate();
 }

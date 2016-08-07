@@ -1,0 +1,5 @@
+{
+  if (mTilesInCurrentViewport.contains(tile)) {
+    invalidate();
+  }
+}

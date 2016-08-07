@@ -1,6 +1,5 @@
 {
   if (mBitmap != null) {
-    canvas.drawBitmap(mBitmap,mLeft,mTop,getPaint());
+    canvas.drawBitmap(mBitmap,mIntrinsicRect,mRelativeRect,getPaint());
   }
-  return getIsDirty();
 }

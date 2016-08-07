@@ -1,0 +1,11 @@
+{
+  if (mState != State.UNASSIGNED) {
+    return;
+  }
+  mState=State.PENDING_DECODE;
+  TileRenderRunnable runnable=new TileRenderRunnable();
+  mTileRenderRunnableWeakReference=new WeakReference<>(runnable);
+  runnable.setTile(this);
+  runnable.setTileRenderPoolExecutor(tileRenderPoolExecutor);
+  tileRenderPoolExecutor.execute(runnable);
+}

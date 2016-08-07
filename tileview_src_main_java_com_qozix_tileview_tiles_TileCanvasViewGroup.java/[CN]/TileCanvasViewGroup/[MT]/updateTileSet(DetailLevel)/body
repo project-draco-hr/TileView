@@ -1,14 +1,12 @@
 {
-  mDetailLevelToRender=detailLevel;
-  if (mDetailLevelToRender == null) {
+  if (detailLevel == null) {
     return;
   }
-  if (mDetailLevelToRender.equals(mLastRequestedDetailLevel)) {
+  if (detailLevel.equals(mDetailLevelToRender)) {
     return;
   }
-  mLastRequestedDetailLevel=mDetailLevelToRender;
-  mCurrentTileCanvasView=getCurrentTileCanvasView();
-  mCurrentTileCanvasView.bringToFront();
   cancelRender();
+  markTilesAsPrevious();
+  mDetailLevelToRender=detailLevel;
   requestRender();
 }

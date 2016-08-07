@@ -3,6 +3,10 @@
     if (runnable instanceof TileRenderRunnable) {
       TileRenderRunnable tileRenderRunnable=(TileRenderRunnable)runnable;
       tileRenderRunnable.cancel(true);
+      Tile tile=tileRenderRunnable.getTile();
+      if (tile != null) {
+        tile.reset();
+      }
     }
   }
   getQueue().clear();

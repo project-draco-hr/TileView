@@ -1,12 +1,10 @@
 {
   if (!mTransitionsEnabled) {
-    return null;
+    return mPaint=null;
   }
   if (mPaint == null) {
     mPaint=new Paint();
   }
-  float rendered=getRendered();
-  int opacity=(int)(rendered * 255);
-  mPaint.setAlpha(opacity);
+  mPaint.setAlpha((int)(255 * mProgress));
   return mPaint;
 }

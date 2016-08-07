@@ -3,4 +3,5 @@
     return;
   }
   mBitmap=bitmapProvider.getBitmap(this,context);
+  mState=State.DECODED;
 }

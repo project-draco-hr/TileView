@@ -1,7 +1,0 @@
-{
-  for (  Tile tile : mTiles) {
-    tile.destroy(shouldRecycle,false);
-  }
-  mTiles.clear();
-  invalidate();
-}

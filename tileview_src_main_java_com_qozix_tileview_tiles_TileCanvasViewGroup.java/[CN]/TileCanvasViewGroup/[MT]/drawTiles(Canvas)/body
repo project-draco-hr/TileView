@@ -1,0 +1,9 @@
+{
+  if (mPreviouslyDrawnTiles.size() > 0) {
+    drawTilesConsideringPreviouslyDrawnLevel(canvas);
+  }
+ else {
+    drawTilesWithoutConsideringPreviouslyDrawnLevel(canvas);
+  }
+  Log.d(getClass().getSimpleName(),"prevous tile count: " + mPreviouslyDrawnTiles.size());
+}

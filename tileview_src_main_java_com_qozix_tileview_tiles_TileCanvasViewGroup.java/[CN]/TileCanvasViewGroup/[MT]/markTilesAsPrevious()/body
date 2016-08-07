@@ -1,0 +1,8 @@
+{
+  for (  Tile tile : mTilesInCurrentViewport) {
+    if (tile.getState() == Tile.State.DECODED) {
+      mPreviouslyDrawnTiles.add(tile);
+    }
+  }
+  mTilesInCurrentViewport.clear();
+}

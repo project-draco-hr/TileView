@@ -7,9 +7,20 @@
   if (status == TileRenderHandler.Status.COMPLETE) {
     mComplete=true;
   }
-  Handler handler=getHandler();
-  if (handler != null) {
-    Message message=handler.obtainMessage(status.getMessageCode(),this);
-    message.sendToTarget();
+  TileRenderPoolExecutor tileRenderPoolExecutor=mTileRenderPoolExecutorWeakReference.get();
+  if (tileRenderPoolExecutor != null) {
+    TileCanvasViewGroup tileCanvasViewGroup=tileRenderPoolExecutor.getTileCanvasViewGroup();
+    if (tileCanvasViewGroup != null) {
+      Tile tile=getTile();
+      if (tile != null) {
+        Handler handler=tileRenderPoolExecutor.getHandler();
+        if (handler != null) {
+          tile.setTransitionsEnabled(tileCanvasViewGroup.getTransitionsEnabled());
+          tile.setTransitionDuration(tileCanvasViewGroup.getTransitionDuration());
+          Message message=handler.obtainMessage(status.getMessageCode(),this);
+          message.sendToTarget();
+        }
+      }
+    }
   }
 }

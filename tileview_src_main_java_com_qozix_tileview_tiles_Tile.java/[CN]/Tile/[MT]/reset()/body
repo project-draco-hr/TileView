@@ -1,0 +1,16 @@
+{
+  if (mState == State.PENDING_DECODE) {
+    if (mTileRenderRunnableWeakReference != null) {
+      TileRenderRunnable runnable=mTileRenderRunnableWeakReference.get();
+      if (runnable != null) {
+        runnable.cancel(true);
+      }
+    }
+  }
+  mState=State.UNASSIGNED;
+  mRenderTimeStamp=null;
+  if (mBitmap != null && !mBitmap.isRecycled()) {
+    mBitmap.recycle();
+  }
+  mBitmap=null;
+}

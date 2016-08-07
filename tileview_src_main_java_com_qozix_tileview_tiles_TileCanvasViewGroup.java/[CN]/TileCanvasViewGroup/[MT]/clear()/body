@@ -2,5 +2,5 @@
   suppressRender();
   cancelRender();
   mTilesInCurrentViewport.clear();
-  mCurrentTileCanvasView.clearTiles(mShouldRecycleBitmaps);
+  invalidate();
 }
