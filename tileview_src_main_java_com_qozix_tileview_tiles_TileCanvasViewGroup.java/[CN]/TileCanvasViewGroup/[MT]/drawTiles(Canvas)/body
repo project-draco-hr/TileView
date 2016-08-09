@@ -5,5 +5,4 @@
  else {
     drawTilesWithoutConsideringPreviouslyDrawnLevel(canvas);
   }
-  Log.d(getClass().getSimpleName(),"prevous tile count: " + mPreviouslyDrawnTiles.size());
 }

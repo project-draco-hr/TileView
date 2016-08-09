@@ -1,7 +1,7 @@
 {
   super.onCreate(savedInstanceState);
   TileView tileView=getTileView();
-  tileView.setTransitionsEnabled(false);
+  tileView.setScaleLimits(0,2);
   tileView.setSize(2835,4289);
   tileView.addDetailLevel(1.000f,"tiles/painting/1000/%d_%d.jpg");
   tileView.addDetailLevel(0.500f,"tiles/painting/500/%d_%d.jpg");
