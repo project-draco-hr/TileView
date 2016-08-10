@@ -1,8 +1,11 @@
 {
   super.onCreate(savedInstanceState);
   TileView tileView=getTileView();
+  tileView.addDetailLevel(0.0125f,"https://raw.githubusercontent.com/moagrius/TileView/master/demo/src/main/assets/tiles/map/phi-62500-%d_%d.jpg");
+  tileView.addDetailLevel(0.2500f,"https://raw.githubusercontent.com/moagrius/TileView/master/demo/src/main/assets/tiles/map/phi-125000-%d_%d.jpg");
+  tileView.addDetailLevel(0.5000f,"https://raw.githubusercontent.com/moagrius/TileView/master/demo/src/main/assets/tiles/map/phi-250000-%d_%d.jpg");
+  tileView.addDetailLevel(1.0000f,"https://raw.githubusercontent.com/moagrius/TileView/master/demo/src/main/assets/tiles/map/phi-500000-%d_%d.jpg");
   tileView.setBitmapProvider(new BitmapProviderPicasso());
-  tileView.setTransitionsEnabled(false);
   tileView.setSize(8967,6726);
   tileView.setMarkerAnchorPoints(-0.5f,-1.0f);
   tileView.setShouldRenderWhilePanning(true);
@@ -31,8 +34,8 @@
   paint.setPathEffect(new CornerPathEffect(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,5,metrics)));
   tileView.drawPath(points.subList(1,5),null);
   tileView.setBackgroundColor(0xFFe7e7e7);
-  tileView.addDetailLevel(0.0125f,"https://raw.githubusercontent.com/moagrius/TileView/master/demo/src/main/assets/tiles/map/phi-62500-%d_%d.jpg");
-  tileView.addDetailLevel(0.2500f,"https://raw.githubusercontent.com/moagrius/TileView/master/demo/src/main/assets/tiles/map/phi-125000-%d_%d.jpg");
-  tileView.addDetailLevel(0.5000f,"https://raw.githubusercontent.com/moagrius/TileView/master/demo/src/main/assets/tiles/map/phi-250000-%d_%d.jpg");
-  tileView.addDetailLevel(1.0000f,"https://raw.githubusercontent.com/moagrius/TileView/master/demo/src/main/assets/tiles/map/phi-500000-%d_%d.jpg");
+  tileView.setShouldRenderWhilePanning(true);
+  ImageView downSample=new ImageView(this);
+  downSample.setImageResource(R.drawable.downsample);
+  tileView.addView(downSample,0);
 }
