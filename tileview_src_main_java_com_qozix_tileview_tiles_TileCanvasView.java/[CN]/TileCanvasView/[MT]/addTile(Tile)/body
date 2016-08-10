@@ -1,7 +1,0 @@
-{
-  if (!mTiles.contains(tile)) {
-    mTiles.add(tile);
-    tile.setParentTileCanvasView(this);
-    invalidate();
-  }
-}

@@ -1,0 +1,4 @@
+{
+  mComputedScaledViewport.set((int)(mComputedViewport.left * scale),(int)(mComputedViewport.top * scale),(int)(mComputedViewport.right * scale),(int)(mComputedViewport.bottom * scale));
+  return mComputedScaledViewport;
+}

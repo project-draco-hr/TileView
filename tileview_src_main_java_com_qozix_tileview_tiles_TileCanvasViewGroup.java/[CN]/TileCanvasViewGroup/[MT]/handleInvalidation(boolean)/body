@@ -1,0 +1,12 @@
+{
+  if (shouldInvalidate) {
+    mHasInvalidatedOnCleanOnce=false;
+    invalidate();
+  }
+ else {
+    if (!mHasInvalidatedOnCleanOnce) {
+      mHasInvalidatedOnCleanOnce=true;
+      invalidate();
+    }
+  }
+}

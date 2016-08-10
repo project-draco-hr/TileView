@@ -1,7 +1,0 @@
-{
-  boolean pending=false;
-  for (  Tile tile : mTiles) {
-    pending=tile.draw(canvas) || pending;
-  }
-  return pending;
-}

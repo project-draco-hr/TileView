@@ -1,0 +1,17 @@
+{
+  boolean shouldInvalidate=false;
+  Iterator<Tile> tilesFromLastDetailLevelIterator=mPreviouslyDrawnTiles.iterator();
+  while (tilesFromLastDetailLevelIterator.hasNext()) {
+    Tile tile=tilesFromLastDetailLevelIterator.next();
+    Rect rect=tile.getRelativeRect();
+    if (mDirtyRegion.quickReject(rect)) {
+      tilesFromLastDetailLevelIterator.remove();
+    }
+ else {
+      tile.computeProgress();
+      tile.draw(canvas);
+      shouldInvalidate|=tile.getIsDirty();
+    }
+  }
+  return shouldInvalidate;
+}

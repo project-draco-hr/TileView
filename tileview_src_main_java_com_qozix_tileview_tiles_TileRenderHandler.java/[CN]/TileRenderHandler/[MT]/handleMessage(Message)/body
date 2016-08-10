@@ -13,7 +13,7 @@ case RENDER_ERROR:
     tileCanvasViewGroup.handleTileRenderException(tileRenderRunnable.getThrowable());
   break;
 case RENDER_COMPLETE:
-tileCanvasViewGroup.addTileToCurrentTileCanvasView(tile);
+tileCanvasViewGroup.addTileToCanvas(tile);
 break;
 }
 }

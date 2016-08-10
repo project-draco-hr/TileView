@@ -1,10 +1,6 @@
 {
   mTileRenderPoolExecutor.shutdownNow();
   clear();
-  for (  TileCanvasView tileGroup : mTileCanvasViewHashMap.values()) {
-    tileGroup.clearTiles(mShouldRecycleBitmaps);
-  }
-  mTileCanvasViewHashMap.clear();
   if (!mTileRenderThrottleHandler.hasMessages(RENDER_FLAG)) {
     mTileRenderThrottleHandler.removeMessages(RENDER_FLAG);
   }

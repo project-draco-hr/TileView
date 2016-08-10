@@ -1,0 +1,8 @@
+{
+  if (mPreviouslyDrawnTiles.size() > 0) {
+    drawTilesConsideringPreviouslyDrawnLevel(canvas);
+  }
+ else {
+    drawTilesWithoutConsideringPreviouslyDrawnLevel(canvas);
+  }
+}

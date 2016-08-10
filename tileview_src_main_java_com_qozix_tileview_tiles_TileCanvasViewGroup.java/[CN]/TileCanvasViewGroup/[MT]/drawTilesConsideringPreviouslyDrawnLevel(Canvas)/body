@@ -1,0 +1,6 @@
+{
+  boolean shouldInvalidate=establishDirtyRegion();
+  shouldInvalidate|=drawPreviousTiles(canvas);
+  shouldInvalidate|=drawAndClearCurrentDecodedTiles(canvas);
+  handleInvalidation(shouldInvalidate);
+}

@@ -1,0 +1,17 @@
+{
+  boolean shouldInvalidate=false;
+  mDirtyRegion.set(getComputedViewport());
+  for (  Tile tile : mTilesInCurrentViewport) {
+    if (tile.getState() == Tile.State.DECODED) {
+      tile.computeProgress();
+      mDecodedTilesInCurrentViewport.add(tile);
+      if (tile.getIsDirty()) {
+        shouldInvalidate=true;
+      }
+ else {
+        mDirtyRegion.op(tile.getRelativeRect(),Region.Op.DIFFERENCE);
+      }
+    }
+  }
+  return shouldInvalidate;
+}

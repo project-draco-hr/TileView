@@ -1,0 +1,11 @@
+{
+  boolean shouldInvalidate=false;
+  for (  Tile tile : mTilesInCurrentViewport) {
+    if (tile.getState() == Tile.State.DECODED) {
+      tile.computeProgress();
+      tile.draw(canvas);
+      shouldInvalidate|=tile.getIsDirty();
+    }
+  }
+  handleInvalidation(shouldInvalidate);
+}

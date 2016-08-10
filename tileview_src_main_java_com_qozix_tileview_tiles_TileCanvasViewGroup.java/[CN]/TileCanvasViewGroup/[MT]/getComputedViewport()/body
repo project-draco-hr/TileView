@@ -1,0 +1,6 @@
+{
+  if (mDetailLevelToRender == null) {
+    return null;
+  }
+  return mDetailLevelToRender.getDetailLevelManager().getComputedScaledViewport(getInvertedScale());
+}

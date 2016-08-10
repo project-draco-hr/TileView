@@ -1,6 +1,0 @@
-{
-  if (mBitmapProviderWeakReference == null) {
-    return null;
-  }
-  return mBitmapProviderWeakReference.get();
-}

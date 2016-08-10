@@ -1,6 +1,0 @@
-{
-  if (mContextWeakReference == null) {
-    return null;
-  }
-  return mContextWeakReference.get();
-}

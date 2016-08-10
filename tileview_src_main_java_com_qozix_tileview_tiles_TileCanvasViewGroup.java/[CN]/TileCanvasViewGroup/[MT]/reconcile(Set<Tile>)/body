@@ -1,10 +1,2 @@
 {
-  for (  Tile tile : mTilesInCurrentViewport) {
-    if (!recentlyComputedVisibleTileSet.contains(tile)) {
-      mTilesNotInCurrentViewport.add(tile);
-    }
-  }
-  mTilesInCurrentViewport.addAll(recentlyComputedVisibleTileSet);
-  mTilesInCurrentViewport.removeAll(mTilesNotInCurrentViewport);
-  mTilesNotInCurrentViewport.clear();
 }

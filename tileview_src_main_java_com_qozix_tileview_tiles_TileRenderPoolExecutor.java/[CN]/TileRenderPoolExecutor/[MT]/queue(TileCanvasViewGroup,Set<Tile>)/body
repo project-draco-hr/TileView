@@ -1,8 +1,6 @@
 {
   mTileCanvasViewGroupWeakReference=new WeakReference<>(tileCanvasViewGroup);
   mHandler.setTileCanvasViewGroup(tileCanvasViewGroup);
-  final Context context=tileCanvasViewGroup.getContext();
-  final BitmapProvider bitmapProvider=tileCanvasViewGroup.getBitmapProvider();
   tileCanvasViewGroup.onRenderTaskPreExecute();
   for (  Runnable runnable : getQueue()) {
     if (runnable instanceof TileRenderRunnable) {
@@ -11,15 +9,8 @@
         continue;
       }
       Tile tile=tileRenderRunnable.getTile();
-      if (tile == null) {
-        continue;
-      }
-      if (renderSet.contains(tile)) {
-        renderSet.remove(tile);
-      }
- else {
-        tileRenderRunnable.cancel(true);
-        remove(tileRenderRunnable);
+      if (tile != null && !renderSet.contains(tile)) {
+        tile.reset();
       }
     }
   }
@@ -27,11 +18,6 @@
     if (isShutdownOrTerminating()) {
       return;
     }
-    TileRenderRunnable runnable=new TileRenderRunnable();
-    runnable.setTile(tile);
-    runnable.setContext(context);
-    runnable.setBitmapProvider(bitmapProvider);
-    runnable.setHandler(mHandler);
-    execute(runnable);
+    tile.execute(this);
   }
 }

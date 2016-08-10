@@ -1,0 +1,4 @@
+{
+  mScaledRect.set((int)(mRelativeRect.left * scale),(int)(mRelativeRect.top * scale),(int)(mRelativeRect.right * scale),(int)(mRelativeRect.bottom * scale));
+  return mScaledRect;
+}

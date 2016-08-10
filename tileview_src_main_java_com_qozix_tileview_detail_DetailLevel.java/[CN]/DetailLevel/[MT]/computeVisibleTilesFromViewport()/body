@@ -1,0 +1,9 @@
+{
+  mTilesVisibleInViewport.clear();
+  for (int rowCurrent=mLastStateSnapshot.rowStart; rowCurrent < mLastStateSnapshot.rowEnd; rowCurrent++) {
+    for (int columnCurrent=mLastStateSnapshot.columnStart; columnCurrent < mLastStateSnapshot.columnEnd; columnCurrent++) {
+      Tile tile=new Tile(columnCurrent,rowCurrent,mTileWidth,mTileHeight,mData,this);
+      mTilesVisibleInViewport.add(tile);
+    }
+  }
+}

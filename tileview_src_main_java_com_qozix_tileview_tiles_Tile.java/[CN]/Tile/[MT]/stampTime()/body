@@ -1,3 +1,2 @@
 {
-  renderTimestamp=AnimationUtils.currentAnimationTimeMillis();
 }

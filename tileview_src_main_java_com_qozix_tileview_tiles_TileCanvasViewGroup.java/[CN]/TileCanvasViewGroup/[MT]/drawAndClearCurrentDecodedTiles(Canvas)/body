@@ -1,0 +1,9 @@
+{
+  boolean shouldInvalidate=false;
+  for (  Tile tile : mDecodedTilesInCurrentViewport) {
+    tile.draw(canvas);
+    shouldInvalidate|=tile.getIsDirty();
+  }
+  mDecodedTilesInCurrentViewport.clear();
+  return shouldInvalidate;
+}

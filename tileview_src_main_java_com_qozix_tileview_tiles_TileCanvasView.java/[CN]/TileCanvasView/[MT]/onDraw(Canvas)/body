@@ -1,8 +1,0 @@
-{
-  super.onDraw(canvas);
-  canvas.save();
-  canvas.scale(mScale,mScale);
-  boolean pending=drawTiles(canvas);
-  canvas.restore();
-  handleDrawState(pending);
-}

@@ -10,23 +10,23 @@
   if (tile == null) {
     return TileRenderHandler.Status.INCOMPLETE;
   }
-  Context context=getContext();
-  if (context == null) {
+  TileRenderPoolExecutor tileRenderPoolExecutor=mTileRenderPoolExecutorWeakReference.get();
+  if (tileRenderPoolExecutor == null) {
     return TileRenderHandler.Status.INCOMPLETE;
   }
-  BitmapProvider bitmapProvider=getBitmapProvider();
-  if (bitmapProvider == null) {
+  TileCanvasViewGroup tileCanvasViewGroup=tileRenderPoolExecutor.getTileCanvasViewGroup();
+  if (tileCanvasViewGroup == null) {
     return TileRenderHandler.Status.INCOMPLETE;
   }
   try {
-    tile.generateBitmap(context,bitmapProvider);
+    tile.generateBitmap(tileCanvasViewGroup.getContext(),tileCanvasViewGroup.getBitmapProvider());
   }
  catch (  Throwable throwable) {
     mThrowable=throwable;
     return TileRenderHandler.Status.ERROR;
   }
   if (mCancelled || tile.getBitmap() == null || mThread.isInterrupted()) {
-    tile.destroy(true);
+    tile.reset();
     return TileRenderHandler.Status.INCOMPLETE;
   }
   return TileRenderHandler.Status.COMPLETE;

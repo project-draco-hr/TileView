@@ -1,6 +1,0 @@
-{
-  if (mDetailLevelToRender != null) {
-    return mDetailLevelToRender.getScale();
-  }
-  return 1;
-}

@@ -1,6 +1,6 @@
 {
-  if (!mShouldUpdateDetailLevelWhileZooming) {
-    mDetailLevelManager.lockDetailLevel();
+  if (origin == null) {
+    mTileCanvasViewGroup.suppressRender();
   }
   mDetailLevelManager.setScale(scale);
 }

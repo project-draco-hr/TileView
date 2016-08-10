@@ -1,3 +1,6 @@
 {
   mTransitionsEnabled=enabled;
+  if (enabled) {
+    mProgress=0f;
+  }
 }

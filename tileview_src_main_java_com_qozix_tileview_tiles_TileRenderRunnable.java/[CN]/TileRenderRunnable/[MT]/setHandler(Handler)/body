@@ -1,3 +1,0 @@
-{
-  mHandlerWeakReference=new WeakReference<>(handler);
-}

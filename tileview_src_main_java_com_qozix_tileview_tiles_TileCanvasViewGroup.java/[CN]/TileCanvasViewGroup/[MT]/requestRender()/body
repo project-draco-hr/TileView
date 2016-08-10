@@ -1,6 +1,5 @@
 {
   mRenderIsCancelled=false;
-  mRenderIsSuppressed=false;
   if (mDetailLevelToRender == null) {
     return;
   }

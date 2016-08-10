@@ -1,3 +1,0 @@
-{
-  mBitmapProviderWeakReference=new WeakReference<>(bitmapProvider);
-}

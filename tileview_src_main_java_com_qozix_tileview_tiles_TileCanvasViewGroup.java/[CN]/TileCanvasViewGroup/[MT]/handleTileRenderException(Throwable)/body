@@ -1,5 +1,5 @@
 {
-  if (throwable instanceof OutOfMemoryError) {
-    cleanup();
+  if (mTileRenderThrowableListener != null) {
+    mTileRenderThrowableListener.onRenderThrow(throwable);
   }
 }
