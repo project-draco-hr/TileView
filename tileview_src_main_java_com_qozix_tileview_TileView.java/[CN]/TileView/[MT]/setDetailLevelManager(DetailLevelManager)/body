@@ -1,3 +1,4 @@
 {
   mDetailLevelManager=manager;
+  mDetailLevelManager.setDetailLevelChangeListener(this);
 }
