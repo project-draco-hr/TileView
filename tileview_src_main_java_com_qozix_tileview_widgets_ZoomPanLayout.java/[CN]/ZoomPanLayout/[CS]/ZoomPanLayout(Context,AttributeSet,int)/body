@@ -1,6 +1,7 @@
 {
   super(context,attrs,defStyleAttr);
   setWillNotDraw(false);
+  setClipChildren(false);
   mScroller=new Scroller(context);
   mGestureDetector=new GestureDetector(context,this);
   mScaleGestureDetector=new ScaleGestureDetector(context,this);
