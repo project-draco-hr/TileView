@@ -1,4 +1,4 @@
 {
-  removeAllViews();
+  mCalloutLayout.removeAllViews();
   return super.onTouchEvent(event);
 }
