@@ -2,5 +2,7 @@
   mBaseWidth=width;
   mBaseHeight=height;
   updateScaledDimensions();
+  calculateMinimumScaleToFit();
+  constrainScrollToLimits();
   requestLayout();
 }
