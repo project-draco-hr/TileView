@@ -1,6 +1,6 @@
 {
-  suppressRender();
   cancelRender();
   mTilesInCurrentViewport.clear();
+  mPreviouslyDrawnTiles.clear();
   invalidate();
 }
